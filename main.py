@@ -1,6 +1,13 @@
+import binascii
 from io import FileIO, SEEK_CUR
+import json
 import os
+import random
+import re
+import string
+import struct
 import sys
+from time import sleep
 from util.io_helper import IOHelper
 
 MPK_MAGIC = 'TPKG'
@@ -20,13 +27,15 @@ class MPK:
     @staticmethod
     def load(io: FileIO):  # line:19
         instance = MPK(io)  # line:20
-        magic = IOHelper.read_utf8_string(io, 4)  # line:21
+        magic = IOHelper.read_utf8_string1(io, 4)  # line:21
+        print(magic)
         if magic == MPK_MAGIC:  # line:22
             version = IOHelper.read_struct(io, '<i')[0]  # line:23
             MPK.printTell(io)  # line:24
-            io.seek(4, SEEK_CUR)  # line:25
+            io.seek(4, SEEK_CUR)  # line:25 # 将文件指针从当前位置向后移动 4 个字节
             MPK.printTell(io)  # line:26
             count = IOHelper.read_struct(io, 'i')[0]  # line:27
+            print('count', count)
             instance.set_version(version)  # line:29
             for i in range(count):  # line:30
                 size = 'i'  # line:31
@@ -89,32 +98,63 @@ class Main:
 
         for arg in self._args[1:]:
             try:
-                with open(arg, 'rb') as io:
-                    base_name, _ = os.path.splitext(os.path.basename(arg))  # 获取文件名（不含扩展名）
-                    print(f'正在加载：{arg}')
-                    mpk = MPK.load(io)  # 加载 MPK 文件；如果 load 方法可能失败，在此处添加错误处理
-
-                    unpack_dir = os.path.join(os.path.dirname(arg), f'{base_name}_unpack')  # 创建解压目录的路径
-                    os.makedirs(unpack_dir, exist_ok=True)  # 创建解压目录（如果不存在）
-
-                    for i, file_info in enumerate(mpk.files):  # 使用 enumerate 迭代，获取索引和值
-                        offset = file_info.get('offset', 0)  # 安全地获取 offset 值，默认为 0
-                        file_name = file_info.get('name', f'unknown_{i}')  # 安全地获取 name 值，默认为 unknown_i
-
-                        if offset != 0:
-                            print(f'正在解压：{file_name}')
-                            file_path = os.path.join(unpack_dir, file_name)  # 解压后文件的完整路径
-                            with open(file_path, 'wb') as outfile:
-                                outfile.write(mpk.data(i))  # 写入文件数据；如果数据读取可能失败，在此处添加错误处理
-
-            except (FileNotFoundError, IOError, Exception) as e:  # 捕获更广泛的异常
-                print(f"处理 {arg} 时出错：{e}")  # 打印有用的错误信息
+                with open(arg, 'rb') as io:  # 以二进制读取模式打开 MPK 文件
+                    _, file_arg = os.path.split(arg)
+                    print('Loading: %s' % arg)  # 打印正在加载的文件路径
+                    mpk = MPK.load(io)  # 加载 MPK 文件，返回 MPK 对象
+                    for i in mpk.files:
+                        try:
+                            # 循环处理 MPK 文件中的每个文件
+                            file = mpk.file(i)  # 获取当前文件的信息字典
+                            if file['offset'] != 0:
+                                # 如果文件的偏移量不为 0，则表示该文件需要解压缩
+                                if file['name'] == '':
+                                    # 如果文件名为空，则设置为默认值
+                                    file['name'] = 'unknown_%s' % i
+                                print('Unpacking: %s' %
+                                      file['name'])  # 打印当前正在解压缩的文件名
+                                # 拼接解压缩后的文件路径
+                                path_file = '%s_unpack/%s' % (arg,
+                                                              file['name'])
+                                dir_file, _ = os.path.split(
+                                    path_file)  # 获取文件所在目录路径
+                                # 创建目录（如果不存在），存在时不报错
+                                os.makedirs(dir_file, exist_ok=True)
+                                with open(path_file, 'wb') as io_file:
+                                    # 打开解压缩后的文件，以二进制写入模式
+                                    # io_file.write(mpk.data(i))  # 写入当前文件的数据到文件中
+                                    data = mpk.data(i)
+                                    if data:  # Check for data
+                                        try:
+                                            # Decode bytes to Python object (assuming UTF-8 encoding)
+                                            python_object = json.loads(
+                                                data.decode('utf-8'))
+                                            # Convert to JSON string with indent
+                                            json_string = json.dumps(
+                                                python_object, indent=4)
+                                            # Write as UTF-8 encoded bytes
+                                            io_file.write(
+                                                json_string.encode('utf-8'))
+                                        except (json.JSONDecodeError, UnicodeDecodeError) as e:
+                                            print(
+                                                f"Error processing data for file '{file['name']}': {e}. Writing raw bytes.")
+                                            io_file.write(data)
+                                    else:
+                                        print(
+                                            f"Warning: No data found for file '{file['name']}'. Skipping.")
+                        # 捕获 FileNotFoundError, IOError 和其他异常
+                        except (FileNotFoundError, IOError, Exception) as e:
+                            # 打印错误信息，并继续处理下一个文件
+                            print(f"处理 MPK 文件11 '{arg}' 时出错：{e}")
+                            continue
+            # 捕获 FileNotFoundError, IOError 和其他异常
+            except (FileNotFoundError, IOError, Exception) as e:
+                print(f"处理 MPK 文件22 '{arg}' 时出错：{e}")  # 打印错误信息，并继续处理下一个文件
 # Example usage
 if __name__ == "__main__":
-    MPK_VERSION = 1 #定义MPK版本号
+    MPK_VERSION = 1  # 定义MPK版本号
     main_instance = Main(sys.argv)
     main_instance.run()
-    
-    
+
     # 获取要执行的方法名
     print(11111)

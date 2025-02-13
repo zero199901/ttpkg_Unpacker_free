@@ -1,4 +1,5 @@
 from io import FileIO, SEEK_CUR
+import sys
 
 from util.io_helper import IOHelper
 
@@ -63,6 +64,9 @@ class MPK:
         self._files.insert(i, file)
 
     def data(self, index):
+        # print(index)
+        print(3333333)
+        sys.exit()
         # 获取文件数据的方法，通过文件索引
         if index < len(self._files):
             file = self._files[index]  # 获取文件信息的字典
