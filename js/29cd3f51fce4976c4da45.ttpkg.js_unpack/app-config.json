@@ -1,201 +1,201 @@
 {
-    "appId": "ttc6a8b015599fe90101",
-    "entryPagePath": "pages/index/index",
-    "isMicroApp": true,
-    "pages": [
-        "pages/index/index",
-        "pages/read-history/index",
-        "pages/reader/index",
-        "pages/mine/index",
-        "pages/window/index",
-        "subpages/mine/vip/index",
-        "subpages/mine/trade-record/index",
-        "subpages/mine/purchase-config/index",
-        "subpages/mine/about-us/index"
-    ],
-    "subPackages": [
-        {
-            "root": "subpages/mine/",
-            "pages": [
-                "vip/index",
-                "trade-record/index",
-                "purchase-config/index",
-                "about-us/index"
-            ]
-        }
-    ],
-    "networkTimeout": {
-        "request": 60000,
-        "uploadFile": 60000,
-        "connectSocket": 60000,
-        "downloadFile": 60000
+  "appId": "ttc6a8b015599fe90101",
+  "entryPagePath": "pages/index/index",
+  "isMicroApp": true,
+  "pages": [
+    "pages/index/index",
+    "pages/read-history/index",
+    "pages/reader/index",
+    "pages/mine/index",
+    "pages/window/index",
+    "subpages/mine/vip/index",
+    "subpages/mine/trade-record/index",
+    "subpages/mine/purchase-config/index",
+    "subpages/mine/about-us/index"
+  ],
+  "subPackages": [
+    {
+      "root": "subpages/mine/",
+      "pages": [
+        "vip/index",
+        "trade-record/index",
+        "purchase-config/index",
+        "about-us/index"
+      ]
+    }
+  ],
+  "networkTimeout": {
+    "request": 60000,
+    "uploadFile": 60000,
+    "connectSocket": 60000,
+    "downloadFile": 60000
+  },
+  "global": {
+    "window": {
+      "navigationBarTextStyle": "black",
+      "navigationBarTitleText": "渺渺故事会",
+      "navigationBarBackgroundColor": "#F5F5F5",
+      "backgroundColor": "#F5F5F5"
+    }
+  },
+  "tabBar": {
+    "color": "#111111",
+    "selectedColor": "#FF613B",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/read-history/index",
+        "iconPath": "static/tabbar/history.png",
+        "selectedIconPath": "static/tabbar/history-on.png",
+        "text": "最近阅读"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabbar/store.png",
+        "selectedIconPath": "static/tabbar/store-on.png",
+        "text": "书城"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "static/tabbar/mine.png",
+        "selectedIconPath": "static/tabbar/mine-on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [],
+  "permission": {},
+  "prefetches": {},
+  "preloadRule": {
+    "pages/mine/index": {
+      "network": "all",
+      "packages": [
+        "subpages/mine/"
+      ]
+    }
+  },
+  "prefetchRules": {},
+  "page": {
+    "pages/index/index": {
+      "window": {
+        "usingComponents": {
+          "qm-icon": "/components/qm-icon/index",
+          "qm-tab": "/components/qm-tab/index",
+          "qm-scrollx-book-list": "/components/qm-scrollx-book-list/index",
+          "qm-book-card": "/components/qm-book-card/index",
+          "qm-empty": "/components/qm-empty/index"
+        },
+        "embedType": "none"
+      }
     },
-    "global": {
-        "window": {
-            "navigationBarTextStyle": "black",
-            "navigationBarTitleText": "\u6e3a\u6e3a\u6545\u4e8b\u4f1a",
-            "navigationBarBackgroundColor": "#F5F5F5",
-            "backgroundColor": "#F5F5F5"
-        }
-    },
-    "tabBar": {
-        "color": "#111111",
-        "selectedColor": "#FF613B",
-        "borderStyle": "black",
+    "pages/read-history/index": {
+      "window": {
+        "navigationBarBackgroundColor": "#FFFFFF",
         "backgroundColor": "#FFFFFF",
-        "list": [
-            {
-                "pagePath": "pages/read-history/index",
-                "iconPath": "static/tabbar/history.png",
-                "selectedIconPath": "static/tabbar/history-on.png",
-                "text": "\u6700\u8fd1\u9605\u8bfb"
-            },
-            {
-                "pagePath": "pages/index/index",
-                "iconPath": "static/tabbar/store.png",
-                "selectedIconPath": "static/tabbar/store-on.png",
-                "text": "\u4e66\u57ce"
-            },
-            {
-                "pagePath": "pages/mine/index",
-                "iconPath": "static/tabbar/mine.png",
-                "selectedIconPath": "static/tabbar/mine-on.png",
-                "text": "\u6211\u7684"
-            }
-        ]
+        "enablePullDownRefresh": true,
+        "onReachBottomDistance": 500,
+        "usingComponents": {
+          "qm-icon": "/components/qm-icon/index",
+          "qm-book-card": "/components/qm-book-card/index",
+          "qm-empty": "/components/qm-empty/index"
+        },
+        "embedType": "none"
+      }
     },
-    "navigateToMiniProgramAppIdList": [],
-    "permission": {},
-    "prefetches": {},
-    "preloadRule": {
-        "pages/mine/index": {
-            "network": "all",
-            "packages": [
-                "subpages/mine/"
-            ]
-        }
+    "pages/reader/index": {
+      "window": {
+        "navigationBarTitleText": "",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "usingComponents": {
+          "qm-icon": "/components/qm-icon/index",
+          "q-reader": "/node-modules/@repo/qm-components/src/q-reader/index",
+          "qm-pay-panel": "/components/qm-pay-panel/index",
+          "final-chapter": "/pages/reader/components/final-chapter"
+        },
+        "embedType": "none"
+      }
     },
-    "prefetchRules": {},
-    "page": {
-        "pages/index/index": {
-            "window": {
-                "usingComponents": {
-                    "qm-icon": "/components/qm-icon/index",
-                    "qm-tab": "/components/qm-tab/index",
-                    "qm-scrollx-book-list": "/components/qm-scrollx-book-list/index",
-                    "qm-book-card": "/components/qm-book-card/index",
-                    "qm-empty": "/components/qm-empty/index"
-                },
-                "embedType": "none"
-            }
+    "pages/mine/index": {
+      "window": {
+        "usingComponents": {
+          "qm-icon": "/components/qm-icon/index",
+          "uni-popup": "/node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup",
+          "how-to-find-me": "/pages/mine/components/how-to-find-me"
         },
-        "pages/read-history/index": {
-            "window": {
-                "navigationBarBackgroundColor": "#FFFFFF",
-                "backgroundColor": "#FFFFFF",
-                "enablePullDownRefresh": true,
-                "onReachBottomDistance": 500,
-                "usingComponents": {
-                    "qm-icon": "/components/qm-icon/index",
-                    "qm-book-card": "/components/qm-book-card/index",
-                    "qm-empty": "/components/qm-empty/index"
-                },
-                "embedType": "none"
-            }
-        },
-        "pages/reader/index": {
-            "window": {
-                "navigationBarTitleText": "",
-                "navigationBarBackgroundColor": "#FFFFFF",
-                "usingComponents": {
-                    "qm-icon": "/components/qm-icon/index",
-                    "q-reader": "/node-modules/@repo/qm-components/src/q-reader/index",
-                    "qm-pay-panel": "/components/qm-pay-panel/index",
-                    "final-chapter": "/pages/reader/components/final-chapter"
-                },
-                "embedType": "none"
-            }
-        },
-        "pages/mine/index": {
-            "window": {
-                "usingComponents": {
-                    "qm-icon": "/components/qm-icon/index",
-                    "uni-popup": "/node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup",
-                    "how-to-find-me": "/pages/mine/components/how-to-find-me"
-                },
-                "embedType": "none"
-            }
-        },
-        "pages/window/index": {
-            "window": {
-                "navigationBarTitleText": "",
-                "usingComponents": {
-                    "qm-icon": "/components/qm-icon/index"
-                },
-                "embedType": "none"
-            }
-        },
-        "subpages/mine/vip/index": {
-            "window": {
-                "navigationBarTitleText": "VIP",
-                "backgroundColor": "#2F231A",
-                "usingComponents": {
-                    "qm-icon": "/components/qm-icon/index",
-                    "purchase-tips": "/components/qm-pay-panel/components/purchase-tips",
-                    "qm-pay-card": "/components/qm-pay-card/index"
-                },
-                "embedType": "none"
-            }
-        },
-        "subpages/mine/trade-record/index": {
-            "window": {
-                "navigationBarTitleText": "\u4ea4\u6613\u8bb0\u5f55",
-                "navigationBarBackgroundColor": "#FFFFFF",
-                "onReachBottomDistance": 100,
-                "usingComponents": {
-                    "qm-icon": "/components/qm-icon/index",
-                    "qm-tab": "/components/qm-tab/index",
-                    "trade-record-list": "/subpages/mine/components/trade-record-list"
-                },
-                "embedType": "none"
-            }
-        },
-        "subpages/mine/purchase-config/index": {
-            "window": {
-                "navigationBarTitleText": "\u8d2d\u4e70\u8bbe\u7f6e",
-                "usingComponents": {
-                    "qm-icon": "/components/qm-icon/index"
-                },
-                "embedType": "none"
-            }
-        },
-        "subpages/mine/about-us/index": {
-            "window": {
-                "navigationBarTitleText": "\u5173\u4e8e\u6211\u4eec",
-                "usingComponents": {
-                    "qm-icon": "/components/qm-icon/index"
-                },
-                "embedType": "none"
-            }
-        }
+        "embedType": "none"
+      }
     },
-    "ttPlugins": {},
-    "extAlias": {},
-    "npmAlias": {},
-    "pluginPages": [],
-    "fallbackPluginPages": {},
-    "debug": false,
-    "ttLaunchApp": {},
-    "widgets": [],
-    "ext": {},
-    "extAppid": "",
-    "customClose": false,
-    "usingProvide": false,
-    "redirection": {},
-    "component2": false,
-    "industrySDKPages": [],
-    "industrySDK": true,
-    "publishVideoHookPriorityList": [],
-    "referrerPolicy": {},
-    "usePrivacyCheck": false
+    "pages/window/index": {
+      "window": {
+        "navigationBarTitleText": "",
+        "usingComponents": {
+          "qm-icon": "/components/qm-icon/index"
+        },
+        "embedType": "none"
+      }
+    },
+    "subpages/mine/vip/index": {
+      "window": {
+        "navigationBarTitleText": "VIP",
+        "backgroundColor": "#2F231A",
+        "usingComponents": {
+          "qm-icon": "/components/qm-icon/index",
+          "purchase-tips": "/components/qm-pay-panel/components/purchase-tips",
+          "qm-pay-card": "/components/qm-pay-card/index"
+        },
+        "embedType": "none"
+      }
+    },
+    "subpages/mine/trade-record/index": {
+      "window": {
+        "navigationBarTitleText": "交易记录",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "onReachBottomDistance": 100,
+        "usingComponents": {
+          "qm-icon": "/components/qm-icon/index",
+          "qm-tab": "/components/qm-tab/index",
+          "trade-record-list": "/subpages/mine/components/trade-record-list"
+        },
+        "embedType": "none"
+      }
+    },
+    "subpages/mine/purchase-config/index": {
+      "window": {
+        "navigationBarTitleText": "购买设置",
+        "usingComponents": {
+          "qm-icon": "/components/qm-icon/index"
+        },
+        "embedType": "none"
+      }
+    },
+    "subpages/mine/about-us/index": {
+      "window": {
+        "navigationBarTitleText": "关于我们",
+        "usingComponents": {
+          "qm-icon": "/components/qm-icon/index"
+        },
+        "embedType": "none"
+      }
+    }
+  },
+  "ttPlugins": {},
+  "extAlias": {},
+  "npmAlias": {},
+  "pluginPages": [],
+  "fallbackPluginPages": {},
+  "debug": false,
+  "ttLaunchApp": {},
+  "widgets": [],
+  "ext": {},
+  "extAppid": "",
+  "customClose": false,
+  "usingProvide": false,
+  "redirection": {},
+  "component2": false,
+  "industrySDKPages": [],
+  "industrySDK": true,
+  "publishVideoHookPriorityList": [],
+  "referrerPolicy": {},
+  "usePrivacyCheck": false
 }
