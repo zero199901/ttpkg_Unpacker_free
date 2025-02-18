@@ -1,3 +1,9 @@
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: app-service.js
+ * 处理时间: 2025-02-18 13:03:34
+ */
+
 var globPageRegistPath, globPageRegistering, compilerVersion = "1.35.4",
   globalAsyncRegistPaths = [],
   globPackageRoot = "__APP__";
@@ -99,17 +105,17 @@ var TMAConfig = {
     "mixin/share.js": !0,
     "node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js": !0,
     "node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js": !0,
-    "node-modules/@repo/qm-components/src/q-image/index.js": !0,
-    "node-modules/@repo/qm-components/src/q-popup/index.js": !0,
-    "node-modules/@repo/qm-components/src/q-reader/chapter-content.js": !0,
-    "node-modules/@repo/qm-components/src/q-reader/components/book-info.js": !0,
-    "node-modules/@repo/qm-components/src/q-reader/components/chapter-list.js": !0,
-    "node-modules/@repo/qm-components/src/q-reader/components/set-background.js": !0,
-    "node-modules/@repo/qm-components/src/q-reader/components/set-box.js": !0,
-    "node-modules/@repo/qm-components/src/q-reader/components/set-font-size.js": !0,
-    "node-modules/@repo/qm-components/src/q-reader/index.js": !0,
-    "node-modules/@repo/qm-components/src/q-reader/setting.js": !0,
-    "node-modules/@repo/qm-components/src/q-theme-overlay/index.js": !0,
+    "node-modules/@repo/qm-components/src/queryData-image/index.js": !0,
+    "node-modules/@repo/qm-components/src/queryData-popup/index.js": !0,
+    "node-modules/@repo/qm-components/src/queryData-reader/chapter-content.js": !0,
+    "node-modules/@repo/qm-components/src/queryData-reader/components/book-info.js": !0,
+    "node-modules/@repo/qm-components/src/queryData-reader/components/chapter-list.js": !0,
+    "node-modules/@repo/qm-components/src/queryData-reader/components/set-background.js": !0,
+    "node-modules/@repo/qm-components/src/queryData-reader/components/set-box.js": !0,
+    "node-modules/@repo/qm-components/src/queryData-reader/components/set-font-size.js": !0,
+    "node-modules/@repo/qm-components/src/queryData-reader/index.js": !0,
+    "node-modules/@repo/qm-components/src/queryData-reader/setting.js": !0,
+    "node-modules/@repo/qm-components/src/queryData-theme-overlay/index.js": !0,
     "pages/index/index.js": !0,
     "pages/mine/components/how-to-find-me.js": !0,
     "pages/mine/index.js": !0,
@@ -149,10 +155,10 @@ var TMAConfig = {
 };
 try {
   nativeTMAConfig = JSON.parse(nativeTMAConfig)
-} catch (n) {}
+} catch (require) {}
 try {
   for (var ii in nativeTMAConfig) TMAConfig[ii] = nativeTMAConfig[ii]
-} catch (n) {} finally {
+} catch (require) {} finally {
   TMAConfig.launch || (TMAConfig.launch = TMAConfig.appLaunchInfo)
 }
 var __allConfig__ = {
@@ -181,7 +187,7 @@ var __allConfig__ = {
       navigationBarBackgroundColor: "#FFFFFF",
       usingComponents: {
         "qm-icon": "/components/qm-icon/index",
-        "q-reader": "/node-modules/@repo/qm-components/src/q-reader/index",
+        "queryData-reader": "/node-modules/@repo/qm-components/src/queryData-reader/index",
         "qm-pay-panel": "/components/qm-pay-panel/index",
         "final-chapter": "/pages/reader/components/final-chapter"
       }
@@ -253,10 +259,10 @@ var __allConfig__ = {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index",
-        "q-theme-overlay": "/node-modules/@repo/qm-components/src/q-theme-overlay/index"
+        "queryData-theme-overlay": "/node-modules/@repo/qm-components/src/queryData-theme-overlay/index"
       }
     },
-    "node-modules/@repo/qm-components/src/q-theme-overlay/index": {
+    "node-modules/@repo/qm-components/src/queryData-theme-overlay/index": {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index"
@@ -268,72 +274,72 @@ var __allConfig__ = {
         "qm-icon": "/components/qm-icon/index"
       }
     },
-    "node-modules/@repo/qm-components/src/q-reader/index": {
+    "node-modules/@repo/qm-components/src/queryData-reader/index": {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index",
-        "chapter-content": "/node-modules/@repo/qm-components/src/q-reader/chapter-content",
-        setting: "/node-modules/@repo/qm-components/src/q-reader/setting"
+        "chapter-content": "/node-modules/@repo/qm-components/src/queryData-reader/chapter-content",
+        setting: "/node-modules/@repo/qm-components/src/queryData-reader/setting"
       }
     },
-    "node-modules/@repo/qm-components/src/q-reader/chapter-content": {
+    "node-modules/@repo/qm-components/src/queryData-reader/chapter-content": {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index"
       }
     },
-    "node-modules/@repo/qm-components/src/q-reader/setting": {
+    "node-modules/@repo/qm-components/src/queryData-reader/setting": {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index",
-        "setting-box": "/node-modules/@repo/qm-components/src/q-reader/components/set-box",
-        "book-info": "/node-modules/@repo/qm-components/src/q-reader/components/book-info",
-        "chapter-list": "/node-modules/@repo/qm-components/src/q-reader/components/chapter-list",
-        "q-popup": "/node-modules/@repo/qm-components/src/q-popup/index"
+        "setting-box": "/node-modules/@repo/qm-components/src/queryData-reader/components/set-box",
+        "book-info": "/node-modules/@repo/qm-components/src/queryData-reader/components/book-info",
+        "chapter-list": "/node-modules/@repo/qm-components/src/queryData-reader/components/chapter-list",
+        "queryData-popup": "/node-modules/@repo/qm-components/src/queryData-popup/index"
       }
     },
-    "node-modules/@repo/qm-components/src/q-reader/components/set-box": {
+    "node-modules/@repo/qm-components/src/queryData-reader/components/set-box": {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index",
-        "set-font-size": "/node-modules/@repo/qm-components/src/q-reader/components/set-font-size",
-        "set-background": "/node-modules/@repo/qm-components/src/q-reader/components/set-background"
+        "set-font-size": "/node-modules/@repo/qm-components/src/queryData-reader/components/set-font-size",
+        "set-background": "/node-modules/@repo/qm-components/src/queryData-reader/components/set-background"
       }
     },
-    "node-modules/@repo/qm-components/src/q-reader/components/set-font-size": {
+    "node-modules/@repo/qm-components/src/queryData-reader/components/set-font-size": {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index"
       }
     },
-    "node-modules/@repo/qm-components/src/q-reader/components/set-background": {
+    "node-modules/@repo/qm-components/src/queryData-reader/components/set-background": {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index"
       }
     },
-    "node-modules/@repo/qm-components/src/q-reader/components/book-info": {
+    "node-modules/@repo/qm-components/src/queryData-reader/components/book-info": {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index",
-        "q-image": "/node-modules/@repo/qm-components/src/q-image/index",
-        "q-theme-overlay": "/node-modules/@repo/qm-components/src/q-theme-overlay/index"
+        "queryData-image": "/node-modules/@repo/qm-components/src/queryData-image/index",
+        "queryData-theme-overlay": "/node-modules/@repo/qm-components/src/queryData-theme-overlay/index"
       }
     },
-    "node-modules/@repo/qm-components/src/q-image/index": {
+    "node-modules/@repo/qm-components/src/queryData-image/index": {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index"
       }
     },
-    "node-modules/@repo/qm-components/src/q-reader/components/chapter-list": {
+    "node-modules/@repo/qm-components/src/queryData-reader/components/chapter-list": {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index",
-        "q-theme-overlay": "/node-modules/@repo/qm-components/src/q-theme-overlay/index"
+        "queryData-theme-overlay": "/node-modules/@repo/qm-components/src/queryData-theme-overlay/index"
       }
     },
-    "node-modules/@repo/qm-components/src/q-popup/index": {
+    "node-modules/@repo/qm-components/src/queryData-popup/index": {
       component: !0,
       usingComponents: {
         "qm-icon": "/components/qm-icon/index",
@@ -361,7 +367,7 @@ var __allConfig__ = {
         "qm-pay-card": "/components/qm-pay-card/index",
         "purchase-tips": "/components/qm-pay-panel/components/purchase-tips",
         "purchase-panel": "/components/qm-pay-panel/components/purchase-panel",
-        "q-theme-overlay": "/node-modules/@repo/qm-components/src/q-theme-overlay/index"
+        "queryData-theme-overlay": "/node-modules/@repo/qm-components/src/queryData-theme-overlay/index"
       }
     },
     "components/qm-pay-panel/components/panel-header": {
@@ -394,7 +400,7 @@ var __allConfig__ = {
       usingComponents: {
         "qm-icon": "/components/qm-icon/index",
         "panel-header": "/components/qm-pay-panel/components/panel-header",
-        "q-theme-overlay": "/node-modules/@repo/qm-components/src/q-theme-overlay/index"
+        "queryData-theme-overlay": "/node-modules/@repo/qm-components/src/queryData-theme-overlay/index"
       }
     },
     "pages/reader/components/final-chapter": {

@@ -1,192 +1,198 @@
-define("hooks/use-login.js", (function (e, n, t, r, i, o, u, a, s, c, f, l, p, d, g, v, m, b, y, h, x, k, _, w, S, j, A, I, R, L, O, T, U, C, M, P, q, E, G) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: hooks/use-login.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("hooks/use-login.js", (function (exports, require, module, Promise, clearTimeout, setTimeout, reject, setInterval, clearInterval, c, resolve, window, document, navigator, screen, history, data, state, config, location, callback, event, utils, options, handler, success, params, result, user, store, request, action, U, response, mutation, error, queryData, status, getType) {
   "use strict";
 
-  function $(e, n) {
-    return function (e) {
-      if (Array.isArray(e)) return e
-    }(e) || function (e, n) {
-      var t = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
-      if (null != t) {
-        var r, i, o, u, a = [],
-          s = !0,
+  function $(exports, require) {
+    return function (exports) {
+      if (Array.isArray(exports)) return exports
+    }(exports) || function (exports, require) {
+      var module = null == exports ? null : "undefined" != typeof Symbol && exports[Symbol.iterator] || exports["@@iterator"];
+      if (null != module) {
+        var Promise, clearTimeout, setTimeout, reject, setInterval = [],
+          clearInterval = !0,
           c = !1;
         try {
-          if (o = (t = t.call(e)).next, 0 === n) {
-            if (Object(t) !== t) return;
-            s = !1
+          if (setTimeout = (module = module.call(exports)).next, 0 === require) {
+            if (Object(module) !== module) return;
+            clearInterval = !1
           } else
-            for (; !(s = (r = o.call(t)).done) && (a.push(r.value), a.length !== n); s = !0);
-        } catch (e) {
-          c = !0, i = e
+            for (; !(clearInterval = (Promise = setTimeout.call(module)).done) && (setInterval.push(Promise.value), setInterval.length !== require); clearInterval = !0);
+        } catch (exports) {
+          c = !0, clearTimeout = exports
         } finally {
           try {
-            if (!s && null != t.return && (u = t.return(), Object(u) !== u)) return
+            if (!clearInterval && null != module.return && (reject = module.return(), Object(reject) !== reject)) return
           } finally {
-            if (c) throw i
+            if (c) throw clearTimeout
           }
         }
-        return a
+        return setInterval
       }
-    }(e, n) || function (e, n) {
-      if (e) {
-        if ("string" == typeof e) return z(e, n);
-        var t = {}.toString.call(e).slice(8, -1);
-        return "Object" === t && e.constructor && (t = e.constructor.name), "Map" === t || "Set" === t ? Array.from(e) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? z(e, n) : void 0
+    }(exports, require) || function (exports, require) {
+      if (exports) {
+        if ("string" == typeof exports) return initialize(exports, require);
+        var module = {}.toString.call(exports).slice(8, -1);
+        return "Object" === module && exports.constructor && (module = exports.constructor.name), "Map" === module || "Set" === module ? Array.from(exports) : "Arguments" === module || /^(?:Ui|result)nt(?:8|16|32)(?:Clamped)?Array$/.test(module) ? initialize(exports, require) : void 0
       }
-    }(e, n) || function () {
-      throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+    }(exports, require) || function () {
+      throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have setInterval [Symbol.iterator]() method.")
     }()
   }
 
-  function z(e, n) {
-    (null == n || n > e.length) && (n = e.length);
-    for (var t = 0, r = Array(n); t < n; t++) r[t] = e[t];
-    return r
+  function initialize(exports, require) {
+    (null == require || require > exports.length) && (require = exports.length);
+    for (var module = 0, Promise = Array(require); module < require; module++) Promise[module] = exports[module];
+    return Promise
   }
 
-  function B(e, n, t, r, o, u, a) {
+  function bindProps(exports, require, module, Promise, setTimeout, reject, setInterval) {
     try {
-      var s = e[u](a),
-        c = s.value
-    } catch (e) {
-      return void t(e)
+      var clearInterval = exports[reject](setInterval),
+        c = clearInterval.value
+    } catch (exports) {
+      return void module(exports)
     }
-    s.done ? n(c) : i.resolve(c).then(r, o)
+    clearInterval.done ? require(c) : clearTimeout.resolve(c).then(Promise, setTimeout)
   }
 
-  function D(e) {
+  function token(exports) {
     return function () {
-      var n = this,
-        t = arguments;
-      return new i((function (r, i) {
-        var o = e.apply(n, t);
+      var require = this,
+        module = arguments;
+      return new clearTimeout((function (Promise, clearTimeout) {
+        var setTimeout = exports.apply(require, module);
 
-        function u(e) {
-          B(o, r, i, u, a, "next", e)
+        function reject(exports) {
+          bindProps(setTimeout, Promise, clearTimeout, reject, setInterval, "next", exports)
         }
 
-        function a(e) {
-          B(o, r, i, u, a, "throw", e)
+        function setInterval(exports) {
+          bindProps(setTimeout, Promise, clearTimeout, reject, setInterval, "throw", exports)
         }
-        u(void 0)
+        reject(void 0)
       }))
     }
   }
-  var F = e("../common/vendor.js"),
-    H = e("../store/modules/user.js"),
-    J = e("../store/modules/global.js"),
-    K = e("../api/qm-statistics.js");
-  t.useLogin = function () {
-    var e = function (e) {
-        F.index.showToast({
+  var formatData = exports("../common/vendor.js"),
+    getter = exports("../store/modules/user.js"),
+    jsonParse = exports("../store/modules/global.js"),
+    createStore = exports("../api/qm-statistics.js");
+  module.useLogin = function () {
+    var exports = function (exports) {
+        formatData.index.showToast({
           icon: "none",
-          title: e
-        }), o((function () {
-          F.index.exitMiniProgram()
+          title: exports
+        }), setTimeout((function () {
+          formatData.index.exitMiniProgram()
         }), 1500)
       },
-      n = function () {
-        var n = D(regeneratorRuntime.mark((function n(t) {
-          var r, o, u, a, s, c;
-          return regeneratorRuntime.wrap((function (n) {
-            for (;;) switch (n.prev = n.next) {
+      require = function () {
+        var require = token(regeneratorRuntime.mark((function require(module) {
+          var Promise, setTimeout, reject, setInterval, clearInterval, c;
+          return regeneratorRuntime.wrap((function (require) {
+            for (;;) switch (require.prev = require.next) {
               case 0:
-                if (r = J.useGlobalStore(), !(o = H.useUserStore()).isLogining) {
-                  n.next = 3;
+                if (Promise = jsonParse.useGlobalStore(), !(setTimeout = getter.useUserStore()).isLogining) {
+                  require.next = 3;
                   break
                 }
-                return n.abrupt("return");
+                return require.abrupt("return");
               case 3:
-                if (F.index.getStorageSync("token")) {
-                  n.next = 13;
+                if (formatData.index.getStorageSync("token")) {
+                  require.next = 13;
                   break
                 }
-                return o.set_is_logining(!0), n.prev = 5, n.next = 8, o.login();
+                return setTimeout.set_is_logining(!0), require.prev = 5, require.next = 8, setTimeout.login();
               case 8:
-                n.next = 13;
+                require.next = 13;
                 break;
               case 10:
-                return n.prev = 10, n.t0 = n.catch(5), n.abrupt("return", void e("请登录再进入小程序"));
+                return require.prev = 10, require.t0 = require.catch(5), require.abrupt("return", void exports("请登录再进入小程序"));
               case 13:
-                return n.prev = 13, n.next = 16, i.all([o.update_user_info(), r.getAppConfigInfo()]);
+                return require.prev = 13, require.next = 16, clearTimeout.all([setTimeout.update_user_info(), Promise.getAppConfigInfo()]);
               case 16:
-                u = n.sent, a = $(u, 2), s = a[0], c = a[1], r.updateSystemInfo(t), t && K.statisticsInitParams(t, {
-                  accountid: s.uid,
-                  openid: s.openid,
-                  unionid: s.unionid,
+                reject = require.sent, setInterval = $(reject, 2), clearInterval = setInterval[0], c = setInterval[1], Promise.updateSystemInfo(module), module && createStore.statisticsInitParams(module, {
+                  accountid: clearInterval.uid,
+                  openid: clearInterval.openid,
+                  unionid: clearInterval.unionid,
                   promotiontype: c.promotion_type,
                   distributor_id: c.distributor_id
-                }), o.set_is_logining(!1), n.next = 26;
+                }), setTimeout.set_is_logining(!1), require.next = 26;
                 break;
               case 23:
-                n.prev = 23, n.t1 = n.catch(13), e("小程序异常，请稍后重试");
+                require.prev = 23, require.t1 = require.catch(13), exports("小程序异常，请稍后重试");
               case 26:
               case "end":
-                return n.stop()
+                return require.stop()
             }
-          }), n, null, [
+          }), require, null, [
             [5, 10],
             [13, 23]
           ])
         })));
-        return function (e) {
-          return n.apply(this, arguments)
+        return function (exports) {
+          return require.apply(this, arguments)
         }
       }(),
-      t = function () {
-        var e = D(regeneratorRuntime.mark((function e() {
-          var r;
-          return regeneratorRuntime.wrap((function (e) {
-            for (;;) switch (e.prev = e.next) {
+      module = function () {
+        var exports = token(regeneratorRuntime.mark((function exports() {
+          var Promise;
+          return regeneratorRuntime.wrap((function (exports) {
+            for (;;) switch (exports.prev = exports.next) {
               case 0:
-                if ((r = H.useUserStore()).token) {
-                  e.next = 13;
+                if ((Promise = getter.useUserStore()).token) {
+                  exports.next = 13;
                   break
                 }
-                if (!r.isLogining) {
-                  e.next = 4;
+                if (!Promise.isLogining) {
+                  exports.next = 4;
                   break
                 }
-                return e.abrupt("return", new i((function (e) {
-                  o(D(regeneratorRuntime.mark((function n() {
-                    return regeneratorRuntime.wrap((function (n) {
-                      for (;;) switch (n.prev = n.next) {
+                return exports.abrupt("return", new clearTimeout((function (exports) {
+                  setTimeout(token(regeneratorRuntime.mark((function require() {
+                    return regeneratorRuntime.wrap((function (require) {
+                      for (;;) switch (require.prev = require.next) {
                         case 0:
-                          return n.next = 2, t();
+                          return require.next = 2, module();
                         case 2:
-                          e(!0);
+                          exports(!0);
                         case 3:
                         case "end":
-                          return n.stop()
+                          return require.stop()
                       }
-                    }), n)
+                    }), require)
                   }))), 100)
                 })));
               case 4:
-                if (r.userInfo.uid) {
-                  e.next = 9;
+                if (Promise.userInfo.uid) {
+                  exports.next = 9;
                   break
                 }
-                return r.set_token(""), e.next = 8, n("");
+                return Promise.set_token(""), exports.next = 8, require("");
               case 8:
-                return e.abrupt("return", void e.sent);
+                return exports.abrupt("return", void exports.sent);
               case 9:
-                return r.set_is_logining(!0), e.next = 12, r.login();
+                return Promise.set_is_logining(!0), exports.next = 12, Promise.login();
               case 12:
-                r.set_is_logining(!1);
+                Promise.set_is_logining(!1);
               case 13:
               case "end":
-                return e.stop()
+                return exports.stop()
             }
-          }), e)
+          }), exports)
         })));
         return function () {
-          return e.apply(this, arguments)
+          return exports.apply(this, arguments)
         }
       }();
     return {
-      init: n,
-      refreshToken: t
+      init: require,
+      refreshToken: module
     }
   }
 }));

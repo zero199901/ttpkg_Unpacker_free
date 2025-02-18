@@ -1,7 +1,13 @@
-define("components/qm-pay-card/components/guide-hand.js", (function (t, n, e, a, o, d, p, r, c, i, s, u, m, h, f, g, y, _, l, b, k, v, x, B, j, C, D, N, R, q, I, w, z, A, E, F, G, H, J) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: components/qm-pay-card/components/guide-hand.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("components/qm-pay-card/components/guide-hand.js", (function (module, require, exports, setInterval, setTimeout, navigator, document, Promise, c, clearTimeout, clearInterval, reject, data, location, resolve, screen, config, utils, window, state, event, history, callback, bindProps, success, response, token, N, user, queryData, result, options, initialize, params, status, formatData, getType, getter, jsonParse) {
   "use strict";
-  var K = t("../../../common/vendor.js"),
-    L = K.defineComponent({
+  var createStore = module("../../../common/vendor.js"),
+    store = createStore.defineComponent({
       __name: "guide-hand",
       props: {
         handBottom: {
@@ -17,19 +23,19 @@ define("components/qm-pay-card/components/guide-hand.js", (function (t, n, e, a,
           default: !1
         }
       },
-      setup: function (t) {
-        return function (n, e) {
+      setup: function (module) {
+        return function (require, exports) {
           return {
-            a: t.isDark ? "/static/pay/hand-dark.png" : "/static/pay/hand.png",
-            b: t.handBottom + "rpx",
-            c: t.handRight + "rpx"
+            setInterval: module.isDark ? "/static/pay/hand-dark.png" : "/static/pay/hand.png",
+            state: module.handBottom + "rpx",
+            c: module.handRight + "rpx"
           }
         }
       }
     }),
-    M = K._export_sfc(L, [
-      ["__scopeId", "data-v-9d811854"]
+    mutation = createStore._export_sfc(store, [
+      ["__scopeId", "data-history-9d811854"]
     ]);
-  tt.createComponent(M)
+  tt.createComponent(mutation)
 }));
 //# sourceMappingURL=guide-hand.js.map

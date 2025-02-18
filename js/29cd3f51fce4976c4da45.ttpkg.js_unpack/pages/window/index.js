@@ -1,7 +1,13 @@
-define("pages/window/index.js", (function (e, t, n, i, o, r, a, d, c, u, p, s, f, l, _, g, m, v, x, j, w, y, C, I, S, b, B, N, P, R, T, U, h, k, q, z, A, D, E) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: pages/window/index.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("pages/window/index.js", (function (exports, module, require, clearTimeout, setTimeout, Promise, setInterval, navigator, c, reject, document, clearInterval, resolve, window, utils, screen, data, history, callback, success, options, config, response, result, handler, state, bindProps, N, error, user, action, U, location, event, queryData, initialize, params, token, status) {
   "use strict";
-  var F = e("../../common/vendor.js"),
-    G = F.defineComponent({
+  var formatData = exports("../../common/vendor.js"),
+    getType = formatData.defineComponent({
       __name: "index",
       props: {
         url: {
@@ -12,24 +18,24 @@ define("pages/window/index.js", (function (e, t, n, i, o, r, a, d, c, u, p, s, f
           type: String
         }
       },
-      setup: function (e) {
-        var t = e,
-          n = function () {
-            t.title && F.index.setNavigationBarTitle({
-              title: t.title
+      setup: function (exports) {
+        var module = exports,
+          require = function () {
+            module.title && formatData.index.setNavigationBarTitle({
+              title: module.title
             })
           };
-        return function (e, i) {
+        return function (exports, clearTimeout) {
           return {
-            a: decodeURIComponent(t.url),
-            b: F.o(n)
+            setInterval: decodeURIComponent(module.url),
+            state: formatData.setTimeout(require)
           }
         }
       }
     }),
-    H = F._export_sfc(G, [
-      ["__scopeId", "data-v-cc688ed9"]
+    getter = formatData._export_sfc(getType, [
+      ["__scopeId", "data-history-cc688ed9"]
     ]);
-  tt.createPage(H)
+  tt.createPage(getter)
 }));
 //# sourceMappingURL=index.js.map

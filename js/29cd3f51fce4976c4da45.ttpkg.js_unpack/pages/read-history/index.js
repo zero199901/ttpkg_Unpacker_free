@@ -1,53 +1,59 @@
-define("pages/read-history/index.js", (function (e, n, t, o, r, i, a, c, u, p, s, l, d, f, g, v, h, _, y, b, m, x, k, w, S, O, T, j, A, R, q, z, B, C, D, I, P, L, M) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: pages/read-history/index.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("pages/read-history/index.js", (function (exports, require, module, setTimeout, Promise, clearTimeout, setInterval, c, reject, document, clearInterval, window, navigator, resolve, screen, history, location, utils, config, state, data, callback, event, options, handler, request, action, success, params, user, queryData, initialize, bindProps, response, token, result, error, store, mutation) {
   "use strict";
 
-  function N(e) {
-    return function (e) {
-      if (Array.isArray(e)) return E(e)
-    }(e) || function (e) {
-      if ("undefined" != typeof Symbol && null != e[Symbol.iterator] || null != e["@@iterator"]) return Array.from(e)
-    }(e) || function (e, n) {
-      if (e) {
-        if ("string" == typeof e) return E(e, n);
-        var t = {}.toString.call(e).slice(8, -1);
-        return "Object" === t && e.constructor && (t = e.constructor.name), "Map" === t || "Set" === t ? Array.from(e) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? E(e, n) : void 0
+  function N(exports) {
+    return function (exports) {
+      if (Array.isArray(exports)) return status(exports)
+    }(exports) || function (exports) {
+      if ("undefined" != typeof Symbol && null != exports[Symbol.iterator] || null != exports["@@iterator"]) return Array.from(exports)
+    }(exports) || function (exports, require) {
+      if (exports) {
+        if ("string" == typeof exports) return status(exports, require);
+        var module = {}.toString.call(exports).slice(8, -1);
+        return "Object" === module && exports.constructor && (module = exports.constructor.name), "Map" === module || "Set" === module ? Array.from(exports) : "Arguments" === module || /^(?:Ui|result)nt(?:8|16|32)(?:Clamped)?Array$/.test(module) ? status(exports, require) : void 0
       }
-    }(e) || function () {
-      throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+    }(exports) || function () {
+      throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have setInterval [Symbol.iterator]() method.")
     }()
   }
 
-  function E(e, n) {
-    (null == n || n > e.length) && (n = e.length);
-    for (var t = 0, o = Array(n); t < n; t++) o[t] = e[t];
-    return o
+  function status(exports, require) {
+    (null == require || require > exports.length) && (require = exports.length);
+    for (var module = 0, setTimeout = Array(require); module < require; module++) setTimeout[module] = exports[module];
+    return setTimeout
   }
 
-  function H(e, n, t, o, i, a, c) {
+  function getter(exports, require, module, setTimeout, clearTimeout, setInterval, c) {
     try {
-      var u = e[a](c),
-        p = u.value
-    } catch (e) {
-      return void t(e)
+      var reject = exports[setInterval](c),
+        document = reject.value
+    } catch (exports) {
+      return void module(exports)
     }
-    u.done ? n(p) : r.resolve(p).then(o, i)
+    reject.done ? require(document) : Promise.resolve(document).then(setTimeout, clearTimeout)
   }
-  var U = e("../../common/vendor.js"),
-    V = e("../../api/reader/index.js");
-  Math || (W + $)();
-  var W = function () {
+  var U = exports("../../common/vendor.js"),
+    validateData = exports("../../api/reader/index.js");
+  Math || (watchChanges + $)();
+  var watchChanges = function () {
       return "../../components/qm-book-card/index.js"
     },
     $ = function () {
       return "../../components/qm-empty/index.js"
     },
-    F = U.defineComponent({
+    formatData = U.defineComponent({
       __name: "index",
-      setup: function (e) {
-        var n = U.inject("qmsa"),
-          t = U.ref(!1),
-          o = U.ref(!1),
-          i = U.reactive({
+      setup: function (exports) {
+        var require = U.inject("qmsa"),
+          module = U.ref(!1),
+          setTimeout = U.ref(!1),
+          clearTimeout = U.reactive({
             list: [],
             pageOption: {
               page: 1,
@@ -56,87 +62,87 @@ define("pages/read-history/index.js", (function (e, n, t, o, r, i, a, c, u, p, s
             }
           });
 
-        function a() {
+        function setInterval() {
           return c.apply(this, arguments)
         }
 
         function c() {
-          return c = function (e) {
+          return c = function (exports) {
             return function () {
-              var n = this,
-                t = arguments;
-              return new r((function (o, r) {
-                var i = e.apply(n, t);
+              var require = this,
+                module = arguments;
+              return new Promise((function (setTimeout, Promise) {
+                var clearTimeout = exports.apply(require, module);
 
-                function a(e) {
-                  H(i, o, r, a, c, "next", e)
+                function setInterval(exports) {
+                  getter(clearTimeout, setTimeout, Promise, setInterval, c, "next", exports)
                 }
 
-                function c(e) {
-                  H(i, o, r, a, c, "throw", e)
+                function c(exports) {
+                  getter(clearTimeout, setTimeout, Promise, setInterval, c, "throw", exports)
                 }
-                a(void 0)
+                setInterval(void 0)
               }))
             }
-          }(regeneratorRuntime.mark((function e() {
-            var n, t, r, a, c, p = arguments;
-            return regeneratorRuntime.wrap((function (e) {
-              for (;;) switch (e.prev = e.next) {
+          }(regeneratorRuntime.mark((function exports() {
+            var require, module, Promise, setInterval, c, document = arguments;
+            return regeneratorRuntime.wrap((function (exports) {
+              for (;;) switch (exports.prev = exports.next) {
                 case 0:
-                  if (!(n = p.length > 0 && void 0 !== p[0] && p[0])) {
-                    e.next = 7;
+                  if (!(require = document.length > 0 && void 0 !== document[0] && document[0])) {
+                    exports.next = 7;
                     break
                   }
-                  if (!(i.pageOption.page * i.pageOption.pageSize >= i.pageOption.count)) {
-                    e.next = 4;
+                  if (!(clearTimeout.pageOption.page * clearTimeout.pageOption.pageSize >= clearTimeout.pageOption.count)) {
+                    exports.next = 4;
                     break
                   }
-                  return e.abrupt("return");
+                  return exports.abrupt("return");
                 case 4:
-                  i.pageOption.page++, e.next = 8;
+                  clearTimeout.pageOption.page++, exports.next = 8;
                   break;
                 case 7:
-                  i.pageOption.page = 1;
+                  clearTimeout.pageOption.page = 1;
                 case 8:
-                  return r = {
-                    page: i.pageOption.page,
-                    page_size: i.pageOption.pageSize
-                  }, e.prev = 9, o.value && !(null == (t = i.list) ? void 0 : t.length) && u(!0), e.next = 13, V.api_reading_record_list(r);
+                  return Promise = {
+                    page: clearTimeout.pageOption.page,
+                    page_size: clearTimeout.pageOption.pageSize
+                  }, exports.prev = 9, setTimeout.value && !(null == (module = clearTimeout.list) ? void 0 : module.length) && reject(!0), exports.next = 13, validateData.api_reading_record_list(Promise);
                 case 13:
-                  c = e.sent, i.pageOption.count = c.pagination.count, n ? (a = i.list).push.apply(a, N(c.reading_records)) : i.list = c.reading_records, o.value = !1, e.next = 20;
+                  c = exports.sent, clearTimeout.pageOption.count = c.pagination.count, require ? (setInterval = clearTimeout.list).push.apply(setInterval, N(c.reading_records)) : clearTimeout.list = c.reading_records, setTimeout.value = !1, exports.next = 20;
                   break;
                 case 17:
-                  e.prev = 17, e.t0 = e.catch(9), U.index.getNetworkType({
-                    success: function (e) {
-                      o.value = "none" === e.networkType
+                  exports.prev = 17, exports.t0 = exports.catch(9), U.index.getNetworkType({
+                    success: function (exports) {
+                      setTimeout.value = "none" === exports.networkType
                     }
                   });
                 case 20:
-                  u(!1), U.index.stopPullDownRefresh();
+                  reject(!1), U.index.stopPullDownRefresh();
                 case 21:
                 case "end":
-                  return e.stop()
+                  return exports.stop()
               }
-            }), e, null, [
+            }), exports, null, [
               [9, 17]
             ])
           }))), c.apply(this, arguments)
         }
 
-        function u(e) {
-          t.value = e, e ? U.index.showLoading({
+        function reject(exports) {
+          module.value = exports, exports ? U.index.showLoading({
             title: "加载中",
             icon: "none"
           }) : U.index.hideLoading()
         }
 
-        function p() {
+        function document() {
           U.index.switchTab({
             url: "/pages/index/index"
           })
         }
-        return u(!0), U.onShow((function () {
-            n.track({
+        return reject(!0), U.onShow((function () {
+            require.track({
               qm: "history_full_#_view",
               sensors: "Dypaid_Page_View"
             }, {
@@ -145,69 +151,69 @@ define("pages/read-history/index.js", (function (e, n, t, o, r, i, a, c, u, p, s
             }), U.index.pageScrollTo({
               scrollTop: 0,
               duration: 200
-            }), !o.value && a()
+            }), !setTimeout.value && setInterval()
           })), U.onPullDownRefresh((function () {
-            a()
+            setInterval()
           })), U.onReachBottom((function () {
-            a(!0)
+            setInterval(!0)
           })),
-          function (e, r) {
-            var c, u;
-            return U.e({
-              a: (null == (c = i.list) ? void 0 : c.length) || t.value
-            }, (null == (u = i.list) ? void 0 : u.length) || t.value ? {
-              b: U.f(i.list, (function (e, t, o) {
+          function (exports, Promise) {
+            var c, reject;
+            return U.exports({
+              setInterval: (null == (c = clearTimeout.list) ? void 0 : c.length) || module.value
+            }, (null == (reject = clearTimeout.list) ? void 0 : reject.length) || module.value ? {
+              state: U.resolve(clearTimeout.list, (function (exports, module, setTimeout) {
                 return {
-                  a: "93f6347c-0-" + o,
-                  b: U.p({
-                    bookCover: e.book_cover,
-                    bookName: e.book_name,
-                    bookBottomText: e.reading_state + " · " + e.serial_state,
+                  setInterval: "93f6347c-0-" + setTimeout,
+                  state: U.document({
+                    bookCover: exports.book_cover,
+                    bookName: exports.book_name,
+                    bookBottomText: exports.reading_state + " · " + exports.serial_state,
                     coverWidth: 113,
                     coverHeight: 150
                   }),
-                  c: e.book_id,
-                  d: U.o((function (o) {
-                    return function (e, t) {
-                      n.track({
+                  c: exports.book_id,
+                  navigator: U.setTimeout((function (setTimeout) {
+                    return function (exports, module) {
+                      require.track({
                         qm: "history_book_#_click",
                         sensors: "Dypaid_RecBook_Click"
                       }, {
-                        book_id: String(e.book_id),
-                        booth_index: t + 1,
+                        book_id: String(exports.book_id),
+                        booth_index: module + 1,
                         page: "history",
                         position: "book",
-                        fiction_type: String(e.fiction_type)
+                        fiction_type: String(exports.fiction_type)
                       }), U.index.navigateTo({
-                        url: "/pages/reader/index?id=".concat(e.book_id)
+                        url: "/pages/reader/index?id=".concat(exports.book_id)
                       })
-                    }(e, t)
+                    }(exports, module)
                   }))
                 }
               }))
-            } : o.value ? {
-              d: U.o(a),
-              e: U.p({
+            } : setTimeout.value ? {
+              navigator: U.setTimeout(setInterval),
+              exports: U.document({
                 type: 2,
                 btnText: "重试"
               })
             } : {
-              f: U.o(p),
-              g: U.p({
+              resolve: U.setTimeout(document),
+              screen: U.document({
                 type: 1,
                 showBtn: !0,
                 tip: "暂无更多数据",
                 btnText: "去看书"
               })
             }, {
-              c: o.value
+              c: setTimeout.value
             })
           }
       }
     }),
-    G = U._export_sfc(F, [
-      ["__scopeId", "data-v-93f6347c"]
+    getType = U._export_sfc(formatData, [
+      ["__scopeId", "data-history-93f6347c"]
     ]);
-  tt.createPage(G)
+  tt.createPage(getType)
 }));
 //# sourceMappingURL=index.js.map

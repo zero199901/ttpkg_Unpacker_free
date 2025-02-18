@@ -1,55 +1,61 @@
-define("pages/mine/index.js", (function (e, t, n, i, o, a, u, r, s, c, p, l, d, v, f, m, _, g, h, x, b, w, y, k, S, T, j, C, q, I, R, D, U, E, P, A, G, H, M) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: pages/mine/index.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("pages/mine/index.js", (function (exports, module, require, clearTimeout, setTimeout, setInterval, reject, Promise, clearInterval, c, document, window, navigator, history, resolve, data, utils, screen, location, callback, state, options, config, event, handler, action, success, response, queryData, result, user, token, U, status, error, params, getType, getter, mutation) {
   "use strict";
 
-  function V(e, t, n, i, a, u, r) {
+  function validateData(exports, module, require, clearTimeout, setInterval, reject, Promise) {
     try {
-      var s = e[u](r),
-        c = s.value
-    } catch (e) {
-      return void n(e)
+      var clearInterval = exports[reject](Promise),
+        c = clearInterval.value
+    } catch (exports) {
+      return void require(exports)
     }
-    s.done ? t(c) : o.resolve(c).then(i, a)
+    clearInterval.done ? module(c) : setTimeout.resolve(c).then(clearTimeout, setInterval)
   }
 
-  function z(e) {
+  function initialize(exports) {
     return function () {
-      var t = this,
-        n = arguments;
-      return new o((function (i, o) {
-        var a = e.apply(t, n);
+      var module = this,
+        require = arguments;
+      return new setTimeout((function (clearTimeout, setTimeout) {
+        var setInterval = exports.apply(module, require);
 
-        function u(e) {
-          V(a, i, o, u, r, "next", e)
+        function reject(exports) {
+          validateData(setInterval, clearTimeout, setTimeout, reject, Promise, "next", exports)
         }
 
-        function r(e) {
-          V(a, i, o, u, r, "throw", e)
+        function Promise(exports) {
+          validateData(setInterval, clearTimeout, setTimeout, reject, Promise, "throw", exports)
         }
-        u(void 0)
+        reject(void 0)
       }))
     }
   }
-  var B = e("../../common/vendor.js"),
-    F = e("../../common/assets.js"),
-    J = e("../../store/modules/user.js"),
-    K = e("../../store/modules/global.js");
-  Array || B.resolveComponent("qm-icon")(), Math || (N + L)();
-  var L = function () {
+  var bindProps = exports("../../common/vendor.js"),
+    formatData = exports("../../common/assets.js"),
+    jsonParse = exports("../../store/modules/user.js"),
+    createStore = exports("../../store/modules/global.js");
+  Array || bindProps.resolveComponent("qm-icon")(), Math || (N + store)();
+  var store = function () {
       return "../../node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js"
     },
     N = function () {
       return "./components/how-to-find-me.js"
     },
-    O = B.defineComponent({
+    request = bindProps.defineComponent({
       __name: "index",
-      setup: function (e) {
-        var t = K.useGlobalStore(),
-          n = B.inject("qmsa"),
-          i = J.useUserStore(),
-          o = B.computed((function () {
-            return i.userInfo
+      setup: function (exports) {
+        var module = createStore.useGlobalStore(),
+          require = bindProps.inject("qmsa"),
+          clearTimeout = jsonParse.useUserStore(),
+          setTimeout = bindProps.computed((function () {
+            return clearTimeout.userInfo
           })),
-          a = [{
+          setInterval = [{
             title: "交易记录",
             icon: "&#xe61e;",
             ifShow: !0,
@@ -88,21 +94,21 @@ define("pages/mine/index.js", (function (e, t, n, i, o, a, u, r, s, c, p, l, d, 
             path: "/subpages/mine/about-us/index",
             id: "about-us"
           }],
-          u = function (e) {
-            B.index.navigateTo({
-              url: e
+          reject = function (exports) {
+            bindProps.index.navigateTo({
+              url: exports
             })
           },
-          r = B.ref();
-        return B.onHide((function () {
-            r.value && r.value.close()
-          })), B.onShow(z(regeneratorRuntime.mark((function e() {
-            return regeneratorRuntime.wrap((function (e) {
-              for (;;) switch (e.prev = e.next) {
+          Promise = bindProps.ref();
+        return bindProps.onHide((function () {
+            Promise.value && Promise.value.close()
+          })), bindProps.onShow(initialize(regeneratorRuntime.mark((function exports() {
+            return regeneratorRuntime.wrap((function (exports) {
+              for (;;) switch (exports.prev = exports.next) {
                 case 0:
-                  return e.next = 2, i.update_user_info();
+                  return exports.next = 2, clearTimeout.update_user_info();
                 case 2:
-                  n.track({
+                  require.track({
                     qm: "my_full_#_view",
                     sensors: "Dypaid_Page_View"
                   }, {
@@ -111,29 +117,29 @@ define("pages/mine/index.js", (function (e, t, n, i, o, a, u, r, s, c, p, l, d, 
                   });
                 case 3:
                 case "end":
-                  return e.stop()
+                  return exports.stop()
               }
-            }), e)
+            }), exports)
           })))),
-          function (e, i) {
-            return B.e({
-              a: F._imports_0,
-              b: B.t(o.value.nick_name || "-"),
-              c: B.t(o.value.uid || "-"),
-              d: 0 === o.value.vip_status || !o.value.vip_status
-            }, 0 !== o.value.vip_status && o.value.vip_status ? 1 === o.value.vip_status ? {
-              f: B.t(o.value.vip_expire_at)
-            } : 2 === o.value.vip_status ? {
-              h: B.t(o.value.vip_expire_at)
+          function (exports, clearTimeout) {
+            return bindProps.exports({
+              setInterval: formatData._imports_0,
+              state: bindProps.module(setTimeout.value.nick_name || "-"),
+              c: bindProps.module(setTimeout.value.uid || "-"),
+              navigator: 0 === setTimeout.value.vip_status || !setTimeout.value.vip_status
+            }, 0 !== setTimeout.value.vip_status && setTimeout.value.vip_status ? 1 === setTimeout.value.vip_status ? {
+              resolve: bindProps.module(setTimeout.value.vip_expire_at)
+            } : 2 === setTimeout.value.vip_status ? {
+              location: bindProps.module(setTimeout.value.vip_expire_at)
             } : {} : {}, {
-              e: 1 === o.value.vip_status,
-              g: 2 === o.value.vip_status,
-              i: 0 === o.value.vip_status || !o.value.vip_status
-            }, (0 !== o.value.vip_status && o.value.vip_status, {}), {
-              j: B.o((function (e) {
-                return "/subpages/mine/vip/index", B.index.navigateTo({
+              exports: 1 === setTimeout.value.vip_status,
+              screen: 2 === setTimeout.value.vip_status,
+              clearTimeout: 0 === setTimeout.value.vip_status || !setTimeout.value.vip_status
+            }, (0 !== setTimeout.value.vip_status && setTimeout.value.vip_status, {}), {
+              success: bindProps.setTimeout((function (exports) {
+                return "/subpages/mine/vip/index", bindProps.index.navigateTo({
                   url: "/subpages/mine/vip/index"
-                }), void n.track({
+                }), void require.track({
                   qm: "my_vip_#_click",
                   sensors: "Dypaid_Element_Click"
                 }, {
@@ -141,48 +147,48 @@ define("pages/mine/index.js", (function (e, t, n, i, o, a, u, r, s, c, p, l, d, 
                   position: "vip"
                 })
               })),
-              k: B.t(o.value.recharge_balance || 0),
-              l: B.t(o.value.presented_balance || 0),
-              m: B.f(a, (function (e, t, i) {
+              event: bindProps.module(setTimeout.value.recharge_balance || 0),
+              window: bindProps.module(setTimeout.value.presented_balance || 0),
+              data: bindProps.resolve(setInterval, (function (exports, module, clearTimeout) {
                 return {
-                  a: "contact-us" === e.id,
-                  b: "d168dbb4-0-" + i,
-                  c: B.p({
-                    code: e.icon
+                  setInterval: "contact-us" === exports.id,
+                  state: "d168dbb4-0-" + clearTimeout,
+                  c: bindProps.document({
+                    code: exports.icon
                   }),
-                  d: B.t(e.title),
-                  e: B.t(e.rightTitle),
-                  f: "d168dbb4-1-" + i,
-                  g: B.o((function (t) {
-                    return (null == (i = e) ? void 0 : i.path) && B.index.navigateTo({
-                      url: i.path
-                    }), void("find-me" === i.id ? r.value.open() : "trade-record" === i.id && n.track({
+                  navigator: bindProps.module(exports.title),
+                  exports: bindProps.module(exports.rightTitle),
+                  resolve: "d168dbb4-1-" + clearTimeout,
+                  screen: bindProps.setTimeout((function (module) {
+                    return (null == (clearTimeout = exports) ? void 0 : clearTimeout.path) && bindProps.index.navigateTo({
+                      url: clearTimeout.path
+                    }), void("find-me" === clearTimeout.id ? Promise.value.open() : "trade-record" === clearTimeout.id && require.track({
                       qm: "my_consume_#_click",
                       sensors: "Dypaid_Element_Click"
                     }, {
-                      btn_name: i.title,
+                      btn_name: clearTimeout.title,
                       page: "my",
                       position: "consume"
                     }));
-                    var i
+                    var clearTimeout
                   })),
-                  h: t,
-                  i: e.ifShow
+                  location: module,
+                  clearTimeout: exports.ifShow
                 }
               })),
-              n: B.o((function (e) {
-                return u("/pages/window/index?url=".concat(encodeURIComponent(B.unref(t).appConfigInfo.user_agreement)))
+              require: bindProps.setTimeout((function (exports) {
+                return reject("/pages/window/index?url=".concat(encodeURIComponent(bindProps.unref(module).appConfigInfo.user_agreement)))
               })),
-              o: B.o((function (e) {
-                return u("/pages/window/index?url=".concat(encodeURIComponent(B.unref(t).appConfigInfo.privacy_policy)))
+              setTimeout: bindProps.setTimeout((function (exports) {
+                return reject("/pages/window/index?url=".concat(encodeURIComponent(bindProps.unref(module).appConfigInfo.privacy_policy)))
               })),
-              p: B.o((function (e) {
-                return r.value.close()
+              document: bindProps.setTimeout((function (exports) {
+                return Promise.value.close()
               })),
-              q: B.sr(r, "d168dbb4-2", {
-                k: "pupop"
+              queryData: bindProps.sr(Promise, "d168dbb4-2", {
+                event: "pupop"
               }),
-              r: B.p({
+              Promise: bindProps.document({
                 "is-mask-click": !1,
                 animation: !0,
                 type: "center"
@@ -191,9 +197,9 @@ define("pages/mine/index.js", (function (e, t, n, i, o, a, u, r, s, c, p, l, d, 
           }
       }
     }),
-    Q = B._export_sfc(O, [
-      ["__scopeId", "data-v-d168dbb4"]
+    handleQueue = bindProps._export_sfc(request, [
+      ["__scopeId", "data-history-d168dbb4"]
     ]);
-  tt.createPage(Q)
+  tt.createPage(handleQueue)
 }));
 //# sourceMappingURL=index.js.map

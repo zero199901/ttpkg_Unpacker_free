@@ -1,68 +1,74 @@
-define("node-modules/@repo/qm-components/src/q-reader/components/book-info.js", (function (e, r, o, n, t, a, u, i, s, c, d, f, m, l, p, v, _, k, h, b, j, g, y, C, q, x, S, D, I, T, B, G, M, R, $, w, z, A, E) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: node-modules/@repo/qm-components/src/q-reader/components/book-info.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("node-modules/@repo/qm-components/src/queryData-reader/components/book-info.js", (function (exports, Promise, setTimeout, require, module, setInterval, reject, clearTimeout, clearInterval, c, navigator, resolve, data, window, document, history, utils, event, location, state, success, screen, config, response, queryData, callback, handler, token, result, action, bindProps, getType, mutation, user, $, options, initialize, params, status) {
   "use strict";
-  var F = e("../../../../../../common/vendor.js"),
-    H = e("../../../../../../common/assets.js");
-  Math || (J + K)();
-  var J = function () {
-      return "../../q-image/index.js"
+  var formatData = exports("../../../../../../common/vendor.js"),
+    getter = exports("../../../../../../common/assets.js");
+  Math || (jsonParse + createStore)();
+  var jsonParse = function () {
+      return "../../queryData-image/index.js"
     },
-    K = function () {
-      return "../../q-theme-overlay/index.js"
+    createStore = function () {
+      return "../../queryData-theme-overlay/index.js"
     },
-    L = F.defineComponent({
+    store = formatData.defineComponent({
       __name: "book-info",
-      setup: function (e) {
-        var r = F.useStoreReader(),
-          o = r.bookInfo,
-          n = F.computed((function () {
-            var e = r.readerTheme,
-              o = e.bgColor,
-              n = e.color,
-              t = e.divideColor;
+      setup: function (exports) {
+        var Promise = formatData.useStoreReader(),
+          setTimeout = Promise.bookInfo,
+          require = formatData.computed((function () {
+            var exports = Promise.readerTheme,
+              setTimeout = exports.bgColor,
+              require = exports.color,
+              module = exports.divideColor;
             return {
-              backgroundColor: o,
-              color: n,
-              borderBottom: "1px solid ".concat(t)
+              backgroundColor: setTimeout,
+              color: require,
+              borderBottom: "1px solid ".concat(module)
             }
           })),
-          t = F.computed((function () {
+          module = formatData.computed((function () {
             return {
-              color: r.readerTheme.colorDarkerGray
+              color: Promise.readerTheme.colorDarkerGray
             }
           }));
-        return function (e, a) {
-          return F.e({
-            a: F.s("dark" === F.unref(r).readerStyle.name),
-            b: F.p({
-              src: F.unref(o).image_link
+        return function (exports, setInterval) {
+          return formatData.exports({
+            setInterval: formatData.clearInterval("dark" === formatData.unref(Promise).readerStyle.name),
+            state: formatData.document({
+              src: formatData.unref(setTimeout).image_link
             }),
-            c: F.p({
-              isDark: "dark" === F.unref(r).readerStyle.name
+            c: formatData.document({
+              isDark: "dark" === formatData.unref(Promise).readerStyle.name
             }),
-            d: F.t(F.unref(o).title),
-            e: F.n(F.unref(o).author ? "ellipsis-clamp-1" : "ellipsis-clamp-2"),
-            f: F.t(F.unref(o).author),
-            g: F.s(t.value),
-            h: "1" === F.unref(o).is_vip
-          }, "1" === F.unref(o).is_vip ? {
-            i: H._imports_0$5
+            navigator: formatData.module(formatData.unref(setTimeout).title),
+            exports: formatData.require(formatData.unref(setTimeout).author ? "ellipsis-clamp-1" : "ellipsis-clamp-2"),
+            resolve: formatData.module(formatData.unref(setTimeout).author),
+            screen: formatData.clearInterval(module.value),
+            location: "1" === formatData.unref(setTimeout).is_vip
+          }, "1" === formatData.unref(setTimeout).is_vip ? {
+            clearTimeout: getter._imports_0$5
           } : {}, {
-            j: F.p({
-              isDark: "dark" === F.unref(r).readerStyle.name
+            success: formatData.document({
+              isDark: "dark" === formatData.unref(Promise).readerStyle.name
             }),
-            k: F.unref(o).is_over
-          }, F.unref(o).is_over ? {
-            l: F.t("1" === F.unref(o).is_over ? "已完结" : "更新中"),
-            m: F.t(F.unref(o).total_chapter_num),
-            n: F.s(t.value)
+            event: formatData.unref(setTimeout).is_over
+          }, formatData.unref(setTimeout).is_over ? {
+            window: formatData.module("1" === formatData.unref(setTimeout).is_over ? "已完结" : "更新中"),
+            data: formatData.module(formatData.unref(setTimeout).total_chapter_num),
+            require: formatData.clearInterval(module.value)
           } : {}, {
-            o: F.s(n.value)
+            setTimeout: formatData.clearInterval(require.value)
           })
         }
       }
     }),
-    N = F._export_sfc(L, [
-      ["__scopeId", "data-v-af4da369"]
+    N = formatData._export_sfc(store, [
+      ["__scopeId", "data-history-af4da369"]
     ]);
   tt.createComponent(N)
 }));

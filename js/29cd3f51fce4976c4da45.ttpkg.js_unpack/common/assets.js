@@ -1,5 +1,11 @@
-define("common/assets.js", (function (t, s, i, a, p, n, o, _, e, m, g, c, r, l, $, d, f, u, b, v, y, j, q, h, k, w, x, z, A, B, C, D, E, F, G, H, I, J, K) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: common/assets.js
+ * 处理时间: 2025-02-18 13:03:28
+ */
+
+define("common/assets.js", (function (module, clearInterval, clearTimeout, setInterval, document, require, setTimeout, utils, exports, data, screen, c, Promise, window, $, navigator, resolve, reject, state, history, config, success, queryData, location, event, options, callback, initialize, params, bindProps, response, token, status, formatData, getType, getter, result, jsonParse, createStore) {
   "use strict";
-  i._imports_0 = "/static/mine/default-avatar.png", i._imports_0$1 = "/static/pay/queen.png", i._imports_0$2 = "/static/global/empty.png", i._imports_0$3 = "/static/pay/vip.png", i._imports_0$4 = "/static/global/loading.png", i._imports_0$5 = "/assets/vip.0f26bdea.png"
+  clearTimeout._imports_0 = "/static/mine/default-avatar.png", clearTimeout._imports_0$1 = "/static/pay/queen.png", clearTimeout._imports_0$2 = "/static/global/empty.png", clearTimeout._imports_0$3 = "/static/pay/vip.png", clearTimeout._imports_0$4 = "/static/global/loading.png", clearTimeout._imports_0$5 = "/assets/vip.0f26bdea.png"
 }));
 //# sourceMappingURL=assets.js.map

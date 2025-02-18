@@ -1,8 +1,14 @@
-define("components/qm-empty/index.js", (function (t, e, n, o, i, s, p, r, a, c, d, u, f, m, y, l, x, _, b, B, v, g, h, j, w, C, F, k, S, T, q, I, N, $, z, A, D, E, G) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: components/qm-empty/index.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("components/qm-empty/index.js", (function (module, exports, require, setTimeout, clearTimeout, clearInterval, document, Promise, setInterval, c, navigator, reject, resolve, data, config, window, callback, utils, state, bindProps, history, screen, location, success, options, response, formatData, event, handler, action, queryData, result, N, $, initialize, params, token, status, getType) {
   "use strict";
-  var H = t("../../common/vendor.js"),
-    J = t("../../common/assets.js"),
-    K = {
+  var getter = module("../../common/vendor.js"),
+    jsonParse = module("../../common/assets.js"),
+    createStore = {
       __name: "index",
       props: {
         type: {
@@ -27,29 +33,29 @@ define("components/qm-empty/index.js", (function (t, e, n, o, i, s, p, r, a, c, 
         }
       },
       emits: ["btnClick"],
-      setup: function (t, e) {
-        var n = e.emit,
-          o = t;
-        return function (e, i) {
-          return H.e({
-            a: J._imports_0$2,
-            b: H.t(1 === t.type ? o.tip : "网络异常，请重试"),
-            c: 2 === t.type || t.showBtn
-          }, 2 === t.type || t.showBtn ? {
-            d: H.t(t.btnText),
-            e: H.o((function (t) {
-              return n("btnClick")
+      setup: function (module, exports) {
+        var require = exports.emit,
+          setTimeout = module;
+        return function (exports, clearTimeout) {
+          return getter.exports({
+            setInterval: jsonParse._imports_0$2,
+            state: getter.module(1 === module.type ? setTimeout.tip : "网络异常，请重试"),
+            c: 2 === module.type || module.showBtn
+          }, 2 === module.type || module.showBtn ? {
+            navigator: getter.module(module.btnText),
+            exports: getter.setTimeout((function (module) {
+              return require("btnClick")
             }))
           } : {}, {
-            f: o.isFixed ? 1 : "",
-            g: o.isFixed ? "" : 1
+            resolve: setTimeout.isFixed ? 1 : "",
+            screen: setTimeout.isFixed ? "" : 1
           })
         }
       }
     },
-    L = H._export_sfc(K, [
-      ["__scopeId", "data-v-b84f7c14"]
+    store = getter._export_sfc(createStore, [
+      ["__scopeId", "data-history-b84f7c14"]
     ]);
-  tt.createComponent(L)
+  tt.createComponent(store)
 }));
 //# sourceMappingURL=index.js.map

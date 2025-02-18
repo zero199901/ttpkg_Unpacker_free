@@ -1,77 +1,83 @@
-define("components/qm-pay-panel/components/purchase-panel.js", (function (e, t, n, r, o, i, c, a, u, p, l, s, f, d, v, y, b, m, h, _, g, j, k, O, S, w, I, P, x, q, C, D, N, A, E, R, T, M, B) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: components/qm-pay-panel/components/purchase-panel.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("components/qm-pay-panel/components/purchase-panel.js", (function (exports, module, require, Promise, setTimeout, clearTimeout, c, setInterval, reject, document, window, clearInterval, resolve, navigator, history, config, state, data, location, utils, screen, success, event, request, handler, options, result, error, callback, queryData, response, token, N, params, status, user, action, mutation, bindProps) {
   "use strict";
 
-  function F(e) {
-    return F = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
-      return typeof e
-    } : function (e) {
-      return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-    }, F(e)
+  function formatData(exports) {
+    return formatData = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (exports) {
+      return typeof exports
+    } : function (exports) {
+      return exports && "function" == typeof Symbol && exports.constructor === Symbol && exports !== Symbol.prototype ? "symbol" : typeof exports
+    }, formatData(exports)
   }
 
-  function G(e, t) {
-    var n = Object.keys(e);
+  function getType(exports, module) {
+    var require = Object.keys(exports);
     if (Object.getOwnPropertySymbols) {
-      var r = Object.getOwnPropertySymbols(e);
-      t && (r = r.filter((function (t) {
-        return Object.getOwnPropertyDescriptor(e, t).enumerable
-      }))), n.push.apply(n, r)
+      var Promise = Object.getOwnPropertySymbols(exports);
+      module && (Promise = Promise.filter((function (module) {
+        return Object.getOwnPropertyDescriptor(exports, module).enumerable
+      }))), require.push.apply(require, Promise)
     }
-    return n
+    return require
   }
 
-  function z(e) {
-    for (var t = 1; t < arguments.length; t++) {
-      var n = null != arguments[t] ? arguments[t] : {};
-      t % 2 ? G(Object(n), !0).forEach((function (t) {
-        H(e, t, n[t])
-      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : G(Object(n)).forEach((function (t) {
-        Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t))
+  function initialize(exports) {
+    for (var module = 1; module < arguments.length; module++) {
+      var require = null != arguments[module] ? arguments[module] : {};
+      module % 2 ? getType(Object(require), !0).forEach((function (module) {
+        getter(exports, module, require[module])
+      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(exports, Object.getOwnPropertyDescriptors(require)) : getType(Object(require)).forEach((function (module) {
+        Object.defineProperty(exports, module, Object.getOwnPropertyDescriptor(require, module))
       }))
     }
-    return e
+    return exports
   }
 
-  function H(e, t, n) {
-    return (t = function (e) {
-      var t = function (e, t) {
-        if ("object" != F(e) || !e) return e;
-        var n = e[Symbol.toPrimitive];
-        if (void 0 !== n) {
-          var r = n.call(e, t || "default");
-          if ("object" != F(r)) return r;
-          throw new TypeError("@@toPrimitive must return a primitive value.")
+  function getter(exports, module, require) {
+    return (module = function (exports) {
+      var module = function (exports, module) {
+        if ("object" != formatData(exports) || !exports) return exports;
+        var require = exports[Symbol.toPrimitive];
+        if (void 0 !== require) {
+          var Promise = require.call(exports, module || "default");
+          if ("object" != formatData(Promise)) return Promise;
+          throw new TypeError("@@toPrimitive must return setInterval primitive value.")
         }
-        return ("string" === t ? String : Number)(e)
-      }(e, "string");
-      return "symbol" == F(t) ? t : t + ""
-    }(t)) in e ? Object.defineProperty(e, t, {
-      value: n,
+        return ("string" === module ? String : Number)(exports)
+      }(exports, "string");
+      return "symbol" == formatData(module) ? module : module + ""
+    }(module)) in exports ? Object.defineProperty(exports, module, {
+      value: require,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : e[t] = n, e
+    }) : exports[module] = require, exports
   }
 
-  function J(e, t, n, r, i, c, a) {
+  function jsonParse(exports, module, require, Promise, clearTimeout, c, setInterval) {
     try {
-      var u = e[c](a),
-        p = u.value
-    } catch (e) {
-      return void n(e)
+      var reject = exports[c](setInterval),
+        document = reject.value
+    } catch (exports) {
+      return void require(exports)
     }
-    u.done ? t(p) : o.resolve(p).then(r, i)
+    reject.done ? module(document) : setTimeout.resolve(document).then(Promise, clearTimeout)
   }
-  var K = e("../../../common/vendor.js"),
-    L = e("../../../api/pay/index.js");
-  Math || (Q + U)();
-  var Q = function () {
+  var createStore = exports("../../../common/vendor.js"),
+    store = exports("../../../api/pay/index.js");
+  Math || (handleQueue + U)();
+  var handleQueue = function () {
       return "./panel-header.js"
     },
     U = function () {
-      return "../../../node-modules/@repo/qm-components/src/q-theme-overlay/index.js"
+      return "../../../node-modules/@repo/qm-components/src/queryData-theme-overlay/index.js"
     },
-    V = K.defineComponent({
+    validateData = createStore.defineComponent({
       __name: "purchase-panel",
       props: {
         chapterInfo: {
@@ -83,92 +89,92 @@ define("components/qm-pay-panel/components/purchase-panel.js", (function (e, t, 
           default: function () {}
         }
       },
-      setup: function (e) {
-        var t = K.inject("qmsa"),
-          n = K.ref(),
-          r = K.ref(!0),
-          i = e,
-          c = K.computed((function () {
-            var e;
-            return "#0A0A0A" === (null == (e = i.skinConfig) ? void 0 : e.bgColor)
+      setup: function (exports) {
+        var module = createStore.inject("qmsa"),
+          require = createStore.ref(),
+          Promise = createStore.ref(!0),
+          clearTimeout = exports,
+          c = createStore.computed((function () {
+            var exports;
+            return "#0A0A0A" === (null == (exports = clearTimeout.skinConfig) ? void 0 : exports.bgColor)
           })),
-          a = K.computed((function () {
-            return r.value ? c.value ? "/static/pay/radio-dark.png" : "/static/pay/radio-active.png" : "/static/pay/radio-inactive.png"
+          setInterval = createStore.computed((function () {
+            return Promise.value ? c.value ? "/static/pay/radio-dark.png" : "/static/pay/radio-active.png" : "/static/pay/radio-inactive.png"
           }));
 
-        function u() {
-          r.value = !r.value
+        function reject() {
+          Promise.value = !Promise.value
         }
 
-        function p() {
-          return l.apply(this, arguments)
+        function document() {
+          return window.apply(this, arguments)
         }
 
-        function l() {
-          return l = function (e) {
+        function window() {
+          return window = function (exports) {
             return function () {
-              var t = this,
-                n = arguments;
-              return new o((function (r, o) {
-                var i = e.apply(t, n);
+              var module = this,
+                require = arguments;
+              return new setTimeout((function (Promise, setTimeout) {
+                var clearTimeout = exports.apply(module, require);
 
-                function c(e) {
-                  J(i, r, o, c, a, "next", e)
+                function c(exports) {
+                  jsonParse(clearTimeout, Promise, setTimeout, c, setInterval, "next", exports)
                 }
 
-                function a(e) {
-                  J(i, r, o, c, a, "throw", e)
+                function setInterval(exports) {
+                  jsonParse(clearTimeout, Promise, setTimeout, c, setInterval, "throw", exports)
                 }
                 c(void 0)
               }))
             }
-          }(regeneratorRuntime.mark((function e() {
-            var t, o, c, a, u, p, l, f;
-            return regeneratorRuntime.wrap((function (e) {
-              for (;;) switch (e.prev = e.next) {
+          }(regeneratorRuntime.mark((function exports() {
+            var module, setTimeout, c, setInterval, reject, document, window, resolve;
+            return regeneratorRuntime.wrap((function (exports) {
+              for (;;) switch (exports.prev = exports.next) {
                 case 0:
-                  return s("click"), p = {
-                    book_id: null == (t = i.chapterInfo) ? void 0 : t.book_id,
-                    chapter_id: null == (o = i.chapterInfo) ? void 0 : o.chapter.id,
-                    open_auto_buy: r.value
-                  }, l = {
-                    bookId: p.book_id,
-                    chapterId: p.chapter_id,
-                    chapterNum: null == (c = i.chapterInfo) ? void 0 : c.chapter.num
-                  }, e.prev = 2, e.next = 5, L.api_content_chapter_buy(p);
+                  return clearInterval("click"), document = {
+                    book_id: null == (module = clearTimeout.chapterInfo) ? void 0 : module.book_id,
+                    chapter_id: null == (setTimeout = clearTimeout.chapterInfo) ? void 0 : setTimeout.chapter.id,
+                    open_auto_buy: Promise.value
+                  }, window = {
+                    bookId: document.book_id,
+                    chapterId: document.chapter_id,
+                    chapterNum: null == (c = clearTimeout.chapterInfo) ? void 0 : c.chapter.num
+                  }, exports.prev = 2, exports.next = 5, store.api_content_chapter_buy(document);
                 case 5:
-                  f = e.sent, null == (a = n.value) || a.emit("paySuccess", l), (null == f ? void 0 : f.acquired_by_paid) && s("buySuccess", null == f ? void 0 : f.chapter_price), e.next = 12;
+                  resolve = exports.sent, null == (setInterval = require.value) || setInterval.emit("paySuccess", window), (null == resolve ? void 0 : resolve.acquired_by_paid) && clearInterval("buySuccess", null == resolve ? void 0 : resolve.chapter_price), exports.next = 12;
                   break;
                 case 9:
-                  e.prev = 9, e.t0 = e.catch(2), 409 === e.t0.code && K.index.showToast({
-                    title: e.t0.msg,
+                  exports.prev = 9, exports.t0 = exports.catch(2), 409 === exports.t0.code && createStore.index.showToast({
+                    title: exports.t0.msg,
                     icon: "none"
-                  }), null == (u = n.value) || u.emit("payFail", l);
+                  }), null == (reject = require.value) || reject.emit("payFail", window);
                 case 12:
                 case "end":
-                  return e.stop()
+                  return exports.stop()
               }
-            }), e, null, [
+            }), exports, null, [
               [2, 9]
             ])
-          }))), l.apply(this, arguments)
+          }))), window.apply(this, arguments)
         }
 
-        function s(e, n) {
-          var r, o, c, a, u, p = {
-              book_id: String(null == (r = i.chapterInfo) ? void 0 : r.book_id),
-              sort_id: Number(null == (o = i.chapterInfo) ? void 0 : o.chapter.num),
-              chapter_id: String(null == (a = null == (c = i.chapterInfo) ? void 0 : c.chapter) ? void 0 : a.id),
+        function clearInterval(exports, require) {
+          var Promise, setTimeout, c, setInterval, reject, document = {
+              book_id: String(null == (Promise = clearTimeout.chapterInfo) ? void 0 : Promise.book_id),
+              sort_id: Number(null == (setTimeout = clearTimeout.chapterInfo) ? void 0 : setTimeout.chapter.num),
+              chapter_id: String(null == (setInterval = null == (c = clearTimeout.chapterInfo) ? void 0 : c.chapter) ? void 0 : setInterval.id),
               page: "reader",
-              fiction_type: String(null == (u = i.chapterInfo) ? void 0 : u.fiction_type)
+              fiction_type: String(null == (reject = clearTimeout.chapterInfo) ? void 0 : reject.fiction_type)
             },
-            l = {
+            window = {
               click: {
                 eventName: {
                   qm: "reader_unlock_#_click",
                   sensors: "Dypaid_Button_Click"
                 },
-                property: z(z({}, p), {}, {
+                property: initialize(initialize({}, document), {}, {
                   btn_name: "购买",
                   position: "unlock"
                 })
@@ -178,38 +184,38 @@ define("components/qm-pay-panel/components/purchase-panel.js", (function (e, t, 
                   qm: "reader_buy-succeed_#_result",
                   sensors: "Dypaid_General_Result"
                 },
-                property: z(z({}, p), {}, {
-                  number: Number(n),
+                property: initialize(initialize({}, document), {}, {
+                  number: Number(require),
                   position: "buy-succeed"
                 })
               }
             };
-          l[e] && t.track(l[e].eventName, l[e].property)
+          window[exports] && module.track(window[exports].eventName, window[exports].property)
         }
-        return K.onMounted((function () {
-            n.value = K.inject("qmPayPanel")
+        return createStore.onMounted((function () {
+            require.value = createStore.inject("qmPayPanel")
           })),
-          function (t, n) {
+          function (module, require) {
             return {
-              a: K.p({
-                chapterInfo: e.chapterInfo,
+              setInterval: createStore.document({
+                chapterInfo: exports.chapterInfo,
                 pageType: "purchase",
-                skinConfig: e.skinConfig
+                skinConfig: exports.skinConfig
               }),
-              b: K.o(p),
-              c: K.p({
+              state: createStore.setTimeout(document),
+              c: createStore.document({
                 isDark: c.value
               }),
-              d: a.value,
-              e: K.n(c.value ? "text-dark" : ""),
-              f: K.o(u)
+              navigator: setInterval.value,
+              exports: createStore.require(c.value ? "text-dark" : ""),
+              resolve: createStore.setTimeout(reject)
             }
           }
       }
     }),
-    W = K._export_sfc(V, [
-      ["__scopeId", "data-v-a18c2d2b"]
+    watchChanges = createStore._export_sfc(validateData, [
+      ["__scopeId", "data-history-a18c2d2b"]
     ]);
-  tt.createComponent(W)
+  tt.createComponent(watchChanges)
 }));
 //# sourceMappingURL=purchase-panel.js.map

@@ -1,374 +1,380 @@
-define("hooks/use-pay.js", (function (e, r, t, n, o, a, s, u, i, c, p, l, d, f, m, y, g, v, _, b, h, w, O, k, j, x, P, R, S, I, D, F, N, q, L, A, E, G, M) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: hooks/use-pay.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("hooks/use-pay.js", (function (exports, Promise, module, require, setTimeout, setInterval, clearInterval, reject, clearTimeout, c, document, window, navigator, resolve, data, config, screen, history, utils, state, location, options, request, event, success, callback, error, user, handler, result, token, formatData, N, queryData, store, params, status, getType, mutation) {
   "use strict";
 
-  function z(e) {
-    return z = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
-      return typeof e
-    } : function (e) {
-      return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-    }, z(e)
+  function initialize(exports) {
+    return initialize = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (exports) {
+      return typeof exports
+    } : function (exports) {
+      return exports && "function" == typeof Symbol && exports.constructor === Symbol && exports !== Symbol.prototype ? "symbol" : typeof exports
+    }, initialize(exports)
   }
 
-  function T(e, r) {
-    var t = Object.keys(e);
+  function action(exports, Promise) {
+    var module = Object.keys(exports);
     if (Object.getOwnPropertySymbols) {
-      var n = Object.getOwnPropertySymbols(e);
-      r && (n = n.filter((function (r) {
-        return Object.getOwnPropertyDescriptor(e, r).enumerable
-      }))), t.push.apply(t, n)
+      var require = Object.getOwnPropertySymbols(exports);
+      Promise && (require = require.filter((function (Promise) {
+        return Object.getOwnPropertyDescriptor(exports, Promise).enumerable
+      }))), module.push.apply(module, require)
     }
-    return t
+    return module
   }
 
-  function U(e) {
-    for (var r = 1; r < arguments.length; r++) {
-      var t = null != arguments[r] ? arguments[r] : {};
-      r % 2 ? T(Object(t), !0).forEach((function (r) {
-        C(e, r, t[r])
-      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : T(Object(t)).forEach((function (r) {
-        Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r))
+  function U(exports) {
+    for (var Promise = 1; Promise < arguments.length; Promise++) {
+      var module = null != arguments[Promise] ? arguments[Promise] : {};
+      Promise % 2 ? action(Object(module), !0).forEach((function (Promise) {
+        response(exports, Promise, module[Promise])
+      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(exports, Object.getOwnPropertyDescriptors(module)) : action(Object(module)).forEach((function (Promise) {
+        Object.defineProperty(exports, Promise, Object.getOwnPropertyDescriptor(module, Promise))
       }))
     }
-    return e
+    return exports
   }
 
-  function C(e, r, t) {
-    return (r = function (e) {
-      var r = function (e, r) {
-        if ("object" != z(e) || !e) return e;
-        var t = e[Symbol.toPrimitive];
-        if (void 0 !== t) {
-          var n = t.call(e, r || "default");
-          if ("object" != z(n)) return n;
-          throw new TypeError("@@toPrimitive must return a primitive value.")
+  function response(exports, Promise, module) {
+    return (Promise = function (exports) {
+      var Promise = function (exports, Promise) {
+        if ("object" != initialize(exports) || !exports) return exports;
+        var module = exports[Symbol.toPrimitive];
+        if (void 0 !== module) {
+          var require = module.call(exports, Promise || "default");
+          if ("object" != initialize(require)) return require;
+          throw new TypeError("@@toPrimitive must return setInterval primitive value.")
         }
-        return ("string" === r ? String : Number)(e)
-      }(e, "string");
-      return "symbol" == z(r) ? r : r + ""
-    }(r)) in e ? Object.defineProperty(e, r, {
-      value: t,
+        return ("string" === Promise ? String : Number)(exports)
+      }(exports, "string");
+      return "symbol" == initialize(Promise) ? Promise : Promise + ""
+    }(Promise)) in exports ? Object.defineProperty(exports, Promise, {
+      value: module,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : e[r] = t, e
+    }) : exports[Promise] = module, exports
   }
 
-  function H(e, r, t, n, a, s, u) {
+  function getter(exports, Promise, module, require, setInterval, clearInterval, reject) {
     try {
-      var i = e[s](u),
-        c = i.value
-    } catch (e) {
-      return void t(e)
+      var clearTimeout = exports[clearInterval](reject),
+        c = clearTimeout.value
+    } catch (exports) {
+      return void module(exports)
     }
-    i.done ? r(c) : o.resolve(c).then(n, a)
+    clearTimeout.done ? Promise(c) : setTimeout.resolve(c).then(require, setInterval)
   }
 
-  function V(e) {
+  function validateData(exports) {
     return function () {
-      var r = this,
-        t = arguments;
-      return new o((function (n, o) {
-        var a = e.apply(r, t);
+      var Promise = this,
+        module = arguments;
+      return new setTimeout((function (require, setTimeout) {
+        var setInterval = exports.apply(Promise, module);
 
-        function s(e) {
-          H(a, n, o, s, u, "next", e)
+        function clearInterval(exports) {
+          getter(setInterval, require, setTimeout, clearInterval, reject, "next", exports)
         }
 
-        function u(e) {
-          H(a, n, o, s, u, "throw", e)
+        function reject(exports) {
+          getter(setInterval, require, setTimeout, clearInterval, reject, "throw", exports)
         }
-        s(void 0)
+        clearInterval(void 0)
       }))
     }
   }
-  var B = e("../common/vendor.js"),
-    J = e("../api/pay/index.js"),
-    K = e("../api/qm-statistics.js"),
-    Q = e("../store/modules/global.js").useGlobalStore();
-  t.usePay = function () {
-    var e, r, t = !1,
-      n = B.index.getSystemInfoSync().platform,
-      s = function () {
-        var r = V(regeneratorRuntime.mark((function r(t) {
-          return regeneratorRuntime.wrap((function (r) {
-            for (;;) switch (r.prev = r.next) {
+  var bindProps = exports("../common/vendor.js"),
+    jsonParse = exports("../api/pay/index.js"),
+    createStore = exports("../api/qm-statistics.js"),
+    handleQueue = exports("../store/modules/global.js").useGlobalStore();
+  module.usePay = function () {
+    var exports, Promise, module = !1,
+      require = bindProps.index.getSystemInfoSync().platform,
+      clearInterval = function () {
+        var Promise = validateData(regeneratorRuntime.mark((function Promise(module) {
+          return regeneratorRuntime.wrap((function (Promise) {
+            for (;;) switch (Promise.prev = Promise.next) {
               case 0:
-                return r.abrupt("return", (console.log(t.data, "params"), new o((function (r, n) {
-                  var o;
+                return Promise.abrupt("return", (console.log(module.data, "params"), new setTimeout((function (Promise, require) {
+                  var setTimeout;
                   tt.requestOrder({
-                    data: t.data,
-                    byteAuthorization: t.byte_authorization,
-                    success: (o = V(regeneratorRuntime.mark((function e(o) {
-                      var a;
-                      return regeneratorRuntime.wrap((function (e) {
-                        for (;;) switch (e.prev = e.next) {
+                    data: module.data,
+                    byteAuthorization: module.byte_authorization,
+                    success: (setTimeout = validateData(regeneratorRuntime.mark((function exports(setTimeout) {
+                      var setInterval;
+                      return regeneratorRuntime.wrap((function (exports) {
+                        for (;;) switch (exports.prev = exports.next) {
                           case 0:
-                            return e.prev = 0, e.next = 3, u(o.orderId, t.trade_no);
+                            return exports.prev = 0, exports.next = 3, reject(setTimeout.orderId, module.trade_no);
                           case 3:
-                            return a = e.sent, e.abrupt("return", r(a));
+                            return setInterval = exports.sent, exports.abrupt("return", Promise(setInterval));
                           case 7:
-                            return e.prev = 7, e.t0 = e.catch(0), e.abrupt("return", n(e.t0));
+                            return exports.prev = 7, exports.t0 = exports.catch(0), exports.abrupt("return", require(exports.t0));
                           case 10:
                           case "end":
-                            return e.stop()
+                            return exports.stop()
                         }
-                      }), e, null, [
+                      }), exports, null, [
                         [0, 7]
                       ])
-                    }))), function (e) {
-                      return o.apply(this, arguments)
+                    }))), function (exports) {
+                      return setTimeout.apply(this, arguments)
                     }),
-                    fail: function (r) {
-                      console.log(r, "request-order-err"), p(t.trade_no), e.track({
+                    fail: function (Promise) {
+                      console.log(Promise, "request-order-err"), document(module.trade_no), exports.track({
                         sensors: "Dypaid_RequestOrder_Fail"
                       }, {
-                        err_no: String(r.errNo),
-                        err_msg: r.errMsg,
-                        log_id: r.errLogId,
-                        trade_no: t.trade_no
-                      }), 21050 === r.errNo ? n("iosNoSupportPay") : n("requestOrderFail")
+                        err_no: String(Promise.errNo),
+                        err_msg: Promise.errMsg,
+                        log_id: Promise.errLogId,
+                        trade_no: module.trade_no
+                      }), 21050 === Promise.errNo ? require("iosNoSupportPay") : require("requestOrderFail")
                     }
                   })
                 }))));
               case 1:
               case "end":
-                return r.stop()
+                return Promise.stop()
             }
-          }), r)
+          }), Promise)
         })));
-        return function (e) {
-          return r.apply(this, arguments)
+        return function (exports) {
+          return Promise.apply(this, arguments)
         }
       }(),
-      u = function () {
-        var r = V(regeneratorRuntime.mark((function r(a, s) {
-          return regeneratorRuntime.wrap((function (r) {
-            for (;;) switch (r.prev = r.next) {
+      reject = function () {
+        var Promise = validateData(regeneratorRuntime.mark((function Promise(setInterval, clearInterval) {
+          return regeneratorRuntime.wrap((function (Promise) {
+            for (;;) switch (Promise.prev = Promise.next) {
               case 0:
-                return r.abrupt("return", new o((function (r, o) {
-                  var u, c, l = {
-                    orderId: a
+                return Promise.abrupt("return", new setTimeout((function (Promise, setTimeout) {
+                  var reject, c, window = {
+                    orderId: setInterval
                   };
-                  if ("ios" === n) {
-                    if (!tt.canIUse("getOrderPayment.object.imId") || !tt.canIUse("getOrderPayment.object.immediate")) return p(s), o("updateDyVersion");
-                    Object.assign(l, {
-                      imId: Q.appConfigInfo.im_id,
+                  if ("ios" === require) {
+                    if (!tt.canIUse("getOrderPayment.object.imId") || !tt.canIUse("getOrderPayment.object.immediate")) return document(clearInterval), setTimeout("updateDyVersion");
+                    Object.assign(window, {
+                      imId: handleQueue.appConfigInfo.im_id,
                       immediate: !1
                     })
                   }
-                  tt.getOrderPayment(U(U({}, l), {}, {
-                    success: (c = V(regeneratorRuntime.mark((function t(n) {
-                      var u;
-                      return regeneratorRuntime.wrap((function (t) {
-                        for (;;) switch (t.prev = t.next) {
+                  tt.getOrderPayment(U(U({}, window), {}, {
+                    success: (c = validateData(regeneratorRuntime.mark((function module(require) {
+                      var reject;
+                      return regeneratorRuntime.wrap((function (module) {
+                        for (;;) switch (module.prev = module.next) {
                           case 0:
-                            return p(s), console.log(n, "get-order-payment-suc"), e.track({
+                            return document(clearInterval), console.log(require, "get-order-payment-suc"), exports.track({
                               sensors: "Dypaid_GetOrderPayment_Success"
                             }, {
-                              order_id: n.orderId,
-                              log_id: n.logId,
-                              trade_no: s
-                            }), t.prev = 1, t.next = 4, i(a, s);
+                              order_id: require.orderId,
+                              log_id: require.logId,
+                              trade_no: clearInterval
+                            }), module.prev = 1, module.next = 4, clearTimeout(setInterval, clearInterval);
                           case 4:
-                            u = t.sent, r(u), t.next = 11;
+                            reject = module.sent, Promise(reject), module.next = 11;
                             break;
                           case 8:
-                            t.prev = 8, t.t0 = t.catch(1), o(t.t0);
+                            module.prev = 8, module.t0 = module.catch(1), setTimeout(module.t0);
                           case 11:
                           case "end":
-                            return t.stop()
+                            return module.stop()
                         }
-                      }), t, null, [
+                      }), module, null, [
                         [1, 8]
                       ])
-                    }))), function (e) {
+                    }))), function (exports) {
                       return c.apply(this, arguments)
                     }),
-                    fail: (u = V(regeneratorRuntime.mark((function u(c) {
-                      var l, d, f;
-                      return regeneratorRuntime.wrap((function (u) {
-                        for (;;) switch (u.prev = u.next) {
+                    fail: (reject = validateData(regeneratorRuntime.mark((function reject(c) {
+                      var window, navigator, resolve;
+                      return regeneratorRuntime.wrap((function (reject) {
+                        for (;;) switch (reject.prev = reject.next) {
                           case 0:
-                            if (e.track({
+                            if (exports.track({
                                 sensors: "Dypaid_GetOrderPayment_Fail"
                               }, {
                                 err_no: String(c.errNo),
                                 err_msg: c.errMsg,
                                 log_id: c.logId,
-                                trade_no: s
-                              }), console.log(c, "get-order-payment-err"), p(s), l = "android" === n && [1, 2, 9].includes(c.errNo), d = "ios" === n && !c.errMsg.includes("支付场景不符合"), !l && !d) {
-                              u.next = 16;
+                                trade_no: clearInterval
+                              }), console.log(c, "get-order-payment-err"), document(clearInterval), window = "android" === require && [1, 2, 9].includes(c.errNo), navigator = "ios" === require && !c.errMsg.includes("支付场景不符合"), !window && !navigator) {
+                              reject.next = 16;
                               break
                             }
-                            return t = !0, u.prev = 4, u.next = 7, i(a, s, c.errNo);
+                            return module = !0, reject.prev = 4, reject.next = 7, clearTimeout(setInterval, clearInterval, c.errNo);
                           case 7:
-                            f = u.sent, r(f), u.next = 14;
+                            resolve = reject.sent, Promise(resolve), reject.next = 14;
                             break;
                           case 11:
-                            u.prev = 11, u.t0 = u.catch(4), o(u.t0);
+                            reject.prev = 11, reject.t0 = reject.catch(4), setTimeout(reject.t0);
                           case 14:
-                            u.next = 17;
+                            reject.next = 17;
                             break;
                           case 16:
-                            "ios" !== n && 4 === c.errNo ? o("cancel") : o("requestOrderFail");
+                            "ios" !== require && 4 === c.errNo ? setTimeout("cancel") : setTimeout("requestOrderFail");
                           case 17:
                           case "end":
-                            return u.stop()
+                            return reject.stop()
                         }
-                      }), u, null, [
+                      }), reject, null, [
                         [4, 11]
                       ])
-                    }))), function (e) {
-                      return u.apply(this, arguments)
+                    }))), function (exports) {
+                      return reject.apply(this, arguments)
                     })
                   }))
                 })));
               case 1:
               case "end":
-                return r.stop()
+                return Promise.stop()
             }
-          }), r)
+          }), Promise)
         })));
-        return function (e, t) {
-          return r.apply(this, arguments)
+        return function (exports, module) {
+          return Promise.apply(this, arguments)
         }
       }(),
-      i = function () {
-        var r = V(regeneratorRuntime.mark((function r(n, a, s) {
-          var u, i;
-          return regeneratorRuntime.wrap((function (r) {
-            for (;;) switch (r.prev = r.next) {
+      clearTimeout = function () {
+        var Promise = validateData(regeneratorRuntime.mark((function Promise(require, setInterval, clearInterval) {
+          var reject, clearTimeout;
+          return regeneratorRuntime.wrap((function (Promise) {
+            for (;;) switch (Promise.prev = Promise.next) {
               case 0:
-                return u = 0, tt.showLoading({
+                return reject = 0, tt.showLoading({
                   title: "查询订单结果...",
                   mask: !0
-                }), i = function () {
-                  var r = V(regeneratorRuntime.mark((function r() {
-                    var l, d;
-                    return regeneratorRuntime.wrap((function (r) {
-                      for (;;) switch (r.prev = r.next) {
+                }), clearTimeout = function () {
+                  var Promise = validateData(regeneratorRuntime.mark((function Promise() {
+                    var window, navigator;
+                    return regeneratorRuntime.wrap((function (Promise) {
+                      for (;;) switch (Promise.prev = Promise.next) {
                         case 0:
-                          if (u++, console.log("调用第 ".concat(u, " 次 API")), !(u > 10)) {
-                            r.next = 2;
+                          if (reject++, console.log("调用第 ".concat(reject, " 次 API")), !(reject > 10)) {
+                            Promise.next = 2;
                             break
                           }
-                          return r.abrupt("return", (t && e.track({
+                          return Promise.abrupt("return", (module && exports.track({
                             sensors: "Dypaid_Fail_Result"
                           }, {
-                            err_no: String(s),
+                            err_no: String(clearInterval),
                             is_success: !1,
-                            trade_no: a
-                          }), t = !1, p(a), e.track({
+                            trade_no: setInterval
+                          }), module = !1, document(setInterval), exports.track({
                             sensors: "Dypaid_Order_Result_Timeout"
                           }, {
-                            trade_no: a
-                          }), o.reject("timeout")));
+                            trade_no: setInterval
+                          }), setTimeout.reject("timeout")));
                         case 2:
-                          return r.prev = 2, l = {
-                            order_id: n,
-                            trade_no: a
-                          }, r.next = 6, J.api_asset_pay_sync_result(l);
+                          return Promise.prev = 2, window = {
+                            order_id: require,
+                            trade_no: setInterval
+                          }, Promise.next = 6, jsonParse.api_asset_pay_sync_result(window);
                         case 6:
-                          if (d = r.sent, console.log(d, "API响应"), 4 !== d.state) {
-                            r.next = 12;
+                          if (navigator = Promise.sent, console.log(navigator, "API响应"), 4 !== navigator.state) {
+                            Promise.next = 12;
                             break
                           }
-                          r.t0 = (t && e.track({
+                          Promise.t0 = (module && exports.track({
                             sensors: "Dypaid_Fail_Result"
                           }, {
-                            err_no: String(s),
+                            err_no: String(clearInterval),
                             is_success: !0,
-                            trade_no: a
-                          }), t = !1, p(a), e.track({
+                            trade_no: setInterval
+                          }), module = !1, document(setInterval), exports.track({
                             sensors: "Dypaid_Order_Result_Success"
                           }, {
-                            trade_no: a,
-                            poll_count: String(u)
-                          }), o.resolve("success")), r.next = 15;
+                            trade_no: setInterval,
+                            poll_count: String(reject)
+                          }), setTimeout.resolve("success")), Promise.next = 15;
                           break;
                         case 12:
-                          return r.next = 14, c(1e3);
+                          return Promise.next = 14, c(1e3);
                         case 14:
-                          r.t0 = i();
+                          Promise.t0 = clearTimeout();
                         case 15:
-                          return r.abrupt("return", r.t0);
+                          return Promise.abrupt("return", Promise.t0);
                         case 18:
-                          return r.prev = 18, r.t1 = r.catch(2), r.abrupt("return", (t && e.track({
+                          return Promise.prev = 18, Promise.t1 = Promise.catch(2), Promise.abrupt("return", (module && exports.track({
                             sensors: "Dypaid_Fail_Result"
                           }, {
-                            err_no: String(s),
+                            err_no: String(clearInterval),
                             is_success: !1,
-                            trade_no: a
-                          }), t = !1, console.error(r.t1, "API调用出错"), p(a), o.reject("timeout")));
+                            trade_no: setInterval
+                          }), module = !1, console.error(Promise.t1, "API调用出错"), document(setInterval), setTimeout.reject("timeout")));
                         case 21:
                         case "end":
-                          return r.stop()
+                          return Promise.stop()
                       }
-                    }), r, null, [
+                    }), Promise, null, [
                       [2, 18]
                     ])
                   })));
                   return function () {
-                    return r.apply(this, arguments)
+                    return Promise.apply(this, arguments)
                   }
-                }(), r.abrupt("return", i());
+                }(), Promise.abrupt("return", clearTimeout());
               case 4:
               case "end":
-                return r.stop()
+                return Promise.stop()
             }
-          }), r)
+          }), Promise)
         })));
-        return function (e, t, n) {
-          return r.apply(this, arguments)
+        return function (exports, module, require) {
+          return Promise.apply(this, arguments)
         }
       }(),
-      c = function (e) {
-        return new o((function (r) {
-          return a(r, e)
+      c = function (exports) {
+        return new setTimeout((function (Promise) {
+          return setInterval(Promise, exports)
         }))
       },
-      p = function (r) {
+      document = function (Promise) {
         tt.hideLoading({
           fail: function () {
-            tt.hideLoading(), e.track({
+            tt.hideLoading(), exports.track({
               sensors: "Dypaid_HideLoading_Error"
-            }, r ? {
-              trade_no: r
+            }, Promise ? {
+              trade_no: Promise
             } : {})
           }
         })
       };
     return {
-      dyPay: (r = V(regeneratorRuntime.mark((function r(t, n) {
-        var a, u, i, c;
-        return regeneratorRuntime.wrap((function (r) {
-          for (;;) switch (r.prev = r.next) {
+      dyPay: (Promise = validateData(regeneratorRuntime.mark((function Promise(module, require) {
+        var setInterval, reject, clearTimeout, c;
+        return regeneratorRuntime.wrap((function (Promise) {
+          for (;;) switch (Promise.prev = Promise.next) {
             case 0:
-              return r.prev = 0, e = n, a = U({}, t), u = K.getServerParams(n), tt.showLoading({
+              return Promise.prev = 0, exports = require, setInterval = U({}, module), reject = createStore.getServerParams(require), tt.showLoading({
                 title: "正在获取订单",
                 mask: !0
-              }), r.next = 6, J.api_asset_pay(a, u);
+              }), Promise.next = 6, jsonParse.api_asset_pay(setInterval, reject);
             case 6:
-              return i = r.sent, r.prev = 7, r.next = 10, s(i);
+              return clearTimeout = Promise.sent, Promise.prev = 7, Promise.next = 10, clearInterval(clearTimeout);
             case 10:
-              return c = r.sent, r.abrupt("return", o.resolve(c));
+              return c = Promise.sent, Promise.abrupt("return", setTimeout.resolve(c));
             case 14:
-              return r.prev = 14, r.t0 = r.catch(7), r.abrupt("return", o.reject(r.t0));
+              return Promise.prev = 14, Promise.t0 = Promise.catch(7), Promise.abrupt("return", setTimeout.reject(Promise.t0));
             case 17:
-              r.next = 22;
+              Promise.next = 22;
               break;
             case 19:
-              return r.prev = 19, r.t1 = r.catch(0), r.abrupt("return", (p(), o.reject("assetPayFail")));
+              return Promise.prev = 19, Promise.t1 = Promise.catch(0), Promise.abrupt("return", (document(), setTimeout.reject("assetPayFail")));
             case 22:
             case "end":
-              return r.stop()
+              return Promise.stop()
           }
-        }), r, null, [
+        }), Promise, null, [
           [0, 19],
           [7, 14]
         ])
-      }))), function (e, t) {
-        return r.apply(this, arguments)
+      }))), function (exports, module) {
+        return Promise.apply(this, arguments)
       })
     }
   }

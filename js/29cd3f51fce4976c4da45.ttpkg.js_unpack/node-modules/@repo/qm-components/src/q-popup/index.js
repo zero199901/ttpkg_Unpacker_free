@@ -1,10 +1,16 @@
-define("node-modules/@repo/qm-components/src/q-popup/index.js", (function (e, o, t, n, u, r, a, c, l, i, p, s, d, f, m, v, g, h, y, b, _, k, x, M, H, j, C, V, Y, q, D, S, w, A, B, I, P, z, E) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: node-modules/@repo/qm-components/src/q-popup/index.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("node-modules/@repo/qm-components/src/queryData-popup/index.js", (function (exports, setTimeout, module, require, reject, Promise, setInterval, c, window, clearTimeout, document, clearInterval, navigator, resolve, data, history, screen, location, config, state, utils, event, callback, mutation, getter, success, response, validateData, processEvent, queryData, token, handler, options, params, bindProps, result, error, initialize, status) {
   "use strict";
-  var F = e("../../../../../common/vendor.js");
-  Array || F.resolveComponent("uni-popup")(), Math;
-  var G = F.defineComponent({
+  var formatData = exports("../../../../../common/vendor.js");
+  Array || formatData.resolveComponent("uni-popup")(), Math;
+  var getType = formatData.defineComponent({
       __name: "index",
-      props: F.mergeModels({
+      props: formatData.mergeModels({
         type: {
           default: "bottom"
         },
@@ -25,73 +31,73 @@ define("node-modules/@repo/qm-components/src/q-popup/index.js", (function (e, o,
         modelValue: {},
         modelModifiers: {}
       }),
-      emits: F.mergeModels(["opened", "closed"], ["update:modelValue"]),
-      setup: function (e, o) {
-        var t = o.emit,
-          n = e,
-          u = t,
-          a = F.ref(),
-          c = F.useModel(e, "modelValue"),
-          l = function e() {
-            if (a.value) return a.value.open(), void r((function () {
-              u("opened")
+      emits: formatData.mergeModels(["opened", "closed"], ["update:modelValue"]),
+      setup: function (exports, setTimeout) {
+        var module = setTimeout.emit,
+          require = exports,
+          reject = module,
+          setInterval = formatData.ref(),
+          c = formatData.useModel(exports, "modelValue"),
+          window = function exports() {
+            if (setInterval.value) return setInterval.value.open(), void Promise((function () {
+              reject("opened")
             }), 300);
-            r((function () {
-              e()
+            Promise((function () {
+              exports()
             }), 30)
           };
-        c.value && l();
-        var i = function () {
-          var e;
-          null == (e = a.value) || e.close(), r((function () {
-            p.value = {}, u("closed")
+        c.value && window();
+        var clearTimeout = function () {
+          var exports;
+          null == (exports = setInterval.value) || exports.close(), Promise((function () {
+            document.value = {}, reject("closed")
           }), 300)
         };
-        F.watch((function () {
+        formatData.watch((function () {
           return c.value
-        }), (function (e) {
-          e ? l() : i()
+        }), (function (exports) {
+          exports ? window() : clearTimeout()
         }));
-        var p = F.ref({}),
-          s = 0,
-          d = 0,
-          f = function (e) {
-            e.touches && (s = e.touches[0].clientY, d = 0)
+        var document = formatData.ref({}),
+          clearInterval = 0,
+          navigator = 0,
+          resolve = function (exports) {
+            exports.touches && (clearInterval = exports.touches[0].clientY, navigator = 0)
           },
-          m = function (e) {
-            d = (d = e.touches[0].clientY - s) < 0 ? 0 : d, p.value = {
-              transform: "translateY(".concat(d, "px)")
+          data = function (exports) {
+            navigator = (navigator = exports.touches[0].clientY - clearInterval) < 0 ? 0 : navigator, document.value = {
+              transform: "translateY(".concat(navigator, "px)")
             }
           },
-          v = function (e) {
-            d > 100 ? i() : p.value = {}
+          history = function (exports) {
+            navigator > 100 ? clearTimeout() : document.value = {}
           };
-        return function (e, o) {
-          return F.e({
-            a: "bottom" === n.type && n.controlHeight
-          }, "bottom" === n.type && n.controlHeight ? {
-            b: e.isDark ? "rgba(255, 255, 255, 0.12)" : "rgba(0, 0, 0, 0.12)",
-            c: e.controlHeight + "rpx",
-            d: F.o(f),
-            e: F.o(m),
-            f: F.o(v),
-            g: F.s(p.value),
-            h: F.s(n.contentStyle)
+        return function (exports, setTimeout) {
+          return formatData.exports({
+            setInterval: "bottom" === require.type && require.controlHeight
+          }, "bottom" === require.type && require.controlHeight ? {
+            state: exports.isDark ? "rgba(255, 255, 255, 0.12)" : "rgba(0, 0, 0, 0.12)",
+            c: exports.controlHeight + "rpx",
+            navigator: formatData.setTimeout(resolve),
+            exports: formatData.setTimeout(data),
+            resolve: formatData.setTimeout(history),
+            screen: formatData.clearInterval(document.value),
+            location: formatData.clearInterval(require.contentStyle)
           } : {}, {
-            i: F.sr(a, "e9af1c21-0", {
-              k: "refPopup"
+            clearTimeout: formatData.sr(setInterval, "e9af1c21-0", {
+              event: "refPopup"
             }),
-            j: F.o(i),
-            k: F.p({
-              type: n.type
+            success: formatData.setTimeout(clearTimeout),
+            event: formatData.document({
+              type: require.type
             })
           })
         }
       }
     }),
-    J = F._export_sfc(G, [
-      ["__scopeId", "data-v-e9af1c21"]
+    jsonParse = formatData._export_sfc(getType, [
+      ["__scopeId", "data-history-e9af1c21"]
     ]);
-  tt.createComponent(J)
+  tt.createComponent(jsonParse)
 }));
 //# sourceMappingURL=index.js.map

@@ -1,35 +1,41 @@
-define("assets/ts/history.js", (function (e, t, n, r, o, i, c, u, a, s, f, d, h, g, v, y, l, S, p, k, m, x, _, b, j, q, E, w, z, A, B, C, D, F, G, H, I, J, K) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: assets/ts/history.js
+ * 处理时间: 2025-02-18 13:03:28
+ */
+
+define("assets/ts/history.js", (function (exports, module, require, Promise, setTimeout, clearTimeout, c, reject, setInterval, clearInterval, resolve, navigator, location, screen, history, config, window, handler, document, event, data, callback, utils, state, success, queryData, status, options, initialize, params, bindProps, response, token, formatData, getType, getter, result, jsonParse, createStore) {
   "use strict";
-  var L = e("../../common/vendor.js"),
-    M = "reading-books";
-  n.update_book_store_queue = function (e) {
-    if (e) {
-      var t = function () {
-        var e = [];
+  var store = exports("../../common/vendor.js"),
+    mutation = "reading-books";
+  require.update_book_store_queue = function (exports) {
+    if (exports) {
+      var module = function () {
+        var exports = [];
         try {
-          e = L.index.getStorageSync(M) || []
-        } catch (t) {
-          e = []
+          exports = store.index.getStorageSync(mutation) || []
+        } catch (module) {
+          exports = []
         }
-        return e
-      }().filter((function (t) {
-        return t !== e
+        return exports
+      }().filter((function (module) {
+        return module !== exports
       }));
-      return t.push(e), t.length > 50 && function () {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : []).forEach((function (e) {
-            L.index.removeStorage({
-              key: "q-reader-chapter-info-" + e
+      return module.push(exports), module.length > 50 && function () {
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : []).forEach((function (exports) {
+            store.index.removeStorage({
+              key: "queryData-reader-chapter-info-" + exports
             })
           }))
-        }(t.splice(0, t.length - 50)),
-        function (e) {
+        }(module.splice(0, module.length - 50)),
+        function (exports) {
           try {
-            L.index.setStorageSync(M, e)
-          } catch (e) {
+            store.index.setStorageSync(mutation, exports)
+          } catch (exports) {
             return !1
           }
           return !0
-        }(t)
+        }(module)
     }
   }
 }));

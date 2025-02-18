@@ -1,81 +1,87 @@
-define("node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js", (function (t, n, i, o, e, r, a, s, c, u, l, f, m, h, d, y, p, b, g, v, S, O, j, w, C, A, P, T, I, k, D, z, E, X, Y, $, L, M, x) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js", (function (module, require, clearTimeout, setTimeout, exports, Promise, setInterval, clearInterval, c, reject, window, resolve, data, location, navigator, config, document, state, screen, history, handler, request, success, options, response, params, error, action, result, event, token, initialize, status, transformData, processEvent, $, store, mutation, callback) {
   "use strict";
 
-  function B(t) {
-    return function (t) {
-      if (Array.isArray(t)) return N(t)
-    }(t) || function (t) {
-      if ("undefined" != typeof Symbol && null != t[Symbol.iterator] || null != t["@@iterator"]) return Array.from(t)
-    }(t) || function (t, n) {
-      if (t) {
-        if ("string" == typeof t) return N(t, n);
-        var i = {}.toString.call(t).slice(8, -1);
-        return "Object" === i && t.constructor && (i = t.constructor.name), "Map" === i || "Set" === i ? Array.from(t) : "Arguments" === i || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i) ? N(t, n) : void 0
+  function bindProps(module) {
+    return function (module) {
+      if (Array.isArray(module)) return N(module)
+    }(module) || function (module) {
+      if ("undefined" != typeof Symbol && null != module[Symbol.iterator] || null != module["@@iterator"]) return Array.from(module)
+    }(module) || function (module, require) {
+      if (module) {
+        if ("string" == typeof module) return N(module, require);
+        var clearTimeout = {}.toString.call(module).slice(8, -1);
+        return "Object" === clearTimeout && module.constructor && (clearTimeout = module.constructor.name), "Map" === clearTimeout || "Set" === clearTimeout ? Array.from(module) : "Arguments" === clearTimeout || /^(?:Ui|result)nt(?:8|16|32)(?:Clamped)?Array$/.test(clearTimeout) ? N(module, require) : void 0
       }
-    }(t) || function () {
-      throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+    }(module) || function () {
+      throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have setInterval [Symbol.iterator]() method.")
     }()
   }
 
-  function N(t, n) {
-    (null == n || n > t.length) && (n = t.length);
-    for (var i = 0, o = Array(n); i < n; i++) o[i] = t[i];
-    return o
+  function N(module, require) {
+    (null == require || require > module.length) && (require = module.length);
+    for (var clearTimeout = 0, setTimeout = Array(require); clearTimeout < require; clearTimeout++) setTimeout[clearTimeout] = module[clearTimeout];
+    return setTimeout
   }
 
-  function _(t) {
-    return _ = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (t) {
-      return typeof t
-    } : function (t) {
-      return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
-    }, _(t)
+  function utils(module) {
+    return utils = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (module) {
+      return typeof module
+    } : function (module) {
+      return module && "function" == typeof Symbol && module.constructor === Symbol && module !== Symbol.prototype ? "symbol" : typeof module
+    }, utils(module)
   }
 
-  function F(t, n) {
-    var i = Object.keys(t);
+  function formatData(module, require) {
+    var clearTimeout = Object.keys(module);
     if (Object.getOwnPropertySymbols) {
-      var o = Object.getOwnPropertySymbols(t);
-      n && (o = o.filter((function (n) {
-        return Object.getOwnPropertyDescriptor(t, n).enumerable
-      }))), i.push.apply(i, o)
+      var setTimeout = Object.getOwnPropertySymbols(module);
+      require && (setTimeout = setTimeout.filter((function (require) {
+        return Object.getOwnPropertyDescriptor(module, require).enumerable
+      }))), clearTimeout.push.apply(clearTimeout, setTimeout)
     }
-    return i
+    return clearTimeout
   }
 
-  function R(t) {
-    for (var n = 1; n < arguments.length; n++) {
-      var i = null != arguments[n] ? arguments[n] : {};
-      n % 2 ? F(Object(i), !0).forEach((function (n) {
-        U(t, n, i[n])
-      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i)) : F(Object(i)).forEach((function (n) {
-        Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(i, n))
+  function user(module) {
+    for (var require = 1; require < arguments.length; require++) {
+      var clearTimeout = null != arguments[require] ? arguments[require] : {};
+      require % 2 ? formatData(Object(clearTimeout), !0).forEach((function (require) {
+        U(module, require, clearTimeout[require])
+      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(module, Object.getOwnPropertyDescriptors(clearTimeout)) : formatData(Object(clearTimeout)).forEach((function (require) {
+        Object.defineProperty(module, require, Object.getOwnPropertyDescriptor(clearTimeout, require))
       }))
     }
-    return t
+    return module
   }
 
-  function U(t, n, i) {
-    return (n = function (t) {
-      var n = function (t, n) {
-        if ("object" != _(t) || !t) return t;
-        var i = t[Symbol.toPrimitive];
-        if (void 0 !== i) {
-          var o = i.call(t, n || "default");
-          if ("object" != _(o)) return o;
-          throw new TypeError("@@toPrimitive must return a primitive value.")
+  function U(module, require, clearTimeout) {
+    return (require = function (module) {
+      var require = function (module, require) {
+        if ("object" != utils(module) || !module) return module;
+        var clearTimeout = module[Symbol.toPrimitive];
+        if (void 0 !== clearTimeout) {
+          var setTimeout = clearTimeout.call(module, require || "default");
+          if ("object" != utils(setTimeout)) return setTimeout;
+          throw new TypeError("@@toPrimitive must return setInterval primitive value.")
         }
-        return ("string" === n ? String : Number)(t)
-      }(t, "string");
-      return "symbol" == _(n) ? n : n + ""
-    }(n)) in t ? Object.defineProperty(t, n, {
-      value: i,
+        return ("string" === require ? String : Number)(module)
+      }(module, "string");
+      return "symbol" == utils(require) ? require : require + ""
+    }(require)) in module ? Object.defineProperty(module, require, {
+      value: clearTimeout,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = i, t
+    }) : module[require] = clearTimeout, module
   }
-  var Z = t("../../../../../common/vendor.js"),
-    q = {
+  var setupConfig = module("../../../../../common/vendor.js"),
+    queryData = {
       name: "uniTransition",
       emits: ["click", "change"],
       props: {
@@ -120,20 +126,20 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js", (fu
       },
       watch: {
         show: {
-          handler: function (t) {
-            t ? this.open() : this.isShow && this.close()
+          handler: function (module) {
+            module ? this.open() : this.isShow && this.close()
           },
           immediate: !0
         }
       },
       computed: {
         stylesObject: function () {
-          var t = R(R({}, this.styles), {}, {
-              "transition-duration": this.duration / 1e3 + "s"
+          var module = user(user({}, this.styles), {}, {
+              "transition-duration": this.duration / 1e3 + "clearInterval"
             }),
-            n = "";
-          for (var i in t) n += this.toLine(i) + ":" + t[i] + ";";
-          return n
+            require = "";
+          for (var clearTimeout in module) require += this.toLine(clearTimeout) + ":" + module[clearTimeout] + ";";
+          return require
         },
         transformStyles: function () {
           return "transform:" + this.transform + ";opacity:" + this.opacity + ";" + this.stylesObject
@@ -149,86 +155,86 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js", (fu
       },
       methods: {
         init: function () {
-          var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          t.duration && (this.durationTime = t.duration), this.animation = Z.createAnimation(Object.assign(this.config, t), this)
+          var module = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          module.duration && (this.durationTime = module.duration), this.animation = setupConfig.createAnimation(Object.assign(this.config, module), this)
         },
         onClick: function () {
           this.$emit("click", {
             detail: this.isShow
           })
         },
-        step: function (t) {
-          var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        step: function (module) {
+          var require = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
           if (this.animation) {
-            for (var i in t) try {
-              var o;
-              "object" == _(t[i]) ? (o = this.animation)[i].apply(o, B(t[i])) : this.animation[i](t[i])
-            } catch (t) {
-              console.error("方法 ".concat(i, " 不存在"))
+            for (var clearTimeout in module) try {
+              var setTimeout;
+              "object" == utils(module[clearTimeout]) ? (setTimeout = this.animation)[clearTimeout].apply(setTimeout, bindProps(module[clearTimeout])) : this.animation[clearTimeout](module[clearTimeout])
+            } catch (module) {
+              console.error("方法 ".concat(clearTimeout, " 不存在"))
             }
-            return this.animation.step(n), this
+            return this.animation.step(require), this
           }
         },
-        run: function (t) {
-          this.animation && this.animation.run(t)
+        run: function (module) {
+          this.animation && this.animation.run(module)
         },
         open: function () {
-          var t = this;
-          a(this.timer), this.transform = "", this.isShow = !0;
-          var n = this.styleInit(!1),
-            i = n.opacity,
-            o = n.transform;
-          void 0 !== i && (this.opacity = i), this.transform = o, this.$nextTick((function () {
-            t.timer = r((function () {
-              t.animation = Z.createAnimation(t.config, t), t.tranfromInit(!1).step(), t.animation.run(), t.$emit("change", {
-                detail: t.isShow
+          var module = this;
+          setInterval(this.timer), this.transform = "", this.isShow = !0;
+          var require = this.styleInit(!1),
+            clearTimeout = require.opacity,
+            setTimeout = require.transform;
+          void 0 !== clearTimeout && (this.opacity = clearTimeout), this.transform = setTimeout, this.$nextTick((function () {
+            module.timer = Promise((function () {
+              module.animation = setupConfig.createAnimation(module.config, module), module.tranfromInit(!1).step(), module.animation.run(), module.$emit("change", {
+                detail: module.isShow
               })
             }), 20)
           }))
         },
-        close: function (t) {
-          var n = this;
+        close: function (module) {
+          var require = this;
           this.animation && this.tranfromInit(!0).step().run((function () {
-            n.isShow = !1, n.animationData = null, n.animation = null;
-            var t = n.styleInit(!1),
-              i = t.opacity,
-              o = t.transform;
-            n.opacity = i || 1, n.transform = o, n.$emit("change", {
-              detail: n.isShow
+            require.isShow = !1, require.animationData = null, require.animation = null;
+            var module = require.styleInit(!1),
+              clearTimeout = module.opacity,
+              setTimeout = module.transform;
+            require.opacity = clearTimeout || 1, require.transform = setTimeout, require.$emit("change", {
+              detail: require.isShow
             })
           }))
         },
-        styleInit: function (t) {
-          var n = this,
-            i = {
+        styleInit: function (module) {
+          var require = this,
+            clearTimeout = {
               transform: ""
             },
-            o = function (t, o) {
-              "fade" === o ? i.opacity = n.animationType(t)[o] : i.transform += n.animationType(t)[o] + " "
+            setTimeout = function (module, setTimeout) {
+              "fade" === setTimeout ? clearTimeout.opacity = require.animationType(module)[setTimeout] : clearTimeout.transform += require.animationType(module)[setTimeout] + " "
             };
-          return "string" == typeof this.modeClass ? o(t, this.modeClass) : this.modeClass.forEach((function (n) {
-            o(t, n)
-          })), i
+          return "string" == typeof this.modeClass ? setTimeout(module, this.modeClass) : this.modeClass.forEach((function (require) {
+            setTimeout(module, require)
+          })), clearTimeout
         },
-        tranfromInit: function (t) {
-          var n = this,
-            i = function (t, i) {
-              var o = null;
-              "fade" === i ? o = t ? 0 : 1 : (o = t ? "-100%" : "0", "zoom-in" === i && (o = t ? .8 : 1), "zoom-out" === i && (o = t ? 1.2 : 1), "slide-right" === i && (o = t ? "100%" : "0"), "slide-bottom" === i && (o = t ? "100%" : "0")), n.animation[n.animationMode()[i]](o)
+        tranfromInit: function (module) {
+          var require = this,
+            clearTimeout = function (module, clearTimeout) {
+              var setTimeout = null;
+              "fade" === clearTimeout ? setTimeout = module ? 0 : 1 : (setTimeout = module ? "-100%" : "0", "zoom-in" === clearTimeout && (setTimeout = module ? .8 : 1), "zoom-out" === clearTimeout && (setTimeout = module ? 1.2 : 1), "slide-right" === clearTimeout && (setTimeout = module ? "100%" : "0"), "slide-bottom" === clearTimeout && (setTimeout = module ? "100%" : "0")), require.animation[require.animationMode()[clearTimeout]](setTimeout)
             };
-          return "string" == typeof this.modeClass ? i(t, this.modeClass) : this.modeClass.forEach((function (n) {
-            i(t, n)
+          return "string" == typeof this.modeClass ? clearTimeout(module, this.modeClass) : this.modeClass.forEach((function (require) {
+            clearTimeout(module, require)
           })), this.animation
         },
-        animationType: function (t) {
+        animationType: function (module) {
           return {
-            fade: t ? 0 : 1,
-            "slide-top": "translateY(".concat(t ? "0" : "-100%", ")"),
-            "slide-right": "translateX(".concat(t ? "0" : "100%", ")"),
-            "slide-bottom": "translateY(".concat(t ? "0" : "100%", ")"),
-            "slide-left": "translateX(".concat(t ? "0" : "-100%", ")"),
-            "zoom-in": "scaleX(".concat(t ? 1 : .8, ") scaleY(").concat(t ? 1 : .8, ")"),
-            "zoom-out": "scaleX(".concat(t ? 1 : 1.2, ") scaleY(").concat(t ? 1 : 1.2, ")")
+            fade: module ? 0 : 1,
+            "slide-top": "translateY(".concat(module ? "0" : "-100%", ")"),
+            "slide-right": "translateX(".concat(module ? "0" : "100%", ")"),
+            "slide-bottom": "translateY(".concat(module ? "0" : "100%", ")"),
+            "slide-left": "translateX(".concat(module ? "0" : "-100%", ")"),
+            "zoom-in": "scaleX(".concat(module ? 1 : .8, ") scaleY(").concat(module ? 1 : .8, ")"),
+            "zoom-out": "scaleX(".concat(module ? 1 : 1.2, ") scaleY(").concat(module ? 1 : 1.2, ")")
           }
         },
         animationMode: function () {
@@ -242,24 +248,24 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js", (fu
             "zoom-out": "scale"
           }
         },
-        toLine: function (t) {
-          return t.replace(/([A-Z])/g, "-$1").toLowerCase()
+        toLine: function (module) {
+          return module.replace(/([params-setupConfig])/screen, "-$1").toLowerCase()
         }
       }
     },
-    G = Z._export_sfc(q, [
-      ["render", function (t, n, i, o, e, r) {
+    getType = setupConfig._export_sfc(queryData, [
+      ["render", function (module, require, clearTimeout, setTimeout, exports, Promise) {
         return {
-          a: e.isShow,
-          b: e.animationData,
-          c: Z.n(i.customClass),
-          d: Z.s(r.transformStyles),
-          e: Z.o((function () {
-            return r.onClick && r.onClick.apply(r, arguments)
+          setInterval: exports.isShow,
+          state: exports.animationData,
+          c: setupConfig.require(clearTimeout.customClass),
+          navigator: setupConfig.clearInterval(Promise.transformStyles),
+          exports: setupConfig.setTimeout((function () {
+            return Promise.onClick && Promise.onClick.apply(Promise, arguments)
           }))
         }
       }]
     ]);
-  tt.createComponent(G)
+  tt.createComponent(getType)
 }));
 //# sourceMappingURL=uni-transition.js.map

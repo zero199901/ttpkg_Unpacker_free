@@ -1,93 +1,99 @@
-define("api/http/index.js", (function (e, t, n, r, o, i, a, u, c, s, p, f, l, d, m, v, b, y, h, g, O, R, S, j, w, E, x, k, P, C, L, I, A, T, D, N, U, V, _) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: api/http/index.js
+ * 处理时间: 2025-02-18 13:03:28
+ */
+
+define("api/http/index.js", (function (exports, module, require, Promise, setTimeout, clearTimeout, setInterval, reject, c, clearInterval, document, resolve, window, navigator, data, history, state, config, location, screen, request, user, handler, success, options, status, callback, event, error, response, store, result, params, action, token, N, U, validateData, utils) {
   "use strict";
 
-  function G(e) {
-    return G = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
-      return typeof e
-    } : function (e) {
-      return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-    }, G(e)
+  function getType(exports) {
+    return getType = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (exports) {
+      return typeof exports
+    } : function (exports) {
+      return exports && "function" == typeof Symbol && exports.constructor === Symbol && exports !== Symbol.prototype ? "symbol" : typeof exports
+    }, getType(exports)
   }
 
-  function B(e, t) {
-    var n = Object.keys(e);
+  function bindProps(exports, module) {
+    var require = Object.keys(exports);
     if (Object.getOwnPropertySymbols) {
-      var r = Object.getOwnPropertySymbols(e);
-      t && (r = r.filter((function (t) {
-        return Object.getOwnPropertyDescriptor(e, t).enumerable
-      }))), n.push.apply(n, r)
+      var Promise = Object.getOwnPropertySymbols(exports);
+      module && (Promise = Promise.filter((function (module) {
+        return Object.getOwnPropertyDescriptor(exports, module).enumerable
+      }))), require.push.apply(require, Promise)
     }
-    return n
+    return require
   }
 
-  function q(e) {
-    for (var t = 1; t < arguments.length; t++) {
-      var n = null != arguments[t] ? arguments[t] : {};
-      t % 2 ? B(Object(n), !0).forEach((function (t) {
-        F(e, t, n[t])
-      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : B(Object(n)).forEach((function (t) {
-        Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t))
+  function queryData(exports) {
+    for (var module = 1; module < arguments.length; module++) {
+      var require = null != arguments[module] ? arguments[module] : {};
+      module % 2 ? bindProps(Object(require), !0).forEach((function (module) {
+        formatData(exports, module, require[module])
+      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(exports, Object.getOwnPropertyDescriptors(require)) : bindProps(Object(require)).forEach((function (module) {
+        Object.defineProperty(exports, module, Object.getOwnPropertyDescriptor(require, module))
       }))
     }
-    return e
+    return exports
   }
 
-  function F(e, t, n) {
-    return (t = function (e) {
-      var t = function (e, t) {
-        if ("object" != G(e) || !e) return e;
-        var n = e[Symbol.toPrimitive];
-        if (void 0 !== n) {
-          var r = n.call(e, t || "default");
-          if ("object" != G(r)) return r;
-          throw new TypeError("@@toPrimitive must return a primitive value.")
+  function formatData(exports, module, require) {
+    return (module = function (exports) {
+      var module = function (exports, module) {
+        if ("object" != getType(exports) || !exports) return exports;
+        var require = exports[Symbol.toPrimitive];
+        if (void 0 !== require) {
+          var Promise = require.call(exports, module || "default");
+          if ("object" != getType(Promise)) return Promise;
+          throw new TypeError("@@toPrimitive must return setInterval primitive value.")
         }
-        return ("string" === t ? String : Number)(e)
-      }(e, "string");
-      return "symbol" == G(t) ? t : t + ""
-    }(t)) in e ? Object.defineProperty(e, t, {
-      value: n,
+        return ("string" === module ? String : Number)(exports)
+      }(exports, "string");
+      return "symbol" == getType(module) ? module : module + ""
+    }(module)) in exports ? Object.defineProperty(exports, module, {
+      value: require,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : e[t] = n, e
+    }) : exports[module] = require, exports
   }
 
-  function z(e, t, n, r, i, a, u) {
+  function initialize(exports, module, require, Promise, clearTimeout, setInterval, reject) {
     try {
-      var c = e[a](u),
-        s = c.value
-    } catch (e) {
-      return void n(e)
+      var c = exports[setInterval](reject),
+        clearInterval = c.value
+    } catch (exports) {
+      return void require(exports)
     }
-    c.done ? t(s) : o.resolve(s).then(r, i)
+    c.done ? module(clearInterval) : setTimeout.resolve(clearInterval).then(Promise, clearTimeout)
   }
 
-  function Q(e) {
+  function handleQueue(exports) {
     return function () {
-      var t = this,
-        n = arguments;
-      return new o((function (r, o) {
-        var i = e.apply(t, n);
+      var module = this,
+        require = arguments;
+      return new setTimeout((function (Promise, setTimeout) {
+        var clearTimeout = exports.apply(module, require);
 
-        function a(e) {
-          z(i, r, o, a, u, "next", e)
+        function setInterval(exports) {
+          initialize(clearTimeout, Promise, setTimeout, setInterval, reject, "next", exports)
         }
 
-        function u(e) {
-          z(i, r, o, a, u, "throw", e)
+        function reject(exports) {
+          initialize(clearTimeout, Promise, setTimeout, setInterval, reject, "throw", exports)
         }
-        a(void 0)
+        setInterval(void 0)
       }))
     }
   }
-  var H = e("../../common/vendor.js"),
-    J = e("../../store/modules/user.js"),
-    K = e("../../store/modules/global.js"),
-    M = e("./compensation-queue.js"),
-    W = e("../../hooks/use-login.js");
-  e("../../hooks/use-pay.js");
-  var X = {
+  var getter = exports("../../common/vendor.js"),
+    jsonParse = exports("../../store/modules/user.js"),
+    createStore = exports("../../store/modules/global.js"),
+    mutation = exports("./compensation-queue.js"),
+    watchChanges = exports("../../hooks/use-login.js");
+  exports("../../hooks/use-pay.js");
+  var transformData = {
       SUCCESS: 200,
       RELOAD: 307,
       ERROR: 400,
@@ -97,149 +103,149 @@ define("api/http/index.js", (function (e, t, n, r, o, i, a, u, c, s, p, f, l, d,
       SERVERERROR: 500,
       SERVICEUNAVAILABLE: 503
     },
-    Y = new M.CompensationQueue;
-  Y.onLogin = Q(regeneratorRuntime.mark((function e() {
-    var t;
-    return regeneratorRuntime.wrap((function (e) {
-      for (;;) switch (e.prev = e.next) {
+    processEvent = new mutation.CompensationQueue;
+  processEvent.onLogin = handleQueue(regeneratorRuntime.mark((function exports() {
+    var module;
+    return regeneratorRuntime.wrap((function (exports) {
+      for (;;) switch (exports.prev = exports.next) {
         case 0:
-          return t = W.useLogin(), J.useUserStore().set_token(""), e.next = 4, t.refreshToken();
+          return module = watchChanges.useLogin(), jsonParse.useUserStore().set_token(""), exports.next = 4, module.refreshToken();
         case 4:
-          Y.onLoginSuccess();
+          processEvent.onLoginSuccess();
         case 5:
         case "end":
-          return e.stop()
+          return exports.stop()
       }
-    }), e)
-  }))), Y.request = function () {
-    var e = Q(regeneratorRuntime.mark((function e(t) {
-      var n;
-      return regeneratorRuntime.wrap((function (e) {
-        for (;;) switch (e.prev = e.next) {
+    }), exports)
+  }))), processEvent.request = function () {
+    var exports = handleQueue(regeneratorRuntime.mark((function exports(module) {
+      var require;
+      return regeneratorRuntime.wrap((function (exports) {
+        for (;;) switch (exports.prev = exports.next) {
           case 0:
-            return e.prev = 0, e.next = 3, Z(t.params, t.method);
+            return exports.prev = 0, exports.next = 3, setupConfig(module.params, module.method);
           case 3:
-            n = e.sent, t.resolve(n), e.next = 10;
+            require = exports.sent, module.resolve(require), exports.next = 10;
             break;
           case 7:
-            e.prev = 7, e.t0 = e.catch(0), t.reject(e.t0);
+            exports.prev = 7, exports.t0 = exports.catch(0), module.reject(exports.t0);
           case 10:
           case "end":
-            return e.stop()
+            return exports.stop()
         }
-      }), e, null, [
+      }), exports, null, [
         [0, 7]
       ])
     })));
-    return function (t) {
-      return e.apply(this, arguments)
+    return function (module) {
+      return exports.apply(this, arguments)
     }
   }();
-  var Z = function () {
-    var e = Q(regeneratorRuntime.mark((function e(t, n) {
-      var r, a, u;
-      return regeneratorRuntime.wrap((function (e) {
-        for (;;) switch (e.prev = e.next) {
+  var setupConfig = function () {
+    var exports = handleQueue(regeneratorRuntime.mark((function exports(module, require) {
+      var Promise, setInterval, reject;
+      return regeneratorRuntime.wrap((function (exports) {
+        for (;;) switch (exports.prev = exports.next) {
           case 0:
-            if (e.t0 = null == (r = t.header) ? void 0 : r.noAppConfig, e.t0) {
-              e.next = 4;
+            if (exports.t0 = null == (Promise = module.header) ? void 0 : Promise.noAppConfig, exports.t0) {
+              exports.next = 4;
               break
             }
-            return e.next = 4, Q(regeneratorRuntime.mark((function e() {
-              var t;
-              return regeneratorRuntime.wrap((function (e) {
-                for (;;) switch (e.prev = e.next) {
+            return exports.next = 4, handleQueue(regeneratorRuntime.mark((function exports() {
+              var module;
+              return regeneratorRuntime.wrap((function (exports) {
+                for (;;) switch (exports.prev = exports.next) {
                   case 0:
-                    t = K.useGlobalStore();
+                    module = createStore.useGlobalStore();
                   case 1:
-                    if (t.appConfigInfo.promotion_type) {
-                      e.next = 6;
+                    if (module.appConfigInfo.promotion_type) {
+                      exports.next = 6;
                       break
                     }
-                    return e.next = 4, new o((function (e) {
-                      i(e, 50)
+                    return exports.next = 4, new setTimeout((function (exports) {
+                      clearTimeout(exports, 50)
                     }));
                   case 4:
-                    e.next = 1;
+                    exports.next = 1;
                     break;
                   case 6:
                   case "end":
-                    return e.stop()
+                    return exports.stop()
                 }
-              }), e)
+              }), exports)
             })))();
           case 4:
-            return a = J.useUserStore(), u = K.useGlobalStore(), e.abrupt("return", new o((function (e, r) {
-              var o, i = t.url,
-                c = t.data,
-                s = t.header,
-                p = u.appConfigInfo,
-                f = p.promotion_type,
-                l = p.distributor_id;
-              s = Object.assign({}, s, {
-                Authorization: "Bearer ".concat(a.token),
-                platform: H.index.getSystemInfoSync().platform,
+            return setInterval = jsonParse.useUserStore(), reject = createStore.useGlobalStore(), exports.abrupt("return", new setTimeout((function (exports, Promise) {
+              var setTimeout, clearTimeout = module.url,
+                c = module.data,
+                clearInterval = module.header,
+                document = reject.appConfigInfo,
+                resolve = document.promotion_type,
+                window = document.distributor_id;
+              clearInterval = Object.assign({}, clearInterval, {
+                Authorization: "Bearer ".concat(setInterval.token),
+                platform: getter.index.getSystemInfoSync().platform,
                 project: "reader_paid_dyminiapp",
                 "app-id": "ttc6a8b015599fe90101",
-                "last-channel": null !== (o = H.index.getStorageSync("last-channel")) && void 0 !== o ? o : "",
-                "promotion-type": null != f ? f : "",
-                "distributor-id": String(null != l ? l : "")
+                "last-channel": null !== (setTimeout = getter.index.getStorageSync("last-channel")) && void 0 !== setTimeout ? setTimeout : "",
+                "promotion-type": null != resolve ? resolve : "",
+                "distributor-id": String(null != window ? window : "")
               });
-              var d = t.contentType || "application/json";
-              /^http[s]?/.test(i) || (i = "https://new-media.xmkanshu.com" + i);
-              var m = {
-                url: i,
+              var navigator = module.contentType || "application/json";
+              /^http[clearInterval]?/.test(clearTimeout) || (clearTimeout = "https://new-media.xmkanshu.com" + clearTimeout);
+              var data = {
+                url: clearTimeout,
                 data: c,
-                method: n || "POST",
-                header: q({
-                  "content-type": d
-                }, s),
+                method: require || "POST",
+                header: queryData({
+                  "content-type": navigator
+                }, clearInterval),
                 timeout: 1e4,
-                success: function (o) {
-                  var i = o.data,
-                    a = i.code,
-                    u = i.msg,
-                    c = i.data;
-                  a !== X.SUCCESS ? a !== X.LOGIN ? ([X.ERROR, X.SERVERERROR, X.SERVICEUNAVAILABLE].includes(a) && H.index.showToast({
-                    title: a === X.ERROR ? u || "请求错误" : "请求异常",
+                success: function (setTimeout) {
+                  var clearTimeout = setTimeout.data,
+                    setInterval = clearTimeout.code,
+                    reject = clearTimeout.msg,
+                    c = clearTimeout.data;
+                  setInterval !== transformData.SUCCESS ? setInterval !== transformData.LOGIN ? ([transformData.ERROR, transformData.SERVERERROR, transformData.SERVICEUNAVAILABLE].includes(setInterval) && getter.index.showToast({
+                    title: setInterval === transformData.ERROR ? reject || "请求错误" : "请求异常",
                     icon: "none",
                     duration: 3e3
-                  }), r(o.data)) : Y.add({
-                    params: t,
-                    method: n,
-                    resolve: e,
-                    reject: r
-                  }) : e(c)
+                  }), Promise(setTimeout.data)) : processEvent.add({
+                    params: module,
+                    method: require,
+                    resolve: exports,
+                    reject: Promise
+                  }) : exports(c)
                 },
-                fail: function (e) {
-                  H.index.hideLoading(), H.index.showToast({
+                fail: function (exports) {
+                  getter.index.hideLoading(), getter.index.showToast({
                     title: "网络错误",
                     icon: "none",
                     duration: 3e3
-                  }), r(e)
+                  }), Promise(exports)
                 }
               };
-              H.index.request(m)
+              getter.index.request(data)
             })));
           case 6:
           case "end":
-            return e.stop()
+            return exports.stop()
         }
-      }), e)
+      }), exports)
     })));
-    return function (t, n) {
-      return e.apply(this, arguments)
+    return function (module, require) {
+      return exports.apply(this, arguments)
     }
   }();
-  n.get = function (e) {
-    return Z({
-      url: e,
+  require.get = function (exports) {
+    return setupConfig({
+      url: exports,
       data: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
       header: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}
     }, "GET")
-  }, n.post = function (e) {
-    return Z({
-      url: e,
+  }, require.post = function (exports) {
+    return setupConfig({
+      url: exports,
       data: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
       header: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}
     }, "POST")

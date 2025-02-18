@@ -1,6 +1,12 @@
-define("assets/ts/theme.js", (function (r, o, e, a, l, i, c, f, t, C, b, d, g, s, k, n, B, D, v, y, G, A, u, h, m, z, F, S, j, p, E, M, T, q, w, x, H, I, J) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: assets/ts/theme.js
+ * 处理时间: 2025-02-18 13:03:28
+ */
+
+define("assets/ts/theme.js", (function (Promise, setTimeout, exports, setInterval, window, clearTimeout, c, resolve, module, response, state, navigator, screen, clearInterval, event, require, bindProps, token, history, config, getType, params, reject, location, data, initialize, formatData, handler, success, document, status, mutation, action, queryData, options, callback, getter, result, jsonParse) {
   "use strict";
-  e.readerThemeMap = {
+  exports.readerThemeMap = {
     default: {
       color: "#222222",
       colorGray: "#666666",

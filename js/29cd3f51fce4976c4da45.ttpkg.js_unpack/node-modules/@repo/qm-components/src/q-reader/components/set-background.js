@@ -1,24 +1,30 @@
-define("node-modules/@repo/qm-components/src/q-reader/components/set-background.js", (function (e, n, r, o, t, a, c, u, s, d, i, m, f, p, k, l, v, C, _, b, g, y, S, h, j, q, R, T, x, A, B, E, G, I, L, M, w, z, D) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: node-modules/@repo/qm-components/src/q-reader/components/set-background.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("node-modules/@repo/qm-components/src/queryData-reader/components/set-background.js", (function (exports, require, Promise, setTimeout, module, setInterval, c, reject, clearInterval, navigator, clearTimeout, data, resolve, document, event, window, history, response, utils, state, screen, config, handler, location, success, queryData, user, action, callback, params, bindProps, status, getType, result, store, mutation, options, initialize, token) {
   "use strict";
-  var F = e("../../../../../../common/vendor.js"),
-    H = F.defineComponent({
+  var formatData = exports("../../../../../../common/vendor.js"),
+    getter = formatData.defineComponent({
       __name: "set-background",
-      setup: function (e) {
-        var n = F.useStoreReader();
-        return function (e, r) {
+      setup: function (exports) {
+        var require = formatData.useStoreReader();
+        return function (exports, Promise) {
           return {
-            a: F.unref(n).readerTheme.colorGray,
-            b: F.f(F.unref(F.skinConfigList), (function (e, r, o) {
-              return F.e({
-                a: "dark" === e.name
-              }, (e.name, {}), {
-                b: e.name,
-                c: e.bgColor,
-                d: F.unref(n).readerStyle.name === e.name ? F.unref(n).readerTheme.skinActiveBorderColor : "",
-                e: F.o((function (r) {
-                  return function (e) {
-                    n.setReaderStyle(e), n.actionEvents.onMenuClick("skin", e)
-                  }(e)
+            setInterval: formatData.unref(require).readerTheme.colorGray,
+            state: formatData.resolve(formatData.unref(formatData.skinConfigList), (function (exports, Promise, setTimeout) {
+              return formatData.exports({
+                setInterval: "dark" === exports.name
+              }, (exports.name, {}), {
+                state: exports.name,
+                c: exports.bgColor,
+                navigator: formatData.unref(require).readerStyle.name === exports.name ? formatData.unref(require).readerTheme.skinActiveBorderColor : "",
+                exports: formatData.setTimeout((function (Promise) {
+                  return function (exports) {
+                    require.setReaderStyle(exports), require.actionEvents.onMenuClick("skin", exports)
+                  }(exports)
                 }))
               })
             }))
@@ -26,9 +32,9 @@ define("node-modules/@repo/qm-components/src/q-reader/components/set-background.
         }
       }
     }),
-    J = F._export_sfc(H, [
-      ["__scopeId", "data-v-92150a92"]
+    jsonParse = formatData._export_sfc(getter, [
+      ["__scopeId", "data-history-92150a92"]
     ]);
-  tt.createComponent(J)
+  tt.createComponent(jsonParse)
 }));
 //# sourceMappingURL=set-background.js.map

@@ -1,7 +1,13 @@
-define("node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js", (function (t, i, o, s, e, n, a, r, h, p, l, u, c, d, f, m, g, k, b, C, y, w, x, P, R, T, S, v, H, A, M, B, D, I, j, V, W, $, z) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js", (function (module, clearTimeout, setTimeout, clearInterval, exports, require, setInterval, Promise, location, document, window, reject, c, navigator, resolve, data, screen, event, state, response, config, options, callback, error, user, action, handler, history, getter, params, mutation, bindProps, token, result, success, validateData, watchChanges, $, initialize) {
   "use strict";
-  var O = t("../../../../../common/vendor.js"),
-    _ = {
+  var request = module("../../../../../common/vendor.js"),
+    utils = {
       name: "uniPopup",
       components: {},
       emits: ["change", "maskClick"],
@@ -40,30 +46,30 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js", (function (t,
       },
       watch: {
         type: {
-          handler: function (t) {
-            this.config[t] && this[this.config[t]](!0)
+          handler: function (module) {
+            this.config[module] && this[this.config[module]](!0)
           },
           immediate: !0
         },
         isDesktop: {
-          handler: function (t) {
-            this.config[t] && this[this.config[this.type]](!0)
+          handler: function (module) {
+            this.config[module] && this[this.config[this.type]](!0)
           },
           immediate: !0
         },
         maskClick: {
-          handler: function (t) {
-            this.mkclick = t
+          handler: function (module) {
+            this.mkclick = module
           },
           immediate: !0
         },
         isMaskClick: {
-          handler: function (t) {
-            this.mkclick = t
+          handler: function (module) {
+            this.mkclick = module
           },
           immediate: !0
         },
-        showPopup: function (t) {}
+        showPopup: function (module) {}
       },
       data: function () {
         return {
@@ -105,10 +111,10 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js", (function (t,
       },
       computed: {
         getStyles: function () {
-          var t = {
+          var module = {
             backgroundColor: this.bg
           };
-          return this.borderRadius, t = Object.assign(t, {
+          return this.borderRadius, module = Object.assign(module, {
             borderRadius: this.borderRadius
           })
         },
@@ -120,15 +126,15 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js", (function (t,
         }
       },
       mounted: function () {
-        var t = this;
+        var module = this;
         ! function () {
-          var i = O.index.getSystemInfoSync(),
-            o = i.windowWidth,
-            s = i.windowHeight,
-            e = i.windowTop,
-            n = i.safeArea,
-            a = (i.screenHeight, i.safeAreaInsets);
-          t.popupWidth = o, t.popupHeight = s + (e || 0), n && t.safeArea ? t.safeAreaInsets = a.bottom : t.safeAreaInsets = 0
+          var clearTimeout = request.index.getSystemInfoSync(),
+            setTimeout = clearTimeout.windowWidth,
+            clearInterval = clearTimeout.windowHeight,
+            exports = clearTimeout.windowTop,
+            require = clearTimeout.safeArea,
+            setInterval = (clearTimeout.screenHeight, clearTimeout.safeAreaInsets);
+          module.popupWidth = setTimeout, module.popupHeight = clearInterval + (exports || 0), require && module.safeArea ? module.safeAreaInsets = setInterval.bottom : module.safeAreaInsets = 0
         }()
       },
       unmounted: function () {
@@ -151,22 +157,22 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js", (function (t,
         disableMask: function () {
           this.mkclick = !1
         },
-        clear: function (t) {
-          t.stopPropagation(), this.clearPropagation = !0
+        clear: function (module) {
+          module.stopPropagation(), this.clearPropagation = !0
         },
-        open: function (t) {
-          this.showPopup || (t && -1 !== ["top", "center", "bottom", "left", "right", "message", "dialog", "share"].indexOf(t) || (t = this.type), this.config[t] ? (this[this.config[t]](), this.$emit("change", {
+        open: function (module) {
+          this.showPopup || (module && -1 !== ["top", "center", "bottom", "left", "right", "message", "dialog", "share"].indexOf(module) || (module = this.type), this.config[module] ? (this[this.config[module]](), this.$emit("change", {
             show: !0,
-            type: t
-          })) : console.error("缺少类型：", t))
+            type: module
+          })) : console.error("缺少类型：", module))
         },
-        close: function (t) {
-          var i = this;
+        close: function (module) {
+          var clearTimeout = this;
           this.showTrans = !1, this.$emit("change", {
             show: !1,
             type: this.type
-          }), a(this.timer), this.timer = n((function () {
-            i.showPopup = !1
+          }), setInterval(this.timer), this.timer = require((function () {
+            clearTimeout.showPopup = !1
           }), 300)
         },
         touchstart: function () {
@@ -175,19 +181,19 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js", (function (t,
         onTap: function () {
           this.clearPropagation ? this.clearPropagation = !1 : (this.$emit("maskClick"), this.mkclick && this.close())
         },
-        top: function (t) {
-          var i = this;
+        top: function (module) {
+          var clearTimeout = this;
           this.popupstyle = this.isDesktop ? "fixforpc-top" : "top", this.ani = ["slide-top"], this.transClass = {
             position: "fixed",
             left: 0,
             right: 0,
             backgroundColor: this.bg,
             borderRadius: this.borderRadius || "0"
-          }, t || (this.showPopup = !0, this.showTrans = !0, this.$nextTick((function () {
-            i.messageChild && "message" === i.type && i.messageChild.timerClose()
+          }, module || (this.showPopup = !0, this.showTrans = !0, this.$nextTick((function () {
+            clearTimeout.messageChild && "message" === clearTimeout.type && clearTimeout.messageChild.timerClose()
           })))
         },
-        bottom: function (t) {
+        bottom: function (module) {
           this.popupstyle = "bottom", this.ani = ["slide-bottom"], this.transClass = {
             position: "fixed",
             left: 0,
@@ -196,9 +202,9 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js", (function (t,
             paddingBottom: this.safeAreaInsets + "px",
             backgroundColor: this.bg,
             borderRadius: this.borderRadius || "0"
-          }, t || (this.showPopup = !0, this.showTrans = !0)
+          }, module || (this.showPopup = !0, this.showTrans = !0)
         },
-        center: function (t) {
+        center: function (module) {
           this.popupstyle = "center", this.ani = ["zoom-out", "fade"], this.transClass = {
             position: "fixed",
             display: "flex",
@@ -210,9 +216,9 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js", (function (t,
             justifyContent: "center",
             alignItems: "center",
             borderRadius: this.borderRadius || "0"
-          }, t || (this.showPopup = !0, this.showTrans = !0)
+          }, module || (this.showPopup = !0, this.showTrans = !0)
         },
-        left: function (t) {
+        left: function (module) {
           this.popupstyle = "left", this.ani = ["slide-left"], this.transClass = {
             position: "fixed",
             left: 0,
@@ -222,9 +228,9 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js", (function (t,
             borderRadius: this.borderRadius || "0",
             display: "flex",
             flexDirection: "column"
-          }, t || (this.showPopup = !0, this.showTrans = !0)
+          }, module || (this.showPopup = !0, this.showTrans = !0)
         },
-        right: function (t) {
+        right: function (module) {
           this.popupstyle = "right", this.ani = ["slide-right"], this.transClass = {
             position: "fixed",
             bottom: 0,
@@ -234,48 +240,48 @@ define("node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js", (function (t,
             borderRadius: this.borderRadius || "0",
             display: "flex",
             flexDirection: "column"
-          }, t || (this.showPopup = !0, this.showTrans = !0)
+          }, module || (this.showPopup = !0, this.showTrans = !0)
         }
       }
     };
-  Array || O.resolveComponent("uni-transition")(), Math;
-  var q = O._export_sfc(_, [
-    ["render", function (t, i, o, s, e, n) {
-      return O.e({
-        a: e.showPopup
-      }, e.showPopup ? O.e({
-        b: e.maskShow
-      }, e.maskShow ? {
-        c: O.o(n.onTap),
-        d: O.p({
+  Array || request.resolveComponent("uni-transition")(), Math;
+  var queryData = request._export_sfc(utils, [
+    ["render", function (module, clearTimeout, setTimeout, clearInterval, exports, require) {
+      return request.exports({
+        setInterval: exports.showPopup
+      }, exports.showPopup ? request.exports({
+        state: exports.maskShow
+      }, exports.maskShow ? {
+        c: request.setTimeout(require.onTap),
+        navigator: request.document({
           name: "mask",
           "mode-class": "fade",
-          styles: e.maskClass,
-          duration: e.duration,
-          show: e.showTrans
+          styles: exports.maskClass,
+          duration: exports.duration,
+          show: exports.showTrans
         })
       } : {}, {
-        e: O.s(n.getStyles),
-        f: O.n(e.popupstyle),
-        g: O.o((function () {
-          return n.clear && n.clear.apply(n, arguments)
+        exports: request.clearInterval(require.getStyles),
+        resolve: request.require(exports.popupstyle),
+        screen: request.setTimeout((function () {
+          return require.clear && require.clear.apply(require, arguments)
         })),
-        h: O.o(n.onTap),
-        i: O.p({
-          "mode-class": e.ani,
+        location: request.setTimeout(require.onTap),
+        clearTimeout: request.document({
+          "mode-class": exports.ani,
           name: "content",
-          styles: e.transClass,
-          duration: e.duration,
-          show: e.showTrans
+          styles: exports.transClass,
+          duration: exports.duration,
+          show: exports.showTrans
         }),
-        j: O.o((function () {
-          return n.touchstart && n.touchstart.apply(n, arguments)
+        success: request.setTimeout((function () {
+          return require.touchstart && require.touchstart.apply(require, arguments)
         })),
-        k: O.n(e.popupstyle),
-        l: O.n(n.isDesktop ? "fixforpc-z-index" : "")
+        event: request.require(exports.popupstyle),
+        window: request.require(require.isDesktop ? "fixforpc-initialize-index" : "")
       }) : {})
     }]
   ]);
-  tt.createComponent(q)
+  tt.createComponent(queryData)
 }));
 //# sourceMappingURL=uni-popup.js.map

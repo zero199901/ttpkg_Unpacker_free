@@ -1,0 +1,470 @@
+2025-02-18 12:58:57 - Main - INFO - Loading: js/29cd3f51fce4976c4da45.ttpkg.js
+2025-02-18 12:58:57 - MPK - INFO - Magic: TPKG
+2025-02-18 12:58:57 - MPK - INFO - File count: 84
+2025-02-18 12:58:57 - MPK - INFO - Processing file: app-config.json
+2025-02-18 12:58:57 - MPK - INFO - Processing file: api/book-store/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: api/http/compensation-queue.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: api/http/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: api/mine/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: api/pay/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: api/qm-statistics.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: api/reader/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: api/user/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: assets/ts/history.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: assets/ts/theme.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: assets/vip.0f26bdea.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: common/assets.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: common/vendor.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: hooks/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: hooks/use-login.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: hooks/use-pay.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: mixin/share.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/global/empty.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/global/loading.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/iconfont/iconfont.ttf
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/mine/default-avatar.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/pay/hand-dark.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/pay/hand.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/pay/queen.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/pay/radio-active.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/pay/radio-dark.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/pay/radio-inactive.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/pay/vip.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/tabbar/history-on.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/tabbar/history.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/tabbar/mine-on.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/tabbar/mine.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/tabbar/store-on.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: static/tabbar/store.png
+2025-02-18 12:58:57 - MPK - INFO - Processing file: store/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: store/modules/global.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: store/modules/user.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: app.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/index/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/read-history/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/reader/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/mine/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/window/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-icon/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-tab/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-scrollx-book-list/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-book-card/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-empty/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/mine/components/how-to-find-me.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-pay-panel/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/reader/components/final-chapter.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-pay-panel/components/purchase-tips.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-pay-card/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-theme-overlay/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/chapter-content.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/setting.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-pay-panel/components/panel-header.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-pay-panel/components/purchase-panel.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-pay-card/components/guide-hand.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: components/qm-pull-up-loading/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/components/set-box.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/components/book-info.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/components/chapter-list.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-popup/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/components/set-font-size.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/components/set-background.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-image/index.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: preload-modules.json
+2025-02-18 12:58:57 - MPK - INFO - Processing file: page-frame.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: app-service.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/index/index-service.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/read-history/index-service.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/reader/index-service.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/mine/index-service.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/window/index-service.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/index/index-frame.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/read-history/index-frame.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/reader/index-frame.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/mine/index-frame.js
+2025-02-18 12:58:57 - MPK - INFO - Processing file: pages/window/index-frame.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: app-config.json
+2025-02-18 12:58:57 - Main - INFO - Unpacking: api/book-store/index.js
+2025-02-18 12:58:57 - Main - INFO - 成功格式化 JS 文件: api/book-store/index.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: api/http/compensation-queue.js
+2025-02-18 12:58:57 - Main - INFO - 成功格式化 JS 文件: api/http/compensation-queue.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: api/http/index.js
+2025-02-18 12:58:57 - Main - INFO - 成功格式化 JS 文件: api/http/index.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: api/mine/index.js
+2025-02-18 12:58:57 - Main - INFO - 成功格式化 JS 文件: api/mine/index.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: api/pay/index.js
+2025-02-18 12:58:57 - Main - INFO - 成功格式化 JS 文件: api/pay/index.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: api/qm-statistics.js
+2025-02-18 12:58:57 - Main - INFO - 成功格式化 JS 文件: api/qm-statistics.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: api/reader/index.js
+2025-02-18 12:58:57 - Main - INFO - 成功格式化 JS 文件: api/reader/index.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: api/user/index.js
+2025-02-18 12:58:57 - Main - INFO - 成功格式化 JS 文件: api/user/index.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: assets/ts/history.js
+2025-02-18 12:58:57 - Main - INFO - 成功格式化 JS 文件: assets/ts/history.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: assets/ts/theme.js
+2025-02-18 12:58:57 - Main - INFO - 成功格式化 JS 文件: assets/ts/theme.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: assets/vip.0f26bdea.png
+2025-02-18 12:58:57 - Main - INFO - Unpacking: common/assets.js
+2025-02-18 12:58:57 - Main - INFO - 成功格式化 JS 文件: common/assets.js
+2025-02-18 12:58:57 - Main - INFO - Unpacking: common/vendor.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: common/vendor.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: hooks/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: hooks/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: hooks/use-login.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: hooks/use-login.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: hooks/use-pay.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: hooks/use-pay.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: mixin/share.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: mixin/share.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/global/empty.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/global/loading.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/iconfont/iconfont.ttf
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/mine/default-avatar.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/pay/hand-dark.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/pay/hand.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/pay/queen.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/pay/radio-active.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/pay/radio-dark.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/pay/radio-inactive.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/pay/vip.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/tabbar/history-on.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/tabbar/history.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/tabbar/mine-on.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/tabbar/mine.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/tabbar/store-on.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: static/tabbar/store.png
+2025-02-18 12:59:00 - Main - INFO - Unpacking: store/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: store/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: store/modules/global.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: store/modules/global.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: store/modules/user.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: store/modules/user.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: app.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: app.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: pages/index/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: pages/index/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: pages/read-history/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: pages/read-history/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: pages/reader/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: pages/reader/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: pages/mine/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: pages/mine/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: pages/window/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: pages/window/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: components/qm-icon/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: components/qm-icon/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: components/qm-tab/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: components/qm-tab/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: components/qm-scrollx-book-list/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: components/qm-scrollx-book-list/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: components/qm-book-card/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: components/qm-book-card/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: components/qm-empty/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: components/qm-empty/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: pages/mine/components/how-to-find-me.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: pages/mine/components/how-to-find-me.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: node-modules/@repo/qm-components/src/q-reader/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: components/qm-pay-panel/index.js
+2025-02-18 12:59:00 - Main - INFO - 成功格式化 JS 文件: components/qm-pay-panel/index.js
+2025-02-18 12:59:00 - Main - INFO - Unpacking: pages/reader/components/final-chapter.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: pages/reader/components/final-chapter.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: components/qm-pay-panel/components/purchase-tips.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: components/qm-pay-panel/components/purchase-tips.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: components/qm-pay-card/index.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: components/qm-pay-card/index.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-theme-overlay/index.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: node-modules/@repo/qm-components/src/q-theme-overlay/index.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/chapter-content.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: node-modules/@repo/qm-components/src/q-reader/chapter-content.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/setting.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: node-modules/@repo/qm-components/src/q-reader/setting.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: components/qm-pay-panel/components/panel-header.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: components/qm-pay-panel/components/panel-header.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: components/qm-pay-panel/components/purchase-panel.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: components/qm-pay-panel/components/purchase-panel.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: components/qm-pay-card/components/guide-hand.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: components/qm-pay-card/components/guide-hand.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: components/qm-pull-up-loading/index.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: components/qm-pull-up-loading/index.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/components/set-box.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: node-modules/@repo/qm-components/src/q-reader/components/set-box.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/components/book-info.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: node-modules/@repo/qm-components/src/q-reader/components/book-info.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/components/chapter-list.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: node-modules/@repo/qm-components/src/q-reader/components/chapter-list.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-popup/index.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: node-modules/@repo/qm-components/src/q-popup/index.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/components/set-font-size.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: node-modules/@repo/qm-components/src/q-reader/components/set-font-size.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/components/set-background.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: node-modules/@repo/qm-components/src/q-reader/components/set-background.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-image/index.js
+2025-02-18 12:59:01 - Main - INFO - 成功格式化 JS 文件: node-modules/@repo/qm-components/src/q-image/index.js
+2025-02-18 12:59:01 - Main - INFO - Unpacking: preload-modules.json
+2025-02-18 12:59:01 - Main - INFO - Unpacking: page-frame.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: page-frame.js
+2025-02-18 12:59:02 - Main - INFO - Unpacking: app-service.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: app-service.js
+2025-02-18 12:59:02 - Main - INFO - Unpacking: pages/index/index-service.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: pages/index/index-service.js
+2025-02-18 12:59:02 - Main - INFO - Unpacking: pages/read-history/index-service.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: pages/read-history/index-service.js
+2025-02-18 12:59:02 - Main - INFO - Unpacking: pages/reader/index-service.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: pages/reader/index-service.js
+2025-02-18 12:59:02 - Main - INFO - Unpacking: pages/mine/index-service.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: pages/mine/index-service.js
+2025-02-18 12:59:02 - Main - INFO - Unpacking: pages/window/index-service.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: pages/window/index-service.js
+2025-02-18 12:59:02 - Main - INFO - Unpacking: pages/index/index-frame.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: pages/index/index-frame.js
+2025-02-18 12:59:02 - Main - INFO - Unpacking: pages/read-history/index-frame.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: pages/read-history/index-frame.js
+2025-02-18 12:59:02 - Main - INFO - Unpacking: pages/reader/index-frame.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: pages/reader/index-frame.js
+2025-02-18 12:59:02 - Main - INFO - Unpacking: pages/mine/index-frame.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: pages/mine/index-frame.js
+2025-02-18 12:59:02 - Main - INFO - Unpacking: pages/window/index-frame.js
+2025-02-18 12:59:02 - Main - INFO - 成功格式化 JS 文件: pages/window/index-frame.js
+2025-02-18 13:03:28 - Main - INFO - Loading: js/29cd3f51fce4976c4da45.ttpkg.js
+2025-02-18 13:03:28 - MPK - INFO - Magic: TPKG
+2025-02-18 13:03:28 - MPK - INFO - File count: 84
+2025-02-18 13:03:28 - MPK - INFO - Processing file: app-config.json
+2025-02-18 13:03:28 - MPK - INFO - Processing file: api/book-store/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: api/http/compensation-queue.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: api/http/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: api/mine/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: api/pay/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: api/qm-statistics.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: api/reader/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: api/user/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: assets/ts/history.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: assets/ts/theme.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: assets/vip.0f26bdea.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: common/assets.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: common/vendor.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: hooks/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: hooks/use-login.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: hooks/use-pay.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: mixin/share.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/global/empty.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/global/loading.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/iconfont/iconfont.ttf
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/mine/default-avatar.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/pay/hand-dark.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/pay/hand.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/pay/queen.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/pay/radio-active.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/pay/radio-dark.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/pay/radio-inactive.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/pay/vip.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/tabbar/history-on.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/tabbar/history.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/tabbar/mine-on.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/tabbar/mine.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/tabbar/store-on.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: static/tabbar/store.png
+2025-02-18 13:03:28 - MPK - INFO - Processing file: store/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: store/modules/global.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: store/modules/user.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: app.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/index/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/read-history/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/reader/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/mine/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/window/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-icon/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-tab/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-scrollx-book-list/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-book-card/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-empty/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/mine/components/how-to-find-me.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-pay-panel/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/reader/components/final-chapter.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-pay-panel/components/purchase-tips.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-pay-card/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-theme-overlay/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/chapter-content.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/setting.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-pay-panel/components/panel-header.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-pay-panel/components/purchase-panel.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-pay-card/components/guide-hand.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: components/qm-pull-up-loading/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/components/set-box.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/components/book-info.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/components/chapter-list.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-popup/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/components/set-font-size.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-reader/components/set-background.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: node-modules/@repo/qm-components/src/q-image/index.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: preload-modules.json
+2025-02-18 13:03:28 - MPK - INFO - Processing file: page-frame.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: app-service.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/index/index-service.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/read-history/index-service.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/reader/index-service.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/mine/index-service.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/window/index-service.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/index/index-frame.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/read-history/index-frame.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/reader/index-frame.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/mine/index-frame.js
+2025-02-18 13:03:28 - MPK - INFO - Processing file: pages/window/index-frame.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: app-config.json
+2025-02-18 13:03:28 - Main - INFO - Unpacking: api/book-store/index.js
+2025-02-18 13:03:28 - Main - INFO - 成功格式化并还原变量名: api/book-store/index.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: api/http/compensation-queue.js
+2025-02-18 13:03:28 - Main - INFO - 成功格式化并还原变量名: api/http/compensation-queue.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: api/http/index.js
+2025-02-18 13:03:28 - Main - INFO - 成功格式化并还原变量名: api/http/index.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: api/mine/index.js
+2025-02-18 13:03:28 - Main - INFO - 成功格式化并还原变量名: api/mine/index.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: api/pay/index.js
+2025-02-18 13:03:28 - Main - INFO - 成功格式化并还原变量名: api/pay/index.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: api/qm-statistics.js
+2025-02-18 13:03:28 - Main - INFO - 成功格式化并还原变量名: api/qm-statistics.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: api/reader/index.js
+2025-02-18 13:03:28 - Main - INFO - 成功格式化并还原变量名: api/reader/index.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: api/user/index.js
+2025-02-18 13:03:28 - Main - INFO - 成功格式化并还原变量名: api/user/index.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: assets/ts/history.js
+2025-02-18 13:03:28 - Main - INFO - 成功格式化并还原变量名: assets/ts/history.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: assets/ts/theme.js
+2025-02-18 13:03:28 - Main - INFO - 成功格式化并还原变量名: assets/ts/theme.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: assets/vip.0f26bdea.png
+2025-02-18 13:03:28 - Main - INFO - Unpacking: common/assets.js
+2025-02-18 13:03:28 - Main - INFO - 成功格式化并还原变量名: common/assets.js
+2025-02-18 13:03:28 - Main - INFO - Unpacking: common/vendor.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: common/vendor.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: hooks/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: hooks/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: hooks/use-login.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: hooks/use-login.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: hooks/use-pay.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: hooks/use-pay.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: mixin/share.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: mixin/share.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/global/empty.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/global/loading.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/iconfont/iconfont.ttf
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/mine/default-avatar.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/pay/hand-dark.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/pay/hand.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/pay/queen.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/pay/radio-active.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/pay/radio-dark.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/pay/radio-inactive.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/pay/vip.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/tabbar/history-on.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/tabbar/history.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/tabbar/mine-on.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/tabbar/mine.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/tabbar/store-on.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: static/tabbar/store.png
+2025-02-18 13:03:32 - Main - INFO - Unpacking: store/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: store/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: store/modules/global.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: store/modules/global.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: store/modules/user.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: store/modules/user.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: app.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: app.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: pages/index/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: pages/index/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: pages/read-history/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: pages/read-history/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: pages/reader/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: pages/reader/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: pages/mine/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: pages/mine/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: pages/window/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: pages/window/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: components/qm-icon/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: components/qm-icon/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: components/qm-tab/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: components/qm-tab/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: components/qm-scrollx-book-list/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: components/qm-scrollx-book-list/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: components/qm-book-card/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: components/qm-book-card/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: components/qm-empty/index.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: components/qm-empty/index.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: pages/mine/components/how-to-find-me.js
+2025-02-18 13:03:32 - Main - INFO - 成功格式化并还原变量名: pages/mine/components/how-to-find-me.js
+2025-02-18 13:03:32 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/index.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@repo/qm-components/src/q-reader/index.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: components/qm-pay-panel/index.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: components/qm-pay-panel/index.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: pages/reader/components/final-chapter.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: pages/reader/components/final-chapter.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: components/qm-pay-panel/components/purchase-tips.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: components/qm-pay-panel/components/purchase-tips.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: components/qm-pay-card/index.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: components/qm-pay-card/index.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-theme-overlay/index.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@repo/qm-components/src/q-theme-overlay/index.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/chapter-content.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@repo/qm-components/src/q-reader/chapter-content.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/setting.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@repo/qm-components/src/q-reader/setting.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: components/qm-pay-panel/components/panel-header.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: components/qm-pay-panel/components/panel-header.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: components/qm-pay-panel/components/purchase-panel.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: components/qm-pay-panel/components/purchase-panel.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: components/qm-pay-card/components/guide-hand.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: components/qm-pay-card/components/guide-hand.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: components/qm-pull-up-loading/index.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: components/qm-pull-up-loading/index.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/components/set-box.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@repo/qm-components/src/q-reader/components/set-box.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/components/book-info.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@repo/qm-components/src/q-reader/components/book-info.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/components/chapter-list.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@repo/qm-components/src/q-reader/components/chapter-list.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-popup/index.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@repo/qm-components/src/q-popup/index.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/components/set-font-size.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@repo/qm-components/src/q-reader/components/set-font-size.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-reader/components/set-background.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@repo/qm-components/src/q-reader/components/set-background.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: node-modules/@repo/qm-components/src/q-image/index.js
+2025-02-18 13:03:33 - Main - INFO - 成功格式化并还原变量名: node-modules/@repo/qm-components/src/q-image/index.js
+2025-02-18 13:03:33 - Main - INFO - Unpacking: preload-modules.json
+2025-02-18 13:03:33 - Main - INFO - Unpacking: page-frame.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: page-frame.js
+2025-02-18 13:03:34 - Main - INFO - Unpacking: app-service.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: app-service.js
+2025-02-18 13:03:34 - Main - INFO - Unpacking: pages/index/index-service.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: pages/index/index-service.js
+2025-02-18 13:03:34 - Main - INFO - Unpacking: pages/read-history/index-service.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: pages/read-history/index-service.js
+2025-02-18 13:03:34 - Main - INFO - Unpacking: pages/reader/index-service.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: pages/reader/index-service.js
+2025-02-18 13:03:34 - Main - INFO - Unpacking: pages/mine/index-service.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: pages/mine/index-service.js
+2025-02-18 13:03:34 - Main - INFO - Unpacking: pages/window/index-service.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: pages/window/index-service.js
+2025-02-18 13:03:34 - Main - INFO - Unpacking: pages/index/index-frame.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: pages/index/index-frame.js
+2025-02-18 13:03:34 - Main - INFO - Unpacking: pages/read-history/index-frame.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: pages/read-history/index-frame.js
+2025-02-18 13:03:34 - Main - INFO - Unpacking: pages/reader/index-frame.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: pages/reader/index-frame.js
+2025-02-18 13:03:34 - Main - INFO - Unpacking: pages/mine/index-frame.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: pages/mine/index-frame.js
+2025-02-18 13:03:34 - Main - INFO - Unpacking: pages/window/index-frame.js
+2025-02-18 13:03:34 - Main - INFO - 成功格式化并还原变量名: pages/window/index-frame.js

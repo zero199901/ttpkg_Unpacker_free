@@ -1,9 +1,15 @@
-define("components/qm-pay-panel/components/purchase-tips.js", (function (n, o, e, r, a, t, i, s, u, c, p, d, f, l, m, k, v, _, g, C, D, b, w, I, j, x, y, h, q, R, U, A, B, G, S, T, z, E, F) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: components/qm-pay-panel/components/purchase-tips.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("components/qm-pay-panel/components/purchase-tips.js", (function (require, setTimeout, exports, Promise, setInterval, module, clearTimeout, clearInterval, reject, c, document, navigator, resolve, window, data, event, history, utils, screen, response, token, state, options, result, success, callback, config, location, queryData, user, U, params, bindProps, getType, handler, action, initialize, status, formatData) {
   "use strict";
-  var H = n("../../../common/vendor.js"),
-    J = n("../../../store/modules/global.js");
-  Array || H.resolveComponent("qm-icon")();
-  var K = H.defineComponent({
+  var getter = require("../../../common/vendor.js"),
+    jsonParse = require("../../../store/modules/global.js");
+  Array || getter.resolveComponent("qm-icon")();
+  var createStore = getter.defineComponent({
       __name: "purchase-tips",
       props: {
         isDark: {
@@ -11,50 +17,50 @@ define("components/qm-pay-panel/components/purchase-tips.js", (function (n, o, e
           default: !1
         }
       },
-      setup: function (n) {
-        var o = H.ref(!1),
-          e = J.useGlobalStore(),
-          r = {
-            user: "/pages/window/index?url=".concat(encodeURIComponent(e.appConfigInfo.user_agreement)),
-            coin: "/pages/window/index?url=".concat(encodeURIComponent(e.appConfigInfo.coin_buy_url))
+      setup: function (require) {
+        var setTimeout = getter.ref(!1),
+          exports = jsonParse.useGlobalStore(),
+          Promise = {
+            user: "/pages/window/index?url=".concat(encodeURIComponent(exports.appConfigInfo.user_agreement)),
+            coin: "/pages/window/index?url=".concat(encodeURIComponent(exports.appConfigInfo.coin_buy_url))
           };
 
-        function a(n) {
-          H.index.navigateTo({
-            url: n
+        function setInterval(require) {
+          getter.index.navigateTo({
+            url: require
           })
         }
 
-        function t() {
-          o.value = !o.value
+        function module() {
+          setTimeout.value = !setTimeout.value
         }
-        return function (e, i) {
-          return H.e({
-            a: H.n(n.isDark ? "title-dark" : ""),
-            b: H.o(t),
-            c: o.value
-          }, o.value ? {
-            d: H.n(n.isDark ? "t-dark" : ""),
-            e: H.o((function (n) {
-              return a(r.user)
+        return function (exports, clearTimeout) {
+          return getter.exports({
+            setInterval: getter.require(require.isDark ? "title-dark" : ""),
+            state: getter.setTimeout(module),
+            c: setTimeout.value
+          }, setTimeout.value ? {
+            navigator: getter.require(require.isDark ? "module-dark" : ""),
+            exports: getter.setTimeout((function (require) {
+              return setInterval(Promise.user)
             })),
-            f: H.o((function (n) {
-              return a(r.coin)
+            resolve: getter.setTimeout((function (require) {
+              return setInterval(Promise.coin)
             })),
-            g: H.n(n.isDark ? "wrap-dark" : ""),
-            h: H.n(n.isDark ? "mask-dark" : ""),
-            i: H.n(n.isDark ? "footer-dark" : ""),
-            j: H.o(t),
-            k: H.n(n.isDark ? "con-dark" : ""),
-            l: H.o((function () {})),
-            m: H.o((function () {}))
+            screen: getter.require(require.isDark ? "wrap-dark" : ""),
+            location: getter.require(require.isDark ? "mask-dark" : ""),
+            clearTimeout: getter.require(require.isDark ? "footer-dark" : ""),
+            success: getter.setTimeout(module),
+            event: getter.require(require.isDark ? "con-dark" : ""),
+            window: getter.setTimeout((function () {})),
+            data: getter.setTimeout((function () {}))
           } : {})
         }
       }
     }),
-    L = H._export_sfc(K, [
-      ["__scopeId", "data-v-29b4a449"]
+    store = getter._export_sfc(createStore, [
+      ["__scopeId", "data-history-29b4a449"]
     ]);
-  tt.createComponent(L)
+  tt.createComponent(store)
 }));
 //# sourceMappingURL=purchase-tips.js.map

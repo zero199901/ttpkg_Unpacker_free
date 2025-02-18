@@ -9,6 +9,7 @@ import struct
 import sys
 from time import sleep
 from util.io_helper import IOHelper
+from datetime import datetime
 
 MPK_MAGIC = 'TPKG'
 MPK_VERSION = 131072
@@ -22,13 +23,44 @@ class MPK:
         self._logger = self._setup_logger()  # 添加日志记录器
 
     def _setup_logger(self):
+        """设置日志记录器，同时输出到控制台和文件"""
         import logging
+        from logging.handlers import RotatingFileHandler
+        import os
+        
+        # 创建 logs 目录
+        if not os.path.exists('logs'):
+            os.makedirs('logs')
+        
         logger = logging.getLogger('MPK')
         logger.setLevel(logging.INFO)
-        handler = logging.StreamHandler()
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
+        
+        # 设置日志格式
+        formatter = logging.Formatter(
+            '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
+        
+        # 控制台处理器
+        console_handler = logging.StreamHandler()
+        console_handler.setLevel(logging.INFO)
+        console_handler.setFormatter(formatter)
+        
+        # 文件处理器（按日期切分）
+        log_file = os.path.join('logs', 'mpk_unpacker.log')
+        file_handler = RotatingFileHandler(
+            log_file,
+            maxBytes=10*1024*1024,  # 10MB
+            backupCount=5,
+            encoding='utf-8'
+        )
+        file_handler.setLevel(logging.DEBUG)  # 文件记录更详细的日志
+        file_handler.setFormatter(formatter)
+        
+        # 添加处理器
+        logger.addHandler(console_handler)
+        logger.addHandler(file_handler)
+        
         return logger
 
     @staticmethod
@@ -116,13 +148,44 @@ class Main:
         self._logger = self._setup_logger()
 
     def _setup_logger(self):
+        """设置日志记录器，同时输出到控制台和文件"""
         import logging
+        from logging.handlers import RotatingFileHandler
+        import os
+        
+        # 创建 logs 目录
+        if not os.path.exists('logs'):
+            os.makedirs('logs')
+        
         logger = logging.getLogger('Main')
         logger.setLevel(logging.INFO)
-        handler = logging.StreamHandler()
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
+        
+        # 设置日志格式
+        formatter = logging.Formatter(
+            '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
+        
+        # 控制台处理器
+        console_handler = logging.StreamHandler()
+        console_handler.setLevel(logging.INFO)
+        console_handler.setFormatter(formatter)
+        
+        # 文件处理器（按日期切分）
+        log_file = os.path.join('logs', 'mpk_unpacker.log')
+        file_handler = RotatingFileHandler(
+            log_file,
+            maxBytes=10*1024*1024,  # 10MB
+            backupCount=5,
+            encoding='utf-8'
+        )
+        file_handler.setLevel(logging.DEBUG)  # 文件记录更详细的日志
+        file_handler.setFormatter(formatter)
+        
+        # 添加处理器
+        logger.addHandler(console_handler)
+        logger.addHandler(file_handler)
+        
         return logger
 
     def process_file(self, mpk, file_info, output_path):
@@ -155,6 +218,71 @@ class Main:
                 if ext == '.js':
                     try:
                         content = data.decode('utf-8')
+                        
+                        # 变量名映射表
+                        var_mapping = {
+                            't': 'module',
+                            'e': 'exports',
+                            'n': 'require',
+                            'r': 'Promise',
+                            'o': 'setTimeout',
+                            'i': 'clearTimeout',
+                            'a': 'setInterval',
+                            's': 'clearInterval',
+                            'u': 'reject',
+                            'f': 'resolve',
+                            'l': 'window',
+                            'p': 'document',
+                            'h': 'location',
+                            'd': 'navigator',
+                            'v': 'history',
+                            'g': 'screen',
+                            '_': 'utils',
+                            'y': 'config',
+                            'm': 'data',
+                            'b': 'state',
+                            'w': 'options',
+                            'k': 'event',
+                            'S': 'handler',
+                            'x': 'callback',
+                            'C': 'response',
+                            'O': 'request',
+                            'A': 'params',
+                            'I': 'result',
+                            'P': 'error',
+                            'j': 'success',
+                            'E': 'status',
+                            'B': 'message',
+                            'D': 'token',
+                            'R': 'user',
+                            'L': 'store',
+                            'T': 'action',
+                            'M': 'mutation',
+                            'H': 'getter',
+                        }
+                        
+                        # 函数名映射表
+                        func_mapping = {
+                            'G': 'getType',
+                            'B': 'bindProps',
+                            'q': 'queryData',
+                            'F': 'formatData',
+                            'z': 'initialize',
+                            'Q': 'handleQueue',
+                            'Y': 'processEvent',
+                            'W': 'watchChanges',
+                            'X': 'transformData',
+                            'K': 'createStore',
+                            'J': 'jsonParse',
+                            'V': 'validateData',
+                            'Z': 'setupConfig',
+                        }
+                        
+                        # 替换变量名和函数名
+                        for old_name, new_name in {**var_mapping, **func_mapping}.items():
+                            # 使用正则表达式确保只替换独立的标识符
+                            content = re.sub(r'\b' + re.escape(old_name) + r'\b', new_name, content)
+                        
                         # 使用 jsbeautifier 格式化 JS 代码
                         opts = jsbeautifier.default_options()
                         opts.indent_size = 2
@@ -168,8 +296,19 @@ class Main:
                         opts.end_with_newline = True
                         
                         beautified_content = jsbeautifier.beautify(content, opts)
-                        io_file.write(beautified_content.encode('utf-8'))
-                        self._logger.info(f"成功格式化 JS 文件: {filename}")
+                        
+                        # 添加文件头注释
+                        header_comment = (
+                            "/**\n"
+                            " * 反编译并格式化的 JS 文件\n"
+                            " * 原始文件: {}\n"
+                            " * 处理时间: {}\n"
+                            " */\n\n"
+                        ).format(filename, datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+                        
+                        final_content = header_comment + beautified_content
+                        io_file.write(final_content.encode('utf-8'))
+                        self._logger.info(f"成功格式化并还原变量名: {filename}")
                         
                     except UnicodeDecodeError:
                         self._logger.warning(f"无法解码 JS 文件: {filename}")

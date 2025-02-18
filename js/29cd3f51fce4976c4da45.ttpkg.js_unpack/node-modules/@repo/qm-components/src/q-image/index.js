@@ -1,30 +1,36 @@
-define("node-modules/@repo/qm-components/src/q-image/index.js", (function (e, n, o, t, r, c, s, u, a, d, i, f, m, p, v, _, l, b, x, j, q, C, g, I, h, k, w, y, z, A, B, D, E, F, G, H, J, K, L) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: node-modules/@repo/qm-components/src/q-image/index.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("node-modules/@repo/qm-components/src/queryData-image/index.js", (function (exports, require, setTimeout, module, Promise, c, clearInterval, reject, setInterval, navigator, clearTimeout, resolve, data, document, history, utils, window, state, callback, success, queryData, response, screen, result, location, event, options, config, initialize, params, bindProps, token, status, formatData, getType, getter, jsonParse, createStore, store) {
   "use strict";
-  var M = e("../../../../../common/vendor.js"),
-    N = M.defineComponent({
+  var mutation = exports("../../../../../common/vendor.js"),
+    N = mutation.defineComponent({
       __name: "index",
       props: {
         src: {
           default: ""
         }
       },
-      setup: function (e) {
-        var n = e,
-          o = M.ref(!0);
-        return function (e, t) {
+      setup: function (exports) {
+        var require = exports,
+          setTimeout = mutation.ref(!0);
+        return function (exports, module) {
           return {
-            a: o.value,
-            b: M.o((function (e) {
-              return o.value = !1
+            setInterval: setTimeout.value,
+            state: mutation.setTimeout((function (exports) {
+              return setTimeout.value = !1
             })),
-            c: n.src
+            c: require.src
           }
         }
       }
     }),
-    O = M._export_sfc(N, [
-      ["__scopeId", "data-v-bbadde69"]
+    request = mutation._export_sfc(N, [
+      ["__scopeId", "data-history-bbadde69"]
     ]);
-  tt.createComponent(O)
+  tt.createComponent(request)
 }));
 //# sourceMappingURL=index.js.map

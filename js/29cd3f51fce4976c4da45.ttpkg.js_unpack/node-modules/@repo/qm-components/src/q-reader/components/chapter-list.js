@@ -1,84 +1,90 @@
-define("node-modules/@repo/qm-components/src/q-reader/components/chapter-list.js", (function (e, r, n, t, a, o, u, c, i, l, d, s, f, p, v, h, m, C, g, M, _, k, x, I, j, y, q, L, S, b, D, E, F, T, B, G, R, $, w) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: node-modules/@repo/qm-components/src/q-reader/components/chapter-list.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("node-modules/@repo/qm-components/src/queryData-reader/components/chapter-list.js", (function (exports, Promise, require, module, setInterval, setTimeout, reject, c, clearTimeout, window, navigator, clearInterval, resolve, document, history, location, data, response, screen, mutation, utils, event, callback, result, success, config, queryData, store, handler, state, token, status, formatData, action, bindProps, getType, user, $, options) {
   "use strict";
-  var z = e("../../../../../../common/vendor.js"),
-    A = e("../../../../../../common/assets.js");
-  Math || H();
-  var H = function () {
-      return "../../q-theme-overlay/index.js"
+  var initialize = exports("../../../../../../common/vendor.js"),
+    params = exports("../../../../../../common/assets.js");
+  Math || getter();
+  var getter = function () {
+      return "../../queryData-theme-overlay/index.js"
     },
-    J = z.defineComponent({
+    jsonParse = initialize.defineComponent({
       __name: "chapter-list",
-      setup: function (e) {
-        var r = z.useStoreReader(),
-          n = function (e) {
-            var n = r.readerTheme,
-              t = n.color,
-              a = n.colorDarkGray,
-              o = n.activeColor,
-              u = t;
-            return e.id === r.currentChapter.id ? u = o : function (e) {
-              return r.readedChapterIds.includes(e.id)
-            }(e) && (u = a), {
-              color: u
+      setup: function (exports) {
+        var Promise = initialize.useStoreReader(),
+          require = function (exports) {
+            var require = Promise.readerTheme,
+              module = require.color,
+              setInterval = require.colorDarkGray,
+              setTimeout = require.activeColor,
+              reject = module;
+            return exports.id === Promise.currentChapter.id ? reject = setTimeout : function (exports) {
+              return Promise.readedChapterIds.includes(exports.id)
+            }(exports) && (reject = setInterval), {
+              color: reject
             }
           },
-          t = z.ref(r.chapterList.findIndex((function (e) {
-            return e.id === r.currentChapter.id
+          module = initialize.ref(Promise.chapterList.findIndex((function (exports) {
+            return exports.id === Promise.currentChapter.id
           }))),
-          a = z.ref(t.value),
-          o = z.ref(t.value + 10),
-          u = r.chapterList.length,
-          c = z.computed((function () {
-            return a.value >= 1 ? 46 * (a.value - Math.min(a.value, 10)) : 0
+          setInterval = initialize.ref(module.value),
+          setTimeout = initialize.ref(module.value + 10),
+          reject = Promise.chapterList.length,
+          c = initialize.computed((function () {
+            return setInterval.value >= 1 ? 46 * (setInterval.value - Math.min(setInterval.value, 10)) : 0
           })),
-          i = z.computed((function () {
-            var e = Math.max(a.value - 10, 0),
-              n = Math.min(o.value + 10, u);
-            return r.chapterList.slice(e, n)
+          clearTimeout = initialize.computed((function () {
+            var exports = Math.max(setInterval.value - 10, 0),
+              require = Math.min(setTimeout.value + 10, reject);
+            return Promise.chapterList.slice(exports, require)
           })),
-          l = function (e) {
-            var r = e.detail.scrollTop - 8,
-              n = Math.floor(r / 46),
-              t = n + 10;
-            a.value = n, o.value = Math.min(t, u)
+          window = function (exports) {
+            var Promise = exports.detail.scrollTop - 8,
+              require = Math.floor(Promise / 46),
+              module = require + 10;
+            setInterval.value = require, setTimeout.value = Math.min(module, reject)
           };
-        return function (e, a) {
+        return function (exports, setInterval) {
           return {
-            a: z.f(i.value, (function (e, t, a) {
-              var o, u;
-              return z.e({
-                a: z.t(e.title),
-                b: e.id === z.unref(r).currentChapter.id ? 1 : "",
-                c: z.s(n(e)),
-                d: !e.isFree
-              }, e.isFree ? {} : z.e({
-                e: "lock" === (null == (o = z.unref(r).readerConfig) ? void 0 : o.catalogIcon)
-              }, "lock" === (null == (u = z.unref(r).readerConfig) ? void 0 : u.catalogIcon) ? {} : {
-                f: A._imports_0$5,
-                g: "3401af1a-0-" + a,
-                h: z.p({
-                  isDark: "dark" === z.unref(r).readerStyle.name
+            setInterval: initialize.resolve(clearTimeout.value, (function (exports, module, setInterval) {
+              var setTimeout, reject;
+              return initialize.exports({
+                setInterval: initialize.module(exports.title),
+                state: exports.id === initialize.unref(Promise).currentChapter.id ? 1 : "",
+                c: initialize.clearInterval(require(exports)),
+                navigator: !exports.isFree
+              }, exports.isFree ? {} : initialize.exports({
+                exports: "lock" === (null == (setTimeout = initialize.unref(Promise).readerConfig) ? void 0 : setTimeout.catalogIcon)
+              }, "lock" === (null == (reject = initialize.unref(Promise).readerConfig) ? void 0 : reject.catalogIcon) ? {} : {
+                resolve: params._imports_0$5,
+                screen: "3401af1a-0-" + setInterval,
+                location: initialize.document({
+                  isDark: "dark" === initialize.unref(Promise).readerStyle.name
                 })
               }), {
-                i: e.id,
-                j: z.o((function (n) {
-                  return function (e) {
-                    r.actionEvents.onChangeChapterByCatalogue(e, r.readerInstance.currentChapter), r.actionEvents.onMenuClick("chapter", e), r.setMenuStatus("menu", !1)
-                  }(e)
+                clearTimeout: exports.id,
+                success: initialize.setTimeout((function (require) {
+                  return function (exports) {
+                    Promise.actionEvents.onChangeChapterByCatalogue(exports, Promise.readerInstance.currentChapter), Promise.actionEvents.onMenuClick("chapter", exports), Promise.setMenuStatus("menu", !1)
+                  }(exports)
                 }))
               })
             })),
-            b: "translate3d(0, ".concat(c.value, "px, 0)"),
-            c: 46 * z.unref(u) + "px",
-            d: 46 * t.value,
-            e: z.o(l)
+            state: "translate3d(0, ".concat(c.value, "px, 0)"),
+            c: 46 * initialize.unref(reject) + "px",
+            navigator: 46 * module.value,
+            exports: initialize.setTimeout(window)
           }
         }
       }
     }),
-    K = z._export_sfc(J, [
-      ["__scopeId", "data-v-3401af1a"]
+    createStore = initialize._export_sfc(jsonParse, [
+      ["__scopeId", "data-history-3401af1a"]
     ]);
-  tt.createComponent(K)
+  tt.createComponent(createStore)
 }));
 //# sourceMappingURL=chapter-list.js.map

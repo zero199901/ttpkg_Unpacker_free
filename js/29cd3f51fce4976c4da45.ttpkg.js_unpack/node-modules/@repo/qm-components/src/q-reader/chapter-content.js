@@ -1,110 +1,116 @@
-define("node-modules/@repo/qm-components/src/q-reader/chapter-content.js", (function (e, t, r, n, o, a, i, c, u, s, f, p, l, d, v, h, m, y, g, b, x, w, S, C, R, k, O, I, j, P, T, A, q, M, z, D, E, $, N) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: node-modules/@repo/qm-components/src/q-reader/chapter-content.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("node-modules/@repo/qm-components/src/queryData-reader/chapter-content.js", (function (exports, module, Promise, require, setTimeout, setInterval, clearTimeout, c, reject, clearInterval, resolve, document, window, navigator, history, location, data, config, screen, state, callback, options, handler, response, user, event, request, result, success, error, action, params, queryData, mutation, initialize, token, status, $, N) {
   "use strict";
 
-  function V(e) {
-    return V = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
-      return typeof e
-    } : function (e) {
-      return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-    }, V(e)
+  function validateData(exports) {
+    return validateData = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (exports) {
+      return typeof exports
+    } : function (exports) {
+      return exports && "function" == typeof Symbol && exports.constructor === Symbol && exports !== Symbol.prototype ? "symbol" : typeof exports
+    }, validateData(exports)
   }
 
-  function H(e, t) {
-    var r = Object.keys(e);
+  function getter(exports, module) {
+    var Promise = Object.keys(exports);
     if (Object.getOwnPropertySymbols) {
-      var n = Object.getOwnPropertySymbols(e);
-      t && (n = n.filter((function (t) {
-        return Object.getOwnPropertyDescriptor(e, t).enumerable
-      }))), r.push.apply(r, n)
+      var require = Object.getOwnPropertySymbols(exports);
+      module && (require = require.filter((function (module) {
+        return Object.getOwnPropertyDescriptor(exports, module).enumerable
+      }))), Promise.push.apply(Promise, require)
     }
-    return r
+    return Promise
   }
 
-  function K(e) {
-    for (var t = 1; t < arguments.length; t++) {
-      var r = null != arguments[t] ? arguments[t] : {};
-      t % 2 ? H(Object(r), !0).forEach((function (t) {
-        U(e, t, r[t])
-      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : H(Object(r)).forEach((function (t) {
-        Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t))
+  function createStore(exports) {
+    for (var module = 1; module < arguments.length; module++) {
+      var Promise = null != arguments[module] ? arguments[module] : {};
+      module % 2 ? getter(Object(Promise), !0).forEach((function (module) {
+        U(exports, module, Promise[module])
+      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(exports, Object.getOwnPropertyDescriptors(Promise)) : getter(Object(Promise)).forEach((function (module) {
+        Object.defineProperty(exports, module, Object.getOwnPropertyDescriptor(Promise, module))
       }))
     }
-    return e
+    return exports
   }
 
-  function U(e, t, r) {
-    return (t = function (e) {
-      var t = function (e, t) {
-        if ("object" != V(e) || !e) return e;
-        var r = e[Symbol.toPrimitive];
-        if (void 0 !== r) {
-          var n = r.call(e, t || "default");
-          if ("object" != V(n)) return n;
-          throw new TypeError("@@toPrimitive must return a primitive value.")
+  function U(exports, module, Promise) {
+    return (module = function (exports) {
+      var module = function (exports, module) {
+        if ("object" != validateData(exports) || !exports) return exports;
+        var Promise = exports[Symbol.toPrimitive];
+        if (void 0 !== Promise) {
+          var require = Promise.call(exports, module || "default");
+          if ("object" != validateData(require)) return require;
+          throw new TypeError("@@toPrimitive must return setInterval primitive value.")
         }
-        return ("string" === t ? String : Number)(e)
-      }(e, "string");
-      return "symbol" == V(t) ? t : t + ""
-    }(t)) in e ? Object.defineProperty(e, t, {
-      value: r,
+        return ("string" === module ? String : Number)(exports)
+      }(exports, "string");
+      return "symbol" == validateData(module) ? module : module + ""
+    }(module)) in exports ? Object.defineProperty(exports, module, {
+      value: Promise,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : e[t] = r, e
+    }) : exports[module] = Promise, exports
   }
 
-  function _(e) {
-    return function (e) {
-      if (Array.isArray(e)) return J(e)
-    }(e) || function (e) {
-      if ("undefined" != typeof Symbol && null != e[Symbol.iterator] || null != e["@@iterator"]) return Array.from(e)
-    }(e) || function (e, t) {
-      if (e) {
-        if ("string" == typeof e) return J(e, t);
-        var r = {}.toString.call(e).slice(8, -1);
-        return "Object" === r && e.constructor && (r = e.constructor.name), "Map" === r || "Set" === r ? Array.from(e) : "Arguments" === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r) ? J(e, t) : void 0
+  function utils(exports) {
+    return function (exports) {
+      if (Array.isArray(exports)) return jsonParse(exports)
+    }(exports) || function (exports) {
+      if ("undefined" != typeof Symbol && null != exports[Symbol.iterator] || null != exports["@@iterator"]) return Array.from(exports)
+    }(exports) || function (exports, module) {
+      if (exports) {
+        if ("string" == typeof exports) return jsonParse(exports, module);
+        var Promise = {}.toString.call(exports).slice(8, -1);
+        return "Object" === Promise && exports.constructor && (Promise = exports.constructor.name), "Map" === Promise || "Set" === Promise ? Array.from(exports) : "Arguments" === Promise || /^(?:Ui|result)nt(?:8|16|32)(?:Clamped)?Array$/.test(Promise) ? jsonParse(exports, module) : void 0
       }
-    }(e) || function () {
-      throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+    }(exports) || function () {
+      throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have setInterval [Symbol.iterator]() method.")
     }()
   }
 
-  function J(e, t) {
-    (null == t || t > e.length) && (t = e.length);
-    for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
-    return n
+  function jsonParse(exports, module) {
+    (null == module || module > exports.length) && (module = exports.length);
+    for (var Promise = 0, require = Array(module); Promise < module; Promise++) require[Promise] = exports[Promise];
+    return require
   }
 
-  function L(e, t, r, n, a, i, c) {
+  function store(exports, module, Promise, require, setInterval, clearTimeout, c) {
     try {
-      var u = e[i](c),
-        s = u.value
-    } catch (e) {
-      return void r(e)
+      var reject = exports[clearTimeout](c),
+        clearInterval = reject.value
+    } catch (exports) {
+      return void Promise(exports)
     }
-    u.done ? t(s) : o.resolve(s).then(n, a)
+    reject.done ? module(clearInterval) : setTimeout.resolve(clearInterval).then(require, setInterval)
   }
 
-  function B(e) {
+  function bindProps(exports) {
     return function () {
-      var t = this,
-        r = arguments;
-      return new o((function (n, o) {
-        var a = e.apply(t, r);
+      var module = this,
+        Promise = arguments;
+      return new setTimeout((function (require, setTimeout) {
+        var setInterval = exports.apply(module, Promise);
 
-        function i(e) {
-          L(a, n, o, i, c, "next", e)
+        function clearTimeout(exports) {
+          store(setInterval, require, setTimeout, clearTimeout, c, "next", exports)
         }
 
-        function c(e) {
-          L(a, n, o, i, c, "throw", e)
+        function c(exports) {
+          store(setInterval, require, setTimeout, clearTimeout, c, "throw", exports)
         }
-        i(void 0)
+        clearTimeout(void 0)
       }))
     }
   }
-  var Q = e("../../../../../common/vendor.js"),
-    F = Q.defineComponent({
+  var handleQueue = exports("../../../../../common/vendor.js"),
+    formatData = handleQueue.defineComponent({
       __name: "chapter-content",
       props: {
         events: {},
@@ -116,357 +122,357 @@ define("node-modules/@repo/qm-components/src/q-reader/chapter-content.js", (func
           }
         }
       },
-      setup: function (e, t) {
-        var r = t.expose,
-          n = Q.useStoreReader(),
-          i = e,
-          c = Q.getCurrentInstance(),
-          u = Q.ref([]),
-          s = new Q.Reader({
-            events: i.events
+      setup: function (exports, module) {
+        var Promise = module.expose,
+          require = handleQueue.useStoreReader(),
+          clearTimeout = exports,
+          c = handleQueue.getCurrentInstance(),
+          reject = handleQueue.ref([]),
+          clearInterval = new handleQueue.Reader({
+            events: clearTimeout.events
           });
-        s.updateView = function () {
-          var e = B(regeneratorRuntime.mark((function e(t) {
-            return regeneratorRuntime.wrap((function (e) {
-              for (;;) switch (e.prev = e.next) {
+        clearInterval.updateView = function () {
+          var exports = bindProps(regeneratorRuntime.mark((function exports(module) {
+            return regeneratorRuntime.wrap((function (exports) {
+              for (;;) switch (exports.prev = exports.next) {
                 case 0:
-                  return u.value = JSON.parse(JSON.stringify(t)), e.next = 3, Q.nextTick$1();
+                  return reject.value = JSON.parse(JSON.stringify(module)), exports.next = 3, handleQueue.nextTick$1();
                 case 3:
-                  y();
+                  config();
                 case 4:
                 case "end":
-                  return e.stop()
+                  return exports.stop()
               }
-            }), e)
+            }), exports)
           })));
-          return function (t) {
-            return e.apply(this, arguments)
+          return function (module) {
+            return exports.apply(this, arguments)
           }
-        }(), s.getChapterContentHeight = function () {
-          var e = B(regeneratorRuntime.mark((function e(t) {
-            var r;
-            return regeneratorRuntime.wrap((function (e) {
-              for (;;) switch (e.prev = e.next) {
+        }(), clearInterval.getChapterContentHeight = function () {
+          var exports = bindProps(regeneratorRuntime.mark((function exports(module) {
+            var Promise;
+            return regeneratorRuntime.wrap((function (exports) {
+              for (;;) switch (exports.prev = exports.next) {
                 case 0:
-                  return e.next = 2, h("#chapter-".concat(t));
+                  return exports.next = 2, location("#chapter-".concat(module));
                 case 2:
-                  return r = e.sent, e.abrupt("return", (console.log("-- chapter height", t, r), r[0] ? r[0].height : 0));
+                  return Promise = exports.sent, exports.abrupt("return", (console.log("-- chapter height", module, Promise), Promise[0] ? Promise[0].height : 0));
                 case 4:
                 case "end":
-                  return e.stop()
+                  return exports.stop()
               }
-            }), e)
+            }), exports)
           })));
-          return function (t) {
-            return e.apply(this, arguments)
+          return function (module) {
+            return exports.apply(this, arguments)
           }
-        }(), s.onScrollToTop = function () {
-          l.value = Math.random()
-        }, s.onChapterChange = function () {
-          var e = B(regeneratorRuntime.mark((function e(t) {
-            var r, o;
-            return regeneratorRuntime.wrap((function (e) {
-              for (;;) switch (e.prev = e.next) {
+        }(), clearInterval.onScrollToTop = function () {
+          window.value = Math.random()
+        }, clearInterval.onChapterChange = function () {
+          var exports = bindProps(regeneratorRuntime.mark((function exports(module) {
+            var Promise, setTimeout;
+            return regeneratorRuntime.wrap((function (exports) {
+              for (;;) switch (exports.prev = exports.next) {
                 case 0:
-                  if (r = s.events.getChapterInfo(t, "current"), o = !(!r.prev || !r.prev.id || r.disabledLoadPrev), e.t0 = o, e.t0) {
-                    e.next = 7;
+                  if (Promise = clearInterval.events.getChapterInfo(module, "current"), setTimeout = !(!Promise.prev || !Promise.prev.id || Promise.disabledLoadPrev), exports.t0 = setTimeout, exports.t0) {
+                    exports.next = 7;
                     break
                   }
-                  return x.value = !1, e.next = 7, Q.nextTick$1();
+                  return callback.value = !1, exports.next = 7, handleQueue.nextTick$1();
                 case 7:
-                  m.value = o, n.setCurrentChapter(r), t.content && 0 !== t.content.length && (n.setReadedChapterIds(r.id), O());
+                  data.value = setTimeout, require.setCurrentChapter(Promise), module.content && 0 !== module.content.length && (require.setReadedChapterIds(Promise.id), request());
                 case 10:
                 case "end":
-                  return e.stop()
+                  return exports.stop()
               }
-            }), e)
+            }), exports)
           })));
-          return function (t) {
-            return e.apply(this, arguments)
+          return function (module) {
+            return exports.apply(this, arguments)
           }
-        }(), n.setReaderInstance(s);
-        var f, p, l = Q.ref(0),
-          d = Q.ref(""),
-          v = function () {
-            var e = B(regeneratorRuntime.mark((function e(t, r) {
-              var n;
-              return regeneratorRuntime.wrap((function (e) {
-                for (;;) switch (e.prev = e.next) {
+        }(), require.setReaderInstance(clearInterval);
+        var resolve, document, window = handleQueue.ref(0),
+          navigator = handleQueue.ref(""),
+          history = function () {
+            var exports = bindProps(regeneratorRuntime.mark((function exports(module, Promise) {
+              var require;
+              return regeneratorRuntime.wrap((function (exports) {
+                for (;;) switch (exports.prev = exports.next) {
                   case 0:
-                    if (!r) {
-                      e.next = 2;
+                    if (!Promise) {
+                      exports.next = 2;
                       break
                     }
-                    return e.abrupt("return", void(d.value = r));
+                    return exports.abrupt("return", void(navigator.value = Promise));
                   case 2:
-                    n = "chapter-item-0-".concat(t.i), d.value = n;
+                    require = "chapter-item-0-".concat(module.clearTimeout), navigator.value = require;
                   case 4:
                   case "end":
-                    return e.stop()
+                    return exports.stop()
                 }
-              }), e)
+              }), exports)
             })));
-            return function (t, r) {
-              return e.apply(this, arguments)
+            return function (module, Promise) {
+              return exports.apply(this, arguments)
             }
           }(),
-          h = function () {
-            var e = B(regeneratorRuntime.mark((function e(t) {
-              return regeneratorRuntime.wrap((function (e) {
-                for (;;) switch (e.prev = e.next) {
+          location = function () {
+            var exports = bindProps(regeneratorRuntime.mark((function exports(module) {
+              return regeneratorRuntime.wrap((function (exports) {
+                for (;;) switch (exports.prev = exports.next) {
                   case 0:
-                    return e.abrupt("return", new o((function (e) {
-                      var r = Q.index.createSelectorQuery();
-                      r.in(c), r.select(t).boundingClientRect(), r.exec((function (t) {
-                        e(t)
+                    return exports.abrupt("return", new setTimeout((function (exports) {
+                      var Promise = handleQueue.index.createSelectorQuery();
+                      Promise.in(c), Promise.select(module).boundingClientRect(), Promise.exec((function (module) {
+                        exports(module)
                       }))
                     })));
                   case 1:
                   case "end":
-                    return e.stop()
+                    return exports.stop()
                 }
-              }), e)
+              }), exports)
             })));
-            return function (t) {
-              return e.apply(this, arguments)
+            return function (module) {
+              return exports.apply(this, arguments)
             }
           }(),
-          m = Q.ref(!0),
-          y = function () {
-            f && f.disconnect(), (f = Q.index.createIntersectionObserver(c, {
+          data = handleQueue.ref(!0),
+          config = function () {
+            resolve && resolve.disconnect(), (resolve = handleQueue.index.createIntersectionObserver(c, {
               thresholds: [0, 1],
               observeAll: !0
             })).relativeToViewport({
               top: 0
-            }).observe(".chapter-item", (function (e) {
-              var t = +e.dataset.index;
-              s.updateCurrentChapter(t, e.intersectionRatio), 1 === e.intersectionRatio && t === u.value.length - 1 && b()
+            }).observe(".chapter-item", (function (exports) {
+              var module = +exports.dataset.index;
+              clearInterval.updateCurrentChapter(module, exports.intersectionRatio), 1 === exports.intersectionRatio && module === reject.value.length - 1 && state()
             }))
           },
-          g = !1,
-          b = function () {
-            var e = B(regeneratorRuntime.mark((function e() {
-              return regeneratorRuntime.wrap((function (e) {
-                for (;;) switch (e.prev = e.next) {
+          screen = !1,
+          state = function () {
+            var exports = bindProps(regeneratorRuntime.mark((function exports() {
+              return regeneratorRuntime.wrap((function (exports) {
+                for (;;) switch (exports.prev = exports.next) {
                   case 0:
-                    if (!u.value[u.value.length - 1].needPay) {
-                      e.next = 4;
+                    if (!reject.value[reject.value.length - 1].needPay) {
+                      exports.next = 4;
                       break
                     }
-                    console.log("-- 卡点，不预加载"), e.next = 17;
+                    console.log("-- 卡点，不预加载"), exports.next = 17;
                     break;
                   case 4:
-                    if (g) {
-                      e.next = 17;
+                    if (screen) {
+                      exports.next = 17;
                       break
                     }
-                    return g = !0, e.prev = 6, e.next = 9, s.preloadNextChapter();
+                    return screen = !0, exports.prev = 6, exports.next = 9, clearInterval.preloadNextChapter();
                   case 9:
-                    e.next = 14;
+                    exports.next = 14;
                     break;
                   case 11:
-                    e.prev = 11, e.t0 = e.catch(6), console.warn("-- onScrolltolower", e.t0);
+                    exports.prev = 11, exports.t0 = exports.catch(6), console.warn("-- onScrolltolower", exports.t0);
                   case 14:
-                    return e.prev = 14, a((function () {
-                      g = !1
-                    }), 300), e.finish(14);
+                    return exports.prev = 14, setInterval((function () {
+                      screen = !1
+                    }), 300), exports.finish(14);
                   case 17:
                   case "end":
-                    return e.stop()
+                    return exports.stop()
                 }
-              }), e, null, [
+              }), exports, null, [
                 [6, 11, 14, 17]
               ])
             })));
             return function () {
-              return e.apply(this, arguments)
+              return exports.apply(this, arguments)
             }
           }(),
-          x = Q.ref(!1),
-          w = function () {
-            var e = B(regeneratorRuntime.mark((function e() {
-              return regeneratorRuntime.wrap((function (e) {
-                for (;;) switch (e.prev = e.next) {
+          callback = handleQueue.ref(!1),
+          options = function () {
+            var exports = bindProps(regeneratorRuntime.mark((function exports() {
+              return regeneratorRuntime.wrap((function (exports) {
+                for (;;) switch (exports.prev = exports.next) {
                   case 0:
-                    return x.value = !0, e.prev = 1, e.next = 4, s.addPrevChapter();
+                    return callback.value = !0, exports.prev = 1, exports.next = 4, clearInterval.addPrevChapter();
                   case 4:
-                    return e.prev = 4, x.value = !1, e.finish(4);
+                    return exports.prev = 4, callback.value = !1, exports.finish(4);
                   case 7:
                   case "end":
-                    return e.stop()
+                    return exports.stop()
                 }
-              }), e, null, [
+              }), exports, null, [
                 [1, , 4, 7]
               ])
             })));
             return function () {
-              return e.apply(this, arguments)
+              return exports.apply(this, arguments)
             }
           }(),
-          S = Q.computed((function () {
+          handler = handleQueue.computed((function () {
             return {
-              background: n.readerStyle.bgColor
+              background: require.readerStyle.bgColor
             }
           })),
-          C = Q.computed((function () {
+          response = handleQueue.computed((function () {
             return {
-              fontSize: 2 * n.readerStyle.fontSize + "rpx",
-              color: n.readerStyle.color
+              fontSize: 2 * require.readerStyle.fontSize + "rpx",
+              color: require.readerStyle.color
             }
           })),
-          R = Q.computed((function () {
-            var e;
+          user = handleQueue.computed((function () {
+            var exports;
             return {
-              fontSize: n.readerStyle.fontSize * ((null == (e = n.readerConfig) ? void 0 : e.readerTitileRatio) || 1.15) * 2 + "rpx",
-              color: n.readerStyle.color
+              fontSize: require.readerStyle.fontSize * ((null == (exports = require.readerConfig) ? void 0 : exports.readerTitileRatio) || 1.15) * 2 + "rpx",
+              color: require.readerStyle.color
             }
           })),
-          k = {},
-          O = function () {
-            var e = B(regeneratorRuntime.mark((function e() {
-              return regeneratorRuntime.wrap((function (e) {
-                for (;;) switch (e.prev = e.next) {
+          event = {},
+          request = function () {
+            var exports = bindProps(regeneratorRuntime.mark((function exports() {
+              return regeneratorRuntime.wrap((function (exports) {
+                for (;;) switch (exports.prev = exports.next) {
                   case 0:
-                    return e.next = 2, Q.nextTick$1();
+                    return exports.next = 2, handleQueue.nextTick$1();
                   case 2:
-                    p && p.disconnect(), k = {}, (p = Q.index.createIntersectionObserver(c, {
+                    document && document.disconnect(), event = {}, (document = handleQueue.index.createIntersectionObserver(c, {
                       thresholds: [0],
                       observeAll: !0
                     })).relativeToViewport({
                       top: 0
-                    }).observe(".js-chapter-item", (function (e) {
-                      var t = +e.dataset.index,
-                        r = e.dataset.id,
-                        n = k[r] || new Set;
-                      0 === e.intersectionRatio ? n.delete(t) : n.add(t), k[r] = n
+                    }).observe(".js-chapter-item", (function (exports) {
+                      var module = +exports.dataset.index,
+                        Promise = exports.dataset.id,
+                        require = event[Promise] || new Set;
+                      0 === exports.intersectionRatio ? require.delete(module) : require.add(module), event[Promise] = require
                     }));
                   case 6:
                   case "end":
-                    return e.stop()
+                    return exports.stop()
                 }
-              }), e)
+              }), exports)
             })));
             return function () {
-              return e.apply(this, arguments)
+              return exports.apply(this, arguments)
             }
           }(),
-          I = function () {
-            var e = B(regeneratorRuntime.mark((function e() {
-              var t, r;
-              return regeneratorRuntime.wrap((function (e) {
-                for (;;) switch (e.prev = e.next) {
+          result = function () {
+            var exports = bindProps(regeneratorRuntime.mark((function exports() {
+              var module, Promise;
+              return regeneratorRuntime.wrap((function (exports) {
+                for (;;) switch (exports.prev = exports.next) {
                   case 0:
-                    t = Math.min.apply(Math, _(k[s.currentChapter.id].values())), r = {
-                      id: s.currentChapter.id,
-                      i: t
-                    }, Q.index.setStorageSync(Q.storageKeys.chapterInfoPrefix + i.query.id, K(K({}, r), {}, {
-                      bookId: i.query.id,
-                      readedChapterIds: _(new Set(n.readedChapterIds))
+                    module = Math.min.apply(Math, utils(event[clearInterval.currentChapter.id].values())), Promise = {
+                      id: clearInterval.currentChapter.id,
+                      clearTimeout: module
+                    }, handleQueue.index.setStorageSync(handleQueue.storageKeys.chapterInfoPrefix + clearTimeout.query.id, createStore(createStore({}, Promise), {}, {
+                      bookId: clearTimeout.query.id,
+                      readedChapterIds: utils(new Set(require.readedChapterIds))
                     }));
                   case 2:
                   case "end":
-                    return e.stop()
+                    return exports.stop()
                 }
-              }), e)
+              }), exports)
             })));
             return function () {
-              return e.apply(this, arguments)
+              return exports.apply(this, arguments)
             }
           }();
-        return Q.watch((function () {
-            return n.readerStyle.fontSize
-          }), B(regeneratorRuntime.mark((function e() {
-            var t, r, n;
-            return regeneratorRuntime.wrap((function (e) {
-              for (;;) switch (e.prev = e.next) {
+        return handleQueue.watch((function () {
+            return require.readerStyle.fontSize
+          }), bindProps(regeneratorRuntime.mark((function exports() {
+            var module, Promise, require;
+            return regeneratorRuntime.wrap((function (exports) {
+              for (;;) switch (exports.prev = exports.next) {
                 case 0:
-                  return s.clearEmptyData(), t = u.value.findIndex((function (e) {
-                    return e.id === s.currentChapter.id
-                  })), r = Math.min.apply(Math, _(k[s.currentChapter.id].values())), n = "chapter-item-".concat(t, "-").concat(-1 === r ? 0 : r), d.value = "", e.next = 5, Q.nextTick$1();
+                  return clearInterval.clearEmptyData(), module = reject.value.findIndex((function (exports) {
+                    return exports.id === clearInterval.currentChapter.id
+                  })), Promise = Math.min.apply(Math, utils(event[clearInterval.currentChapter.id].values())), require = "chapter-item-".concat(module, "-").concat(-1 === Promise ? 0 : Promise), navigator.value = "", exports.next = 5, handleQueue.nextTick$1();
                 case 5:
-                  d.value = n, O();
+                  navigator.value = require, request();
                 case 7:
                 case "end":
-                  return e.stop()
+                  return exports.stop()
               }
-            }), e)
-          })))), B(regeneratorRuntime.mark((function e() {
-            var t, r, o, a, c, u;
-            return regeneratorRuntime.wrap((function (e) {
-              for (;;) switch (e.prev = e.next) {
+            }), exports)
+          })))), bindProps(regeneratorRuntime.mark((function exports() {
+            var module, Promise, setTimeout, setInterval, c, reject;
+            return regeneratorRuntime.wrap((function (exports) {
+              for (;;) switch (exports.prev = exports.next) {
                 case 0:
-                  if (n.setReaderTheme("default"), (t = Q.index.getStorageSync(Q.storageKeys.setting)) && (t.name || (r = Q.skinConfigList.find((function (e) {
-                      return e.bgColor === t.bgColor
-                    })), t.name = r ? r.name : "white"), n.setReaderStyle(t)), o = Q.index.getStorageSync(Q.storageKeys.chapterInfoPrefix + i.query.id) || {}, a = o.id, !s.events.getInitChapterId) {
-                    e.next = 11;
+                  if (require.setReaderTheme("default"), (module = handleQueue.index.getStorageSync(handleQueue.storageKeys.setting)) && (module.name || (Promise = handleQueue.skinConfigList.find((function (exports) {
+                      return exports.bgColor === module.bgColor
+                    })), module.name = Promise ? Promise.name : "white"), require.setReaderStyle(module)), setTimeout = handleQueue.index.getStorageSync(handleQueue.storageKeys.chapterInfoPrefix + clearTimeout.query.id) || {}, setInterval = setTimeout.id, !clearInterval.events.getInitChapterId) {
+                    exports.next = 11;
                     break
                   }
-                  return e.next = 7, s.events.getInitChapterId();
+                  return exports.next = 7, clearInterval.events.getInitChapterId();
                 case 7:
-                  c = e.sent, o.id = c, e.next = 12;
+                  c = exports.sent, setTimeout.id = c, exports.next = 12;
                   break;
                 case 11:
-                  !i.query.force && a || (o.id = i.query.cid);
+                  !clearTimeout.query.force && setInterval || (setTimeout.id = clearTimeout.query.cid);
                 case 12:
-                  return console.log("-- book init ", o), e.next = 15, s.onInit(o);
+                  return console.log("-- book init ", setTimeout), exports.next = 15, clearInterval.onInit(setTimeout);
                 case 15:
-                  a === s.currentChapter.id && v(o), u = o.readedChapterIds || [], n.setReadedChapterIds(u);
+                  setInterval === clearInterval.currentChapter.id && history(setTimeout), reject = setTimeout.readedChapterIds || [], require.setReadedChapterIds(reject);
                 case 18:
                 case "end":
-                  return e.stop()
+                  return exports.stop()
               }
-            }), e)
-          })))(), Q.index.onAppHide((function () {
-            I()
-          })), Q.onBeforeUnmount((function () {
-            I()
-          })), Q.onUnmounted((function () {
-            f && f.disconnect()
-          })), r({
-            onScrollToView: v
+            }), exports)
+          })))(), handleQueue.index.onAppHide((function () {
+            result()
+          })), handleQueue.onBeforeUnmount((function () {
+            result()
+          })), handleQueue.onUnmounted((function () {
+            resolve && resolve.disconnect()
+          })), Promise({
+            onScrollToView: history
           }),
-          function (e, t) {
-            var r;
+          function (exports, module) {
+            var Promise;
             return {
-              a: Q.f(u.value, (function (e, t, r) {
-                return Q.e({
-                  a: !e.content || 0 === e.content.length
-                }, e.content && 0 !== e.content.length ? {
-                  d: Q.t(e.title),
-                  e: e.id,
-                  f: Q.s(R.value),
-                  g: Q.f(e.content, (function (e, r, n) {
+              setInterval: handleQueue.resolve(reject.value, (function (exports, module, Promise) {
+                return handleQueue.exports({
+                  setInterval: !exports.content || 0 === exports.content.length
+                }, exports.content && 0 !== exports.content.length ? {
+                  navigator: handleQueue.module(exports.title),
+                  exports: exports.id,
+                  resolve: handleQueue.clearInterval(user.value),
+                  screen: handleQueue.resolve(exports.content, (function (exports, Promise, require) {
                     return {
-                      a: Q.t(e),
-                      b: r,
-                      c: r,
-                      d: "chapter-item-".concat(t, "-").concat(r)
+                      setInterval: handleQueue.module(exports),
+                      state: Promise,
+                      c: Promise,
+                      navigator: "chapter-item-".concat(module, "-").concat(Promise)
                     }
                   })),
-                  h: Q.s(C.value),
-                  i: e.id,
-                  j: t,
-                  k: "chapter-".concat(t)
+                  location: handleQueue.clearInterval(response.value),
+                  clearTimeout: exports.id,
+                  success: module,
+                  event: "chapter-".concat(module)
                 } : {
-                  b: e.contentHeight + "px",
-                  c: "chapter-".concat(t)
+                  state: exports.contentHeight + "px",
+                  c: "chapter-".concat(module)
                 }, {
-                  l: "".concat(t, "_").concat(e.id)
+                  window: "".concat(module, "utils").concat(exports.id)
                 })
               })),
-              b: Q.n((null == (r = Q.unref(n).readerConfig) ? void 0 : r.customReaderClass) || ""),
-              c: Q.s(S.value),
-              d: Q.o(b),
-              e: m.value,
-              f: Q.o(w),
-              g: x.value,
-              h: d.value,
-              i: l.value,
-              j: Q.unref(n).readerStyle.bgColor
+              state: handleQueue.require((null == (Promise = handleQueue.unref(require).readerConfig) ? void 0 : Promise.customReaderClass) || ""),
+              c: handleQueue.clearInterval(handler.value),
+              navigator: handleQueue.setTimeout(state),
+              exports: data.value,
+              resolve: handleQueue.setTimeout(options),
+              screen: callback.value,
+              location: navigator.value,
+              clearTimeout: window.value,
+              success: handleQueue.unref(require).readerStyle.bgColor
             }
           }
       }
     });
-  tt.createComponent(F)
+  tt.createComponent(formatData)
 }));
 //# sourceMappingURL=chapter-content.js.map

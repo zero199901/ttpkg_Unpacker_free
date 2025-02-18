@@ -1,12 +1,18 @@
-define("components/qm-book-card/index.js", (function (e, o, t, r, n, a, i, c, p, k, u, s, b, d, f, l, v, m, y, D, h, x, g, T, _, N, S, j, q, C, z, B, W, H, I, M, $, w, A) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: components/qm-book-card/index.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("components/qm-book-card/index.js", (function (exports, setTimeout, module, Promise, require, setInterval, clearTimeout, c, document, event, reject, clearInterval, state, navigator, resolve, window, history, data, config, token, location, callback, screen, action, utils, N, handler, success, queryData, response, initialize, bindProps, watchChanges, getter, result, mutation, $, options, params) {
   "use strict";
-  var E = e("../../common/vendor.js"),
-    F = "渺渺故事会";
-  Math || G();
-  var G = function () {
-      return "../../node-modules/@repo/qm-components/src/q-theme-overlay/index.js"
+  var status = exports("../../common/vendor.js"),
+    formatData = "渺渺故事会";
+  Math || getType();
+  var getType = function () {
+      return "../../node-modules/@repo/qm-components/src/queryData-theme-overlay/index.js"
     },
-    J = E.defineComponent({
+    jsonParse = status.defineComponent({
       __name: "index",
       props: {
         bookCover: {
@@ -42,54 +48,54 @@ define("components/qm-book-card/index.js", (function (e, o, t, r, n, a, i, c, p,
           default: !1
         }
       },
-      setup: function (e) {
-        var o = F,
-          t = E.ref(!1),
-          r = e,
-          n = function () {
-            E.nextTick$1((function () {
-              t.value = !0
+      setup: function (exports) {
+        var setTimeout = formatData,
+          module = status.ref(!1),
+          Promise = exports,
+          require = function () {
+            status.nextTick$1((function () {
+              module.value = !0
             }))
           };
-        return function (a, i) {
-          return E.e({
-            a: !t.value
-          }, t.value ? {} : {
-            b: E.t(E.unref(o))
+        return function (setInterval, clearTimeout) {
+          return status.exports({
+            setInterval: !module.value
+          }, module.value ? {} : {
+            state: status.module(status.unref(setTimeout))
           }, {
-            c: r.bookCover,
-            d: E.o(n),
-            e: t.value,
-            f: E.p({
-              isDark: e.isDark
+            c: Promise.bookCover,
+            navigator: status.setTimeout(require),
+            exports: module.value,
+            resolve: status.document({
+              isDark: exports.isDark
             }),
-            g: r.coverWidth + "rpx",
-            h: r.coverHeight + "rpx",
-            i: "vertical" === r.bookType
-          }, "vertical" === r.bookType ? {
-            j: E.t(r.bookName)
+            screen: Promise.coverWidth + "rpx",
+            location: Promise.coverHeight + "rpx",
+            clearTimeout: "vertical" === Promise.bookType
+          }, "vertical" === Promise.bookType ? {
+            success: status.module(Promise.bookName)
           } : {}, {
-            k: r.coverWidth + "rpx",
-            l: "horizontal" === r.bookType
-          }, "horizontal" === r.bookType ? E.e({
-            m: E.t(r.bookName),
-            n: r.bookDesc ? "" : 1,
-            o: r.bookDesc ? 1 : "",
-            p: e.isDark ? 1 : "",
-            q: r.bookDesc
-          }, r.bookDesc ? {
-            r: E.t(r.bookDesc),
-            s: e.isDark ? 1 : ""
+            event: Promise.coverWidth + "rpx",
+            window: "horizontal" === Promise.bookType
+          }, "horizontal" === Promise.bookType ? status.exports({
+            data: status.module(Promise.bookName),
+            require: Promise.bookDesc ? "" : 1,
+            setTimeout: Promise.bookDesc ? 1 : "",
+            document: exports.isDark ? 1 : "",
+            queryData: Promise.bookDesc
+          }, Promise.bookDesc ? {
+            Promise: status.module(Promise.bookDesc),
+            clearInterval: exports.isDark ? 1 : ""
           } : {}, {
-            t: E.t(r.bookBottomText),
-            v: e.isDark ? 1 : ""
+            module: status.module(Promise.bookBottomText),
+            history: exports.isDark ? 1 : ""
           }) : {})
         }
       }
     }),
-    K = E._export_sfc(J, [
-      ["__scopeId", "data-v-fbcfa562"]
+    createStore = status._export_sfc(jsonParse, [
+      ["__scopeId", "data-history-fbcfa562"]
     ]);
-  tt.createComponent(K)
+  tt.createComponent(createStore)
 }));
 //# sourceMappingURL=index.js.map

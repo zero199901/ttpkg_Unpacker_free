@@ -1,72 +1,78 @@
-define("node-modules/@repo/qm-components/src/q-reader/setting.js", (function (e, t, n, o, r, u, a, i, c, l, s, p, f, m, g, y, d, v, T, S, b, h, C, k, O, j, E, M, B, L, w, G, P, I, x, A, _, D, N) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: node-modules/@repo/qm-components/src/q-reader/setting.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("node-modules/@repo/qm-components/src/queryData-reader/setting.js", (function (exports, module, require, setTimeout, Promise, reject, setInterval, clearTimeout, c, window, clearInterval, document, resolve, data, screen, config, navigator, history, action, handler, state, location, response, event, request, success, status, mutation, bindProps, store, options, getType, error, result, callback, params, utils, token, N) {
   "use strict";
 
-  function q(e) {
-    return q = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
-      return typeof e
-    } : function (e) {
-      return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-    }, q(e)
+  function queryData(exports) {
+    return queryData = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (exports) {
+      return typeof exports
+    } : function (exports) {
+      return exports && "function" == typeof Symbol && exports.constructor === Symbol && exports !== Symbol.prototype ? "symbol" : typeof exports
+    }, queryData(exports)
   }
 
-  function H(e, t) {
-    var n = Object.keys(e);
+  function getter(exports, module) {
+    var require = Object.keys(exports);
     if (Object.getOwnPropertySymbols) {
-      var o = Object.getOwnPropertySymbols(e);
-      t && (o = o.filter((function (t) {
-        return Object.getOwnPropertyDescriptor(e, t).enumerable
-      }))), n.push.apply(n, o)
+      var setTimeout = Object.getOwnPropertySymbols(exports);
+      module && (setTimeout = setTimeout.filter((function (module) {
+        return Object.getOwnPropertyDescriptor(exports, module).enumerable
+      }))), require.push.apply(require, setTimeout)
     }
-    return n
+    return require
   }
 
-  function R(e) {
-    for (var t = 1; t < arguments.length; t++) {
-      var n = null != arguments[t] ? arguments[t] : {};
-      t % 2 ? H(Object(n), !0).forEach((function (t) {
-        V(e, t, n[t])
-      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : H(Object(n)).forEach((function (t) {
-        Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t))
+  function user(exports) {
+    for (var module = 1; module < arguments.length; module++) {
+      var require = null != arguments[module] ? arguments[module] : {};
+      module % 2 ? getter(Object(require), !0).forEach((function (module) {
+        validateData(exports, module, require[module])
+      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(exports, Object.getOwnPropertyDescriptors(require)) : getter(Object(require)).forEach((function (module) {
+        Object.defineProperty(exports, module, Object.getOwnPropertyDescriptor(require, module))
       }))
     }
-    return e
+    return exports
   }
 
-  function V(e, t, n) {
-    return (t = function (e) {
-      var t = function (e, t) {
-        if ("object" != q(e) || !e) return e;
-        var n = e[Symbol.toPrimitive];
-        if (void 0 !== n) {
-          var o = n.call(e, t || "default");
-          if ("object" != q(o)) return o;
-          throw new TypeError("@@toPrimitive must return a primitive value.")
+  function validateData(exports, module, require) {
+    return (module = function (exports) {
+      var module = function (exports, module) {
+        if ("object" != queryData(exports) || !exports) return exports;
+        var require = exports[Symbol.toPrimitive];
+        if (void 0 !== require) {
+          var setTimeout = require.call(exports, module || "default");
+          if ("object" != queryData(setTimeout)) return setTimeout;
+          throw new TypeError("@@toPrimitive must return setInterval primitive value.")
         }
-        return ("string" === t ? String : Number)(e)
-      }(e, "string");
-      return "symbol" == q(t) ? t : t + ""
-    }(t)) in e ? Object.defineProperty(e, t, {
-      value: n,
+        return ("string" === module ? String : Number)(exports)
+      }(exports, "string");
+      return "symbol" == queryData(module) ? module : module + ""
+    }(module)) in exports ? Object.defineProperty(exports, module, {
+      value: require,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : e[t] = n, e
+    }) : exports[module] = require, exports
   }
-  var z = e("../../../../../common/vendor.js");
-  Math || (F + J + K + Q)();
-  var F = function () {
+  var initialize = exports("../../../../../common/vendor.js");
+  Math || (formatData + jsonParse + createStore + handleQueue)();
+  var formatData = function () {
       return "./components/set-box.js"
     },
-    J = function () {
+    jsonParse = function () {
       return "./components/book-info.js"
     },
-    K = function () {
+    createStore = function () {
       return "./components/chapter-list.js"
     },
-    Q = function () {
-      return "../q-popup/index.js"
+    handleQueue = function () {
+      return "../queryData-popup/index.js"
     },
-    U = z.defineComponent({
+    U = initialize.defineComponent({
       __name: "setting",
       props: {
         toolsConfig: {
@@ -76,154 +82,154 @@ define("node-modules/@repo/qm-components/src/q-reader/setting.js", (function (e,
         }
       },
       emits: ["changeChapter"],
-      setup: function (e, t) {
-        var n = t.emit,
-          o = z.useStoreReader(),
-          r = V(V(V({}, z.ToolButtonType.CATALOG, {
+      setup: function (exports, module) {
+        var require = module.emit,
+          setTimeout = initialize.useStoreReader(),
+          Promise = validateData(validateData(validateData({}, initialize.ToolButtonType.CATALOG, {
             iconLink: "icon-directory",
             activeIconLink: "icon-directory_selected",
             title: "目录",
             type: "catalog"
-          }), z.ToolButtonType.THEME, {
+          }), initialize.ToolButtonType.THEME, {
             iconLink: "icon-theme-night",
             activeIconLink: "icon-theme-day",
             title: "夜间",
             activeTitle: "日间",
             type: "theme"
-          }), z.ToolButtonType.SETTING, {
+          }), initialize.ToolButtonType.SETTING, {
             iconLink: "icon-setting",
             activeIconLink: "icon-setting_selected",
             title: "设置",
             type: "setting"
           }),
-          u = n,
-          a = e,
-          i = z.computed((function () {
-            return !o.currentChapter.prev || !o.currentChapter.prev.id
+          reject = require,
+          setInterval = exports,
+          clearTimeout = initialize.computed((function () {
+            return !setTimeout.currentChapter.prev || !setTimeout.currentChapter.prev.id
           })),
-          c = z.computed((function () {
-            return !o.currentChapter.next || !o.currentChapter.next.id
+          c = initialize.computed((function () {
+            return !setTimeout.currentChapter.next || !setTimeout.currentChapter.next.id
           })),
-          l = z.computed((function () {
-            var e = o.readerTheme,
-              t = e.bgColor,
-              n = e.color,
-              r = e.divideColor;
+          window = initialize.computed((function () {
+            var exports = setTimeout.readerTheme,
+              module = exports.bgColor,
+              require = exports.color,
+              Promise = exports.divideColor;
             return {
-              backgroundColor: t,
-              color: n,
-              borderTop: "1px solid ".concat(r)
+              backgroundColor: module,
+              color: require,
+              borderTop: "1px solid ".concat(Promise)
             }
           })),
-          s = z.computed((function () {
-            return a.toolsConfig.map((function (e) {
-              return z.isString(e) ? r[e] : R(R({}, r[e.type]), e)
+          clearInterval = initialize.computed((function () {
+            return setInterval.toolsConfig.map((function (exports) {
+              return initialize.isString(exports) ? Promise[exports] : user(user({}, Promise[exports.type]), exports)
             }))
           })),
-          p = z.computed((function () {
-            var e = a.toolsConfig.find((function (e) {
-              return !z.isString(e) && e.type === z.ToolButtonType.SETTING
+          document = initialize.computed((function () {
+            var exports = setInterval.toolsConfig.find((function (exports) {
+              return !initialize.isString(exports) && exports.type === initialize.ToolButtonType.SETTING
             }));
-            return e && !z.isString(e) ? e.components : []
+            return exports && !initialize.isString(exports) ? exports.components : []
           })),
-          f = z.throttle({
+          resolve = initialize.throttle({
             interval: 300
-          }, (function (e) {
-            if (e === z.ToolButtonType.THEME) {
-              var t = o.readerStyle,
-                n = t.name,
-                r = t.prevName,
-                u = "dark" === n ? r : "dark";
-              return o.setReaderStyle(R({
-                name: u
-              }, z.skinConfigMap.get(u))), void o.actionEvents.onMenuClick("theme", r)
+          }, (function (exports) {
+            if (exports === initialize.ToolButtonType.THEME) {
+              var module = setTimeout.readerStyle,
+                require = module.name,
+                Promise = module.prevName,
+                reject = "dark" === require ? Promise : "dark";
+              return setTimeout.setReaderStyle(user({
+                name: reject
+              }, initialize.skinConfigMap.get(reject))), void setTimeout.actionEvents.onMenuClick("theme", Promise)
             }
-            var a = !1,
-              i = !1;
-            e === z.ToolButtonType.CATALOG ? (a = !o.menuStatus.calalogue, o.menuStatus.setting && o.actionEvents.onMenuStatusChange("setting", !1)) : e === z.ToolButtonType.SETTING && (i = !o.menuStatus.setting, o.actionEvents.onMenuStatusChange("setting", i)), o.setMenuStatus("setting", i), o.setMenuStatus("calalogue", a)
+            var setInterval = !1,
+              clearTimeout = !1;
+            exports === initialize.ToolButtonType.CATALOG ? (setInterval = !setTimeout.menuStatus.calalogue, setTimeout.menuStatus.setting && setTimeout.actionEvents.onMenuStatusChange("setting", !1)) : exports === initialize.ToolButtonType.SETTING && (clearTimeout = !setTimeout.menuStatus.setting, setTimeout.actionEvents.onMenuStatusChange("setting", clearTimeout)), setTimeout.setMenuStatus("setting", clearTimeout), setTimeout.setMenuStatus("calalogue", setInterval)
           })),
-          m = function (e) {
-            o.actionEvents.onMenuStatusChange("calalogue", e), e || o.setMenuStatus("calalogue", !1)
+          data = function (exports) {
+            setTimeout.actionEvents.onMenuStatusChange("calalogue", exports), exports || setTimeout.setMenuStatus("calalogue", !1)
           },
-          g = function (e) {
+          screen = function (exports) {
             return new Map([
-              [z.ToolButtonType.SETTING, o.menuStatus.setting],
-              [z.ToolButtonType.CATALOG, o.menuStatus.calalogue],
-              [z.ToolButtonType.THEME, "dark" === o.readerStyle.name]
-            ]).get(e.type) ? e.activeIconLink : e.iconLink
+              [initialize.ToolButtonType.SETTING, setTimeout.menuStatus.setting],
+              [initialize.ToolButtonType.CATALOG, setTimeout.menuStatus.calalogue],
+              [initialize.ToolButtonType.THEME, "dark" === setTimeout.readerStyle.name]
+            ]).get(exports.type) ? exports.activeIconLink : exports.iconLink
           },
-          y = function (e) {
+          config = function (exports) {
             return new Map([
-              [z.ToolButtonType.SETTING, o.menuStatus.setting],
-              [z.ToolButtonType.CATALOG, o.menuStatus.calalogue],
-              [z.ToolButtonType.THEME, "dark" === o.readerStyle.name]
-            ]).get(e.type) && e.activeTitle || e.title
+              [initialize.ToolButtonType.SETTING, setTimeout.menuStatus.setting],
+              [initialize.ToolButtonType.CATALOG, setTimeout.menuStatus.calalogue],
+              [initialize.ToolButtonType.THEME, "dark" === setTimeout.readerStyle.name]
+            ]).get(exports.type) && exports.activeTitle || exports.title
           },
-          d = z.throttle({
+          navigator = initialize.throttle({
             interval: 300
-          }, (function (e) {
-            o.actionEvents.onMenuClick("btnChangeChapter", e), "prev" === e && i.value || "next" === e && c.value || u("changeChapter", e)
+          }, (function (exports) {
+            setTimeout.actionEvents.onMenuClick("btnChangeChapter", exports), "prev" === exports && clearTimeout.value || "next" === exports && c.value || reject("changeChapter", exports)
           }));
-        return function (e, t) {
-          var n, r;
-          return z.e({
-            a: z.f(s.value, (function (e, t, n) {
+        return function (exports, module) {
+          var require, Promise;
+          return initialize.exports({
+            setInterval: initialize.resolve(clearInterval.value, (function (exports, module, require) {
               return {
-                a: z.n(g(e)),
-                b: z.t(y(e)),
-                c: t,
-                d: z.o((function (t) {
-                  return z.unref(f)(e.type)
+                setInterval: initialize.require(screen(exports)),
+                state: initialize.module(config(exports)),
+                c: module,
+                navigator: initialize.setTimeout((function (module) {
+                  return initialize.unref(resolve)(exports.type)
                 }))
               }
             })),
-            b: z.s(l.value),
-            c: z.unref(o).menuStatus.menu ? 1 : "",
-            d: null == (n = z.unref(o).readerConfig) ? void 0 : n.hasChangeChapterBtn
-          }, (null == (r = z.unref(o).readerConfig) ? void 0 : r.hasChangeChapterBtn) ? {
-            e: i.value ? z.unref(o).readerTheme.colorDarkGray : "",
-            f: z.o((function (e) {
-              return z.unref(d)("prev")
+            state: initialize.clearInterval(window.value),
+            c: initialize.unref(setTimeout).menuStatus.menu ? 1 : "",
+            navigator: null == (require = initialize.unref(setTimeout).readerConfig) ? void 0 : require.hasChangeChapterBtn
+          }, (null == (Promise = initialize.unref(setTimeout).readerConfig) ? void 0 : Promise.hasChangeChapterBtn) ? {
+            exports: clearTimeout.value ? initialize.unref(setTimeout).readerTheme.colorDarkGray : "",
+            resolve: initialize.setTimeout((function (exports) {
+              return initialize.unref(navigator)("prev")
             })),
-            g: c.value ? z.unref(o).readerTheme.colorDarkGray : "",
-            h: z.o((function (e) {
-              return z.unref(d)("next")
+            screen: c.value ? initialize.unref(setTimeout).readerTheme.colorDarkGray : "",
+            location: initialize.setTimeout((function (exports) {
+              return initialize.unref(navigator)("next")
             })),
-            i: z.s(l.value),
-            j: z.unref(o).menuStatus.menu ? 1 : ""
+            clearTimeout: initialize.clearInterval(window.value),
+            success: initialize.unref(setTimeout).menuStatus.menu ? 1 : ""
           } : {}, {
-            k: z.p({
-              componentsConfig: p.value
+            event: initialize.document({
+              componentsConfig: document.value
             }),
-            l: z.s(l.value),
-            m: z.unref(o).menuStatus.setting ? 1 : "",
-            n: z.unref(o).menuStatus.calalogue
-          }, z.unref(o).menuStatus.calalogue ? {
-            o: z.s(l.value)
+            window: initialize.clearInterval(window.value),
+            data: initialize.unref(setTimeout).menuStatus.setting ? 1 : "",
+            require: initialize.unref(setTimeout).menuStatus.calalogue
+          }, initialize.unref(setTimeout).menuStatus.calalogue ? {
+            setTimeout: initialize.clearInterval(window.value)
           } : {}, {
-            p: z.o((function (e) {
-              return m(!0)
+            document: initialize.setTimeout((function (exports) {
+              return data(!0)
             })),
-            q: z.o((function (e) {
-              return m(!1)
+            queryData: initialize.setTimeout((function (exports) {
+              return data(!1)
             })),
-            r: z.o((function (e) {
-              return z.unref(o).menuStatus.calalogue = e
+            Promise: initialize.setTimeout((function (exports) {
+              return initialize.unref(setTimeout).menuStatus.calalogue = exports
             })),
-            s: z.p({
+            clearInterval: initialize.document({
               contentStyle: {
-                backgroundColor: z.unref(o).readerTheme.bgColor
+                backgroundColor: initialize.unref(setTimeout).readerTheme.bgColor
               },
-              isDark: "dark" === z.unref(o).readerStyle.name,
-              modelValue: z.unref(o).menuStatus.calalogue
+              isDark: "dark" === initialize.unref(setTimeout).readerStyle.name,
+              modelValue: initialize.unref(setTimeout).menuStatus.calalogue
             })
           })
         }
       }
     }),
-    W = z._export_sfc(U, [
-      ["__scopeId", "data-v-d3078003"]
+    watchChanges = initialize._export_sfc(U, [
+      ["__scopeId", "data-history-d3078003"]
     ]);
-  tt.createComponent(W)
+  tt.createComponent(watchChanges)
 }));
 //# sourceMappingURL=setting.js.map

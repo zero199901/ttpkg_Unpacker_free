@@ -1,313 +1,319 @@
-define("pages/index/index.js", (function (e, t, n, o, r, i, a, c, s, u, l, p, m, d, _, f, h, g, k, v, b, x, w, y, N, T, D, R, S, F, K, j, q, C, L, B, P, I, M) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: pages/index/index.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("pages/index/index.js", (function (exports, module, require, setTimeout, Promise, clearTimeout, setInterval, c, clearInterval, reject, window, document, data, navigator, utils, resolve, location, screen, event, history, state, callback, options, config, N, action, token, user, handler, formatData, createStore, success, queryData, response, store, bindProps, error, result, mutation) {
   "use strict";
 
-  function V(e, t, n, o, i, a, c) {
+  function validateData(exports, module, require, setTimeout, clearTimeout, setInterval, c) {
     try {
-      var s = e[a](c),
-        u = s.value
-    } catch (e) {
-      return void n(e)
+      var clearInterval = exports[setInterval](c),
+        reject = clearInterval.value
+    } catch (exports) {
+      return void require(exports)
     }
-    s.done ? t(u) : r.resolve(u).then(o, i)
+    clearInterval.done ? module(reject) : Promise.resolve(reject).then(setTimeout, clearTimeout)
   }
 
-  function z(e) {
+  function initialize(exports) {
     return function () {
-      var t = this,
-        n = arguments;
-      return new r((function (o, r) {
-        var i = e.apply(t, n);
+      var module = this,
+        require = arguments;
+      return new Promise((function (setTimeout, Promise) {
+        var clearTimeout = exports.apply(module, require);
 
-        function a(e) {
-          V(i, o, r, a, c, "next", e)
+        function setInterval(exports) {
+          validateData(clearTimeout, setTimeout, Promise, setInterval, c, "next", exports)
         }
 
-        function c(e) {
-          V(i, o, r, a, c, "throw", e)
+        function c(exports) {
+          validateData(clearTimeout, setTimeout, Promise, setInterval, c, "throw", exports)
         }
-        a(void 0)
+        setInterval(void 0)
       }))
     }
   }
-  var A = e("../../common/vendor.js"),
-    E = e("../../api/book-store/index.js");
-  Math || (G + H + O + J)();
-  var G = function () {
+  var params = exports("../../common/vendor.js"),
+    status = exports("../../api/book-store/index.js");
+  Math || (getType + getter + request + jsonParse)();
+  var getType = function () {
       return "../../components/qm-tab/index.js"
     },
-    H = function () {
+    getter = function () {
       return "../../components/qm-scrollx-book-list/index.js"
     },
-    J = function () {
+    jsonParse = function () {
       return "../../components/qm-book-card/index.js"
     },
-    O = function () {
+    request = function () {
       return "../../components/qm-empty/index.js"
     },
-    Q = A.defineComponent({
+    handleQueue = params.defineComponent({
       __name: "index",
-      setup: function (e) {
-        var t = A.inject("qmsa"),
-          n = [{
+      setup: function (exports) {
+        var module = params.inject("qmsa"),
+          require = [{
             label: "女生",
             value: 2
           }, {
             label: "男生",
             value: 1
           }],
-          o = function (e) {
-            var t = A.index.getStorageSync(e),
-              n = t.list,
-              o = t.expire;
-            return o && o >= (new Date).getTime() - 144e5 ? n : []
+          setTimeout = function (exports) {
+            var module = params.index.getStorageSync(exports),
+              require = module.list,
+              setTimeout = module.expire;
+            return setTimeout && setTimeout >= (new Date).getTime() - 144e5 ? require : []
           },
-          i = function (e) {
-            var t = e.category || "",
-              n = e.reading_count || "";
-            return t + (t && n ? " · " : "") + n
+          clearTimeout = function (exports) {
+            var module = exports.category || "",
+              require = exports.reading_count || "";
+            return module + (module && require ? " · " : "") + require
           },
-          a = [{}, {}, {}, {}, {}],
-          c = A.reactive({
+          setInterval = [{}, {}, {}, {}, {}],
+          c = params.reactive({
             activeKey: 0,
             initFlag: !0,
             storageData: {
               1: {
-                hot_list: a,
-                recommend_list: a
+                hot_list: setInterval,
+                recommend_list: setInterval
               },
               2: {
-                hot_list: a,
-                recommend_list: a
+                hot_list: setInterval,
+                recommend_list: setInterval
               }
             },
             isFinish: !1,
             hasNetwork: !0
           }),
-          s = function (e, n, o) {
-            t.track({
-              qm: 1 === c.activeKey ? "bs-male_".concat(o, "_#_click") : "bs-female_".concat(o, "_#_click"),
+          clearInterval = function (exports, require, setTimeout) {
+            module.track({
+              qm: 1 === c.activeKey ? "bs-male_".concat(setTimeout, "utils#_click") : "bs-female_".concat(setTimeout, "utils#_click"),
               sensors: "Dypaid_RecBook_Click"
             }, {
-              book_id: String(e.book_id),
-              booth_index: n + 1,
+              book_id: String(exports.book_id),
+              booth_index: require + 1,
               page: 1 === c.activeKey ? "bs-male" : "bs-female",
-              position: o,
-              fiction_type: String(e.fiction_type)
+              position: setTimeout,
+              fiction_type: String(exports.fiction_type)
             })
           },
-          u = function (e, t) {
-            l(e.book_id), s(e, t, "hot")
+          reject = function (exports, module) {
+            window(exports.book_id), clearInterval(exports, module, "hot")
           },
-          l = function (e) {
-            A.index.navigateTo({
-              url: "/pages/reader/index?id=".concat(e)
+          window = function (exports) {
+            params.index.navigateTo({
+              url: "/pages/reader/index?id=".concat(exports)
             })
           },
-          p = function () {
-            var e = z(regeneratorRuntime.mark((function e() {
-              var t;
-              return regeneratorRuntime.wrap((function (e) {
-                for (;;) switch (e.prev = e.next) {
+          document = function () {
+            var exports = initialize(regeneratorRuntime.mark((function exports() {
+              var module;
+              return regeneratorRuntime.wrap((function (exports) {
+                for (;;) switch (exports.prev = exports.next) {
                   case 0:
-                    return e.prev = 0, e.next = 3, E.api_home_config();
+                    return exports.prev = 0, exports.next = 3, status.api_home_config();
                   case 3:
-                    t = e.sent, c.activeKey = t.preference_type, c.hasNetwork = !0, _(t.preference_type), e.next = 10;
+                    module = exports.sent, c.activeKey = module.preference_type, c.hasNetwork = !0, utils(module.preference_type), exports.next = 10;
                     break;
                   case 7:
-                    e.prev = 7, e.t0 = e.catch(0), A.index.getNetworkType({
-                      success: function (e) {
-                        c.hasNetwork = !("none" === e.networkType)
+                    exports.prev = 7, exports.t0 = exports.catch(0), params.index.getNetworkType({
+                      success: function (exports) {
+                        c.hasNetwork = !("none" === exports.networkType)
                       }
                     });
                   case 10:
                   case "end":
-                    return e.stop()
+                    return exports.stop()
                 }
-              }), e, null, [
+              }), exports, null, [
                 [0, 7]
               ])
             })));
             return function () {
-              return e.apply(this, arguments)
+              return exports.apply(this, arguments)
             }
           }(),
-          m = function () {
-            var e = z(regeneratorRuntime.mark((function e(t) {
-              var n, r, i;
-              return regeneratorRuntime.wrap((function (e) {
-                for (;;) switch (e.prev = e.next) {
+          data = function () {
+            var exports = initialize(regeneratorRuntime.mark((function exports(module) {
+              var require, Promise, clearTimeout;
+              return regeneratorRuntime.wrap((function (exports) {
+                for (;;) switch (exports.prev = exports.next) {
                   case 0:
-                    return n = o("hot_list_" + t), r = n.length, e.prev = 1, c.storageData[t].hot_list = 0 !== n.length ? n : a, e.next = 5, E.api_books_hot_list(t);
+                    return require = setTimeout("hot_list_" + module), Promise = require.length, exports.prev = 1, c.storageData[module].hot_list = 0 !== require.length ? require : setInterval, exports.next = 5, status.api_books_hot_list(module);
                   case 5:
-                    i = e.sent, 0 === n.length && (c.storageData[t].hot_list = i.books), A.index.setStorageSync("hot_list_" + t, {
-                      list: i.books,
+                    clearTimeout = exports.sent, 0 === require.length && (c.storageData[module].hot_list = clearTimeout.books), params.index.setStorageSync("hot_list_" + module, {
+                      list: clearTimeout.books,
                       expire: Date.now()
-                    }), c.hasNetwork = !0, e.next = 12;
+                    }), c.hasNetwork = !0, exports.next = 12;
                     break;
                   case 9:
-                    e.prev = 9, e.t0 = e.catch(1), 0 === r && (c.storageData[t].hot_list = []), A.index.getNetworkType({
-                      success: function (e) {
-                        console.log(e.networkType, "networkType"), c.hasNetwork = !("none" === e.networkType)
+                    exports.prev = 9, exports.t0 = exports.catch(1), 0 === Promise && (c.storageData[module].hot_list = []), params.index.getNetworkType({
+                      success: function (exports) {
+                        console.log(exports.networkType, "networkType"), c.hasNetwork = !("none" === exports.networkType)
                       }
                     });
                   case 12:
                   case "end":
-                    return e.stop()
+                    return exports.stop()
                 }
-              }), e, null, [
+              }), exports, null, [
                 [1, 9]
               ])
             })));
-            return function (t) {
-              return e.apply(this, arguments)
+            return function (module) {
+              return exports.apply(this, arguments)
             }
           }(),
-          d = function () {
-            var e = z(regeneratorRuntime.mark((function e(t) {
-              var n, r, i;
-              return regeneratorRuntime.wrap((function (e) {
-                for (;;) switch (e.prev = e.next) {
+          navigator = function () {
+            var exports = initialize(regeneratorRuntime.mark((function exports(module) {
+              var require, Promise, clearTimeout;
+              return regeneratorRuntime.wrap((function (exports) {
+                for (;;) switch (exports.prev = exports.next) {
                   case 0:
-                    return n = o("recommend_list_" + t), r = n.length, e.prev = 1, c.storageData[t].recommend_list = 0 !== n.length ? n : a, e.next = 5, E.api_book_recommend_list(t);
+                    return require = setTimeout("recommend_list_" + module), Promise = require.length, exports.prev = 1, c.storageData[module].recommend_list = 0 !== require.length ? require : setInterval, exports.next = 5, status.api_book_recommend_list(module);
                   case 5:
-                    i = e.sent, 0 === n.length && (c.storageData[t].recommend_list = i.books), A.index.setStorageSync("recommend_list_" + t, {
-                      list: i.books,
+                    clearTimeout = exports.sent, 0 === require.length && (c.storageData[module].recommend_list = clearTimeout.books), params.index.setStorageSync("recommend_list_" + module, {
+                      list: clearTimeout.books,
                       expire: Date.now()
-                    }), c.isFinish = !0, c.hasNetwork = !0, e.next = 12;
+                    }), c.isFinish = !0, c.hasNetwork = !0, exports.next = 12;
                     break;
                   case 9:
-                    e.prev = 9, e.t0 = e.catch(1), 0 === r && (c.storageData[t].recommend_list = []), c.isFinish = !1, A.index.getNetworkType({
-                      success: function (e) {
-                        c.hasNetwork = !("none" === e.networkType)
+                    exports.prev = 9, exports.t0 = exports.catch(1), 0 === Promise && (c.storageData[module].recommend_list = []), c.isFinish = !1, params.index.getNetworkType({
+                      success: function (exports) {
+                        c.hasNetwork = !("none" === exports.networkType)
                       }
                     });
                   case 12:
                   case "end":
-                    return e.stop()
+                    return exports.stop()
                 }
-              }), e, null, [
+              }), exports, null, [
                 [1, 9]
               ])
             })));
-            return function (t) {
-              return e.apply(this, arguments)
+            return function (module) {
+              return exports.apply(this, arguments)
             }
           }(),
-          _ = function (e) {
-            var n = 1 === e ? "male" : "female";
-            console.log(n, "_trackName"), t.track({
-              qm: "bs-".concat(n, "_full_#_view"),
+          utils = function (exports) {
+            var require = 1 === exports ? "male" : "female";
+            console.log(require, "_trackName"), module.track({
+              qm: "bs-".concat(require, "_full_#_view"),
               sensors: "Dypaid_Page_View"
             }, {
-              page: "bs-".concat(n),
+              page: "bs-".concat(require),
               position: "full"
             })
           },
-          f = function (e) {
-            c.activeKey = e, A.index.pageScrollTo({
+          resolve = function (exports) {
+            c.activeKey = exports, params.index.pageScrollTo({
               scrollTop: 0,
               duration: 200
-            }), _(e)
+            }), utils(exports)
           };
-        A.onShow(z(regeneratorRuntime.mark((function e() {
-          return regeneratorRuntime.wrap((function (e) {
-            for (;;) switch (e.prev = e.next) {
+        params.onShow(initialize(regeneratorRuntime.mark((function exports() {
+          return regeneratorRuntime.wrap((function (exports) {
+            for (;;) switch (exports.prev = exports.next) {
               case 0:
-                A.index.pageScrollTo({
+                params.index.pageScrollTo({
                   scrollTop: 0,
                   duration: 200
-                }), c.initFlag || (m(1), m(2), d(1), d(2)), 0 !== c.activeKey && _(c.activeKey);
+                }), c.initFlag || (data(1), data(2), navigator(1), navigator(2)), 0 !== c.activeKey && utils(c.activeKey);
               case 1:
               case "end":
-                return e.stop()
+                return exports.stop()
             }
-          }), e)
+          }), exports)
         }))));
-        var h = function () {
-          var e = z(regeneratorRuntime.mark((function e() {
-            return regeneratorRuntime.wrap((function (e) {
-              for (;;) switch (e.prev = e.next) {
+        var location = function () {
+          var exports = initialize(regeneratorRuntime.mark((function exports() {
+            return regeneratorRuntime.wrap((function (exports) {
+              for (;;) switch (exports.prev = exports.next) {
                 case 0:
-                  return c.initFlag = !0, A.index.showLoading({
+                  return c.initFlag = !0, params.index.showLoading({
                     title: "加载中"
-                  }), e.next = 4, r.all([p(), m(1), m(2), d(1), d(2)]);
+                  }), exports.next = 4, Promise.all([document(), data(1), data(2), navigator(1), navigator(2)]);
                 case 4:
-                  A.index.hideLoading(), c.initFlag = !1;
+                  params.index.hideLoading(), c.initFlag = !1;
                 case 6:
                 case "end":
-                  return e.stop()
+                  return exports.stop()
               }
-            }), e)
+            }), exports)
           })));
           return function () {
-            return e.apply(this, arguments)
+            return exports.apply(this, arguments)
           }
         }();
-        return h(),
-          function (e, t) {
-            return A.e({
-              a: c.hasNetwork
+        return location(),
+          function (exports, module) {
+            return params.exports({
+              setInterval: c.hasNetwork
             }, c.hasNetwork ? {
-              b: A.o(f),
-              c: A.p({
-                tabs: n,
+              state: params.setTimeout(resolve),
+              c: params.document({
+                tabs: require,
                 activeKey: c.activeKey
               })
             } : {}, {
-              d: A.f(c.storageData, (function (e, t, n) {
-                return A.e({
-                  a: e.hot_list.length > 0
-                }, e.hot_list.length > 0 ? {
-                  b: A.o(u),
-                  c: "e5cb6391-1-" + n,
-                  d: A.p({
-                    bookList: e.hot_list,
-                    scroll: e.hot_list.length > 4
+              navigator: params.resolve(c.storageData, (function (exports, module, require) {
+                return params.exports({
+                  setInterval: exports.hot_list.length > 0
+                }, exports.hot_list.length > 0 ? {
+                  state: params.setTimeout(reject),
+                  c: "e5cb6391-1-" + require,
+                  navigator: params.document({
+                    bookList: exports.hot_list,
+                    scroll: exports.hot_list.length > 4
                   })
                 } : {}, {
-                  e: 0 === e.recommend_list.length,
-                  f: "e5cb6391-2-" + n,
-                  g: A.f(e.recommend_list, (function (e, t, o) {
+                  exports: 0 === exports.recommend_list.length,
+                  resolve: "e5cb6391-2-" + require,
+                  screen: params.resolve(exports.recommend_list, (function (exports, module, setTimeout) {
                     return {
-                      a: "e5cb6391-3-" + n + "-" + o,
-                      b: A.p({
-                        bookCover: e.book_cover,
-                        bookName: e.book_name,
-                        bookDesc: e.book_desc,
-                        bookBottomText: i(e)
+                      setInterval: "e5cb6391-3-" + require + "-" + setTimeout,
+                      state: params.document({
+                        bookCover: exports.book_cover,
+                        bookName: exports.book_name,
+                        bookDesc: exports.book_desc,
+                        bookBottomText: clearTimeout(exports)
                       }),
-                      c: t,
-                      d: A.o((function (n) {
-                        return function (e, t) {
-                          l(e.book_id), s(e, t, "recommend")
-                        }(e, t)
+                      c: module,
+                      navigator: params.setTimeout((function (require) {
+                        return function (exports, module) {
+                          window(exports.book_id), clearInterval(exports, module, "recommend")
+                        }(exports, module)
                       }))
                     }
                   })),
-                  h: e.recommend_list.length > 0,
-                  i: e.recommend_list.length > 0 && c.isFinish
-                }, (e.recommend_list.length > 0 && c.isFinish, {}), {
-                  j: t,
-                  k: c.activeKey === Number(t) && c.hasNetwork
+                  location: exports.recommend_list.length > 0,
+                  clearTimeout: exports.recommend_list.length > 0 && c.isFinish
+                }, (exports.recommend_list.length > 0 && c.isFinish, {}), {
+                  success: module,
+                  event: c.activeKey === Number(module) && c.hasNetwork
                 })
               })),
-              e: A.p({
+              exports: params.document({
                 type: 1,
                 tip: "暂无书籍数据",
                 isFixed: !1
               }),
-              f: !c.hasNetwork
+              resolve: !c.hasNetwork
             }, c.hasNetwork ? {} : {
-              g: A.o(h),
-              h: A.p({
+              screen: params.setTimeout(location),
+              location: params.document({
                 type: 2
               })
             })
           }
       }
     }),
-    U = A._export_sfc(Q, [
-      ["__scopeId", "data-v-e5cb6391"]
+    U = params._export_sfc(handleQueue, [
+      ["__scopeId", "data-history-e5cb6391"]
     ]);
   tt.createPage(U)
 }));

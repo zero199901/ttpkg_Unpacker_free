@@ -1,11 +1,17 @@
-define("components/qm-scrollx-book-list/index.js", (function (o, e, n, t, r, c, i, a, s, u, l, d, f, b, m, p, k, v, _, x, y, j, C, q, L, h, A, B, I, M, N, T, g, w, z, D, E, F, G) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: components/qm-scrollx-book-list/index.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("components/qm-scrollx-book-list/index.js", (function (setTimeout, exports, require, module, Promise, c, clearTimeout, setInterval, clearInterval, reject, window, navigator, resolve, state, data, document, event, history, utils, callback, config, success, response, queryData, store, location, params, bindProps, result, mutation, N, action, screen, options, initialize, token, status, formatData, getType) {
   "use strict";
-  var H = o("../../common/vendor.js");
-  Math || J();
-  var J = function () {
+  var getter = setTimeout("../../common/vendor.js");
+  Math || jsonParse();
+  var jsonParse = function () {
       return "../qm-book-card/index.js"
     },
-    K = H.defineComponent({
+    createStore = getter.defineComponent({
       __name: "index",
       props: {
         bookList: {
@@ -20,36 +26,36 @@ define("components/qm-scrollx-book-list/index.js", (function (o, e, n, t, r, c, 
         }
       },
       emits: ["click"],
-      setup: function (o, e) {
-        var n = e.emit,
-          t = o;
-        return function (e, r) {
+      setup: function (setTimeout, exports) {
+        var require = exports.emit,
+          module = setTimeout;
+        return function (exports, Promise) {
           return {
-            a: H.f(o.bookList, (function (o, e, t) {
+            setInterval: getter.resolve(setTimeout.bookList, (function (setTimeout, exports, module) {
               return {
-                a: "5ae3cb7d-0-" + t,
-                b: H.p({
-                  bookCover: o.book_cover,
-                  bookName: o.book_name,
+                setInterval: "5ae3cb7d-0-" + module,
+                state: getter.document({
+                  bookCover: setTimeout.book_cover,
+                  bookName: setTimeout.book_name,
                   bookType: "vertical"
                 }),
-                c: e,
-                d: H.o((function (t) {
-                  return function (o, e) {
-                    n("click", o, e)
-                  }(o, e)
+                c: exports,
+                navigator: getter.setTimeout((function (module) {
+                  return function (setTimeout, exports) {
+                    require("click", setTimeout, exports)
+                  }(setTimeout, exports)
                 }))
               }
             })),
-            b: t.scroll,
-            c: t.scroll ? 1 : ""
+            state: module.scroll,
+            c: module.scroll ? 1 : ""
           }
         }
       }
     }),
-    O = H._export_sfc(K, [
-      ["__scopeId", "data-v-5ae3cb7d"]
+    request = getter._export_sfc(createStore, [
+      ["__scopeId", "data-history-5ae3cb7d"]
     ]);
-  tt.createComponent(O)
+  tt.createComponent(request)
 }));
 //# sourceMappingURL=index.js.map

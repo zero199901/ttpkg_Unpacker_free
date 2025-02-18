@@ -1,51 +1,57 @@
-define("store/modules/user.js", (function (n, e, t, i, o, s, u, c, r, f, a, g, _, d, S, h, k, l, p, v, x, y, I, j, m, w, L, U, b, q, z, A, B, C, D, E, F, G, H) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: store/modules/user.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("store/modules/user.js", (function (require, exports, module, clearTimeout, setTimeout, clearInterval, reject, c, Promise, resolve, setInterval, screen, utils, navigator, handler, location, event, window, document, history, callback, config, result, success, data, options, store, U, state, queryData, initialize, params, bindProps, response, token, status, formatData, getType, getter) {
   "use strict";
-  var J = n("../../common/vendor.js"),
-    K = n("../../api/user/index.js"),
-    M = {
-      userInfo: J.index.getStorageSync("userInfo") || {},
-      token: J.index.getStorageSync("token"),
+  var jsonParse = require("../../common/vendor.js"),
+    createStore = require("../../api/user/index.js"),
+    mutation = {
+      userInfo: jsonParse.index.getStorageSync("userInfo") || {},
+      token: jsonParse.index.getStorageSync("token"),
       isLogining: !1
     },
-    N = J.defineStore("user", {
+    N = jsonParse.defineStore("user", {
       state: function () {
-        return M
+        return mutation
       },
       actions: {
-        set_user_info: function (n) {
-          this.userInfo = n, J.index.setStorageSync("userInfo", n)
+        set_user_info: function (require) {
+          this.userInfo = require, jsonParse.index.setStorageSync("userInfo", require)
         },
         update_user_info: function () {
-          var n = this;
-          return new o((function (e, t) {
-            K.api_user_info().then((function (t) {
-              n.set_user_info(t), e(t)
-            })).catch((function (n) {
-              t(n)
+          var require = this;
+          return new setTimeout((function (exports, module) {
+            createStore.api_user_info().then((function (module) {
+              require.set_user_info(module), exports(module)
+            })).catch((function (require) {
+              module(require)
             }))
           }))
         },
-        set_token: function (n) {
-          this.token = n, J.index.setStorageSync("token", n)
+        set_token: function (require) {
+          this.token = require, jsonParse.index.setStorageSync("token", require)
         },
-        set_is_logining: function (n) {
-          this.isLogining = n
+        set_is_logining: function (require) {
+          this.isLogining = require
         },
         login: function () {
-          var n = this;
-          return new o((function (e, t) {
-            var i = n;
-            J.index.login({
-              success: function (n) {
-                var o = n.code;
-                K.api_login(o).then((function (n) {
-                  i.set_token(n.access_token), e(n)
-                })).catch((function (n) {
-                  t(n)
+          var require = this;
+          return new setTimeout((function (exports, module) {
+            var clearTimeout = require;
+            jsonParse.index.login({
+              success: function (require) {
+                var setTimeout = require.code;
+                createStore.api_login(setTimeout).then((function (require) {
+                  clearTimeout.set_token(require.access_token), exports(require)
+                })).catch((function (require) {
+                  module(require)
                 }))
               },
-              fail: function (n) {
-                t(n)
+              fail: function (require) {
+                module(require)
               }
             })
           }))
@@ -53,6 +59,6 @@ define("store/modules/user.js", (function (n, e, t, i, o, s, u, c, r, f, a, g, _
         login_app: function () {}
       }
     });
-  t.useUserStore = N
+  module.useUserStore = N
 }));
 //# sourceMappingURL=user.js.map

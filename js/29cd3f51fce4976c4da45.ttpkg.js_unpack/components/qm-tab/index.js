@@ -1,7 +1,13 @@
-define("components/qm-tab/index.js", (function (e, t, n, a, o, i, r, u, c, f, d, p, s, v, y, m, l, b, g, h, _, w, C, K, S, x, j, q, A, B, I, N, k, z, D, E, F, G, H) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: components/qm-tab/index.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("components/qm-tab/index.js", (function (exports, module, require, setInterval, setTimeout, clearTimeout, Promise, reject, c, resolve, navigator, document, clearInterval, history, config, data, window, state, screen, location, utils, options, response, createStore, handler, callback, success, queryData, params, bindProps, result, N, event, initialize, token, status, formatData, getType, getter) {
   "use strict";
-  var J = e("../../common/vendor.js"),
-    L = J.defineComponent({
+  var jsonParse = exports("../../common/vendor.js"),
+    store = jsonParse.defineComponent({
       __name: "index",
       props: {
         tabs: {
@@ -25,48 +31,48 @@ define("components/qm-tab/index.js", (function (e, t, n, a, o, i, r, u, c, f, d,
         }
       },
       emits: ["change", "toConfig"],
-      setup: function (e, t) {
-        var n = t.emit,
-          a = e,
-          o = J.ref(a.activeKey);
-        J.watch((function () {
-          return a.activeKey
+      setup: function (exports, module) {
+        var require = module.emit,
+          setInterval = exports,
+          setTimeout = jsonParse.ref(setInterval.activeKey);
+        jsonParse.watch((function () {
+          return setInterval.activeKey
         }), (function () {
-          o.value = a.activeKey
+          setTimeout.value = setInterval.activeKey
         }), {
           immediate: !0
         });
-        var i = function () {
-          n("toConfig")
+        var clearTimeout = function () {
+          require("toConfig")
         };
-        return function (t, r) {
-          return J.e({
-            a: J.f(e.tabs, (function (e, t, a) {
+        return function (module, Promise) {
+          return jsonParse.exports({
+            setInterval: jsonParse.resolve(exports.tabs, (function (exports, module, setInterval) {
               return {
-                a: J.t(e.label),
-                b: t,
-                c: J.o((function (t) {
-                  return a = e.value, void(o.value !== a && (o.value = a, n("change", a)));
-                  var a
+                setInterval: jsonParse.module(exports.label),
+                state: module,
+                c: jsonParse.setTimeout((function (module) {
+                  return setInterval = exports.value, void(setTimeout.value !== setInterval && (setTimeout.value = setInterval, require("change", setInterval)));
+                  var setInterval
                 })),
-                d: o.value === e.value ? 1 : ""
+                navigator: setTimeout.value === exports.value ? 1 : ""
               }
             })),
-            b: "main" === a.type ? 1 : "",
-            c: "secondary" === a.type ? 1 : "",
-            d: e.showSetting
-          }, e.showSetting ? {
-            e: J.o(i)
+            state: "main" === setInterval.type ? 1 : "",
+            c: "secondary" === setInterval.type ? 1 : "",
+            navigator: exports.showSetting
+          }, exports.showSetting ? {
+            exports: jsonParse.setTimeout(clearTimeout)
           } : {}, {
-            f: "main" === a.type ? 1 : "",
-            g: "secondary" === a.type ? 1 : ""
+            resolve: "main" === setInterval.type ? 1 : "",
+            screen: "secondary" === setInterval.type ? 1 : ""
           })
         }
       }
     }),
-    M = J._export_sfc(L, [
-      ["__scopeId", "data-v-9bcce6b4"]
+    mutation = jsonParse._export_sfc(store, [
+      ["__scopeId", "data-history-9bcce6b4"]
     ]);
-  tt.createComponent(M)
+  tt.createComponent(mutation)
 }));
 //# sourceMappingURL=index.js.map

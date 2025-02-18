@@ -1,27 +1,33 @@
-define("pages/mine/components/how-to-find-me.js", (function (n, e, o, t, f, p, a, r, i, u, m, s, c, d, _, g, l, C, I, v, b, j, h, w, x, G, S, $, k, q, y, z, A, B, D, E, F, H, J) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: pages/mine/components/how-to-find-me.js
+ * 处理时间: 2025-02-18 13:03:32
+ */
+
+define("pages/mine/components/how-to-find-me.js", (function (require, exports, setTimeout, module, resolve, document, setInterval, Promise, clearTimeout, reject, data, clearInterval, c, navigator, utils, screen, window, response, result, history, state, success, location, options, callback, getType, handler, $, event, queryData, config, initialize, params, bindProps, token, status, formatData, getter, jsonParse) {
   "use strict";
-  var K = n("../../../common/vendor.js"),
-    L = n("../../../store/modules/global.js"),
-    M = K.defineComponent({
+  var createStore = require("../../../common/vendor.js"),
+    store = require("../../../store/modules/global.js"),
+    mutation = createStore.defineComponent({
       __name: "how-to-find-me",
-      setup: function (n) {
-        var e = L.useGlobalStore();
-        return function (n, o) {
+      setup: function (require) {
+        var exports = store.useGlobalStore();
+        return function (require, setTimeout) {
           return {
-            a: K.t(K.unref(e).appConfigInfo.app_name),
-            b: K.t(K.unref(e).appConfigInfo.app_name),
-            c: K.unref(e).appConfigInfo.logo,
-            d: K.t(K.unref(e).appConfigInfo.app_name),
-            e: K.t(K.unref(e).appConfigInfo.app_name),
-            f: K.o((function (e) {
-              return n.$emit("close")
+            setInterval: createStore.module(createStore.unref(exports).appConfigInfo.app_name),
+            state: createStore.module(createStore.unref(exports).appConfigInfo.app_name),
+            c: createStore.unref(exports).appConfigInfo.logo,
+            navigator: createStore.module(createStore.unref(exports).appConfigInfo.app_name),
+            exports: createStore.module(createStore.unref(exports).appConfigInfo.app_name),
+            resolve: createStore.setTimeout((function (exports) {
+              return require.$emit("close")
             }))
           }
         }
       }
     }),
-    N = K._export_sfc(M, [
-      ["__scopeId", "data-v-ed782a27"]
+    N = createStore._export_sfc(mutation, [
+      ["__scopeId", "data-history-ed782a27"]
     ]);
   tt.createComponent(N)
 }));

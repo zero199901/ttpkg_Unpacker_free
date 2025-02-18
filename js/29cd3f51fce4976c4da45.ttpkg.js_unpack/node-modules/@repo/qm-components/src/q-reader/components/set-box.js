@@ -1,14 +1,20 @@
-define("node-modules/@repo/qm-components/src/q-reader/components/set-box.js", (function (n, e, o, t, s, r, c, i, u, p, f, m, C, d, g, a, S, l, T, b, j, v, y, N, O, R, q, x, A, B, D, E, F, G, I, K, U, Z, _) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: node-modules/@repo/qm-components/src/q-reader/components/set-box.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("node-modules/@repo/qm-components/src/queryData-reader/components/set-box.js", (function (require, exports, setTimeout, module, clearInterval, Promise, c, clearTimeout, reject, document, resolve, data, response, navigator, screen, setInterval, handler, window, action, state, success, history, config, N, request, user, queryData, callback, params, bindProps, token, status, formatData, getType, result, createStore, U, setupConfig, utils) {
   "use strict";
-  var h = n("../../../../../../common/vendor.js");
-  Math || (k + z)();
-  var k = function () {
+  var location = require("../../../../../../common/vendor.js");
+  Math || (event + initialize)();
+  var event = function () {
       return "./set-font-size.js"
     },
-    z = function () {
+    initialize = function () {
       return "./set-background.js"
     },
-    M = h.defineComponent({
+    mutation = location.defineComponent({
       __name: "set-box",
       props: {
         componentsConfig: {
@@ -17,22 +23,22 @@ define("node-modules/@repo/qm-components/src/q-reader/components/set-box.js", (f
           }
         }
       },
-      setup: function (n) {
-        h.useStoreReader();
-        var e = n;
-        return function (n, o) {
-          return h.e({
-            a: e.componentsConfig.includes(h.unref(h.SettingCompType).FONTSIZE)
-          }, (e.componentsConfig.includes(h.unref(h.SettingCompType).FONTSIZE), {}), {
-            b: e.componentsConfig.includes(h.unref(h.SettingCompType).BACKGROUND)
-          }, e.componentsConfig.includes(h.unref(h.SettingCompType).BACKGROUND) ? {
-            c: h.p({
-              componentsConfig: n.componentsConfig
+      setup: function (require) {
+        location.useStoreReader();
+        var exports = require;
+        return function (require, setTimeout) {
+          return location.exports({
+            setInterval: exports.componentsConfig.includes(location.unref(location.SettingCompType).FONTSIZE)
+          }, (exports.componentsConfig.includes(location.unref(location.SettingCompType).FONTSIZE), {}), {
+            state: exports.componentsConfig.includes(location.unref(location.SettingCompType).BACKGROUND)
+          }, exports.componentsConfig.includes(location.unref(location.SettingCompType).BACKGROUND) ? {
+            c: location.document({
+              componentsConfig: require.componentsConfig
             })
           } : {})
         }
       }
     });
-  tt.createComponent(M)
+  tt.createComponent(mutation)
 }));
 //# sourceMappingURL=set-box.js.map

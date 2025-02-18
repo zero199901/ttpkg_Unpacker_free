@@ -1,22 +1,28 @@
-define("pages/reader/components/final-chapter.js", (function (e, n, o, t, r, a, c, i, u, d, s, m, f, p, v, b, k, l, _, g, h, x, C, y, j, w, L, A, I, T, q, D, N, R, B, M, O, z, E) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: pages/reader/components/final-chapter.js
+ * 处理时间: 2025-02-18 13:03:33
+ */
+
+define("pages/reader/components/final-chapter.js", (function (exports, require, setTimeout, module, Promise, setInterval, c, clearTimeout, reject, navigator, clearInterval, data, resolve, document, history, state, event, window, utils, screen, location, callback, response, config, success, options, store, params, result, action, queryData, token, N, user, bindProps, mutation, request, initialize, status) {
   "use strict";
 
-  function F(e, n, o, t, a, c, i) {
+  function formatData(exports, require, setTimeout, module, setInterval, c, clearTimeout) {
     try {
-      var u = e[c](i),
-        d = u.value
-    } catch (e) {
-      return void o(e)
+      var reject = exports[c](clearTimeout),
+        navigator = reject.value
+    } catch (exports) {
+      return void setTimeout(exports)
     }
-    u.done ? n(d) : r.resolve(d).then(t, a)
+    reject.done ? require(navigator) : Promise.resolve(navigator).then(module, setInterval)
   }
-  var G = e("../../../common/vendor.js"),
-    H = e("../../../api/reader/index.js");
-  Array || G.resolveComponent("qm-icon")(), Math || J();
-  var J = function () {
+  var getType = exports("../../../common/vendor.js"),
+    getter = exports("../../../api/reader/index.js");
+  Array || getType.resolveComponent("qm-icon")(), Math || jsonParse();
+  var jsonParse = function () {
       return "../../../components/qm-book-card/index.js"
     },
-    K = G.defineComponent({
+    createStore = getType.defineComponent({
       __name: "final-chapter",
       props: {
         bookId: {
@@ -28,91 +34,91 @@ define("pages/reader/components/final-chapter.js", (function (e, n, o, t, r, a, 
           default: function () {}
         }
       },
-      setup: function (e) {
-        var n = e,
-          o = G.reactive({
+      setup: function (exports) {
+        var require = exports,
+          setTimeout = getType.reactive({
             name: "",
             recommendList: []
           }),
-          t = G.computed((function () {
-            var e;
-            return "#0A0A0A" === (null == (e = n.skinConfig) ? void 0 : e.bgColor)
+          module = getType.computed((function () {
+            var exports;
+            return "#0A0A0A" === (null == (exports = require.skinConfig) ? void 0 : exports.bgColor)
           }));
 
-        function a(e) {
-          e ? G.index.redirectTo({
-            url: "/pages/reader/index?id=".concat(e)
-          }) : G.index.switchTab({
+        function setInterval(exports) {
+          exports ? getType.index.redirectTo({
+            url: "/pages/reader/index?id=".concat(exports)
+          }) : getType.index.switchTab({
             url: "/pages/index/index"
           })
         }
-        return function (e) {
+        return function (exports) {
             return function () {
-              var n = this,
-                o = arguments;
-              return new r((function (t, r) {
-                var a = e.apply(n, o);
+              var require = this,
+                setTimeout = arguments;
+              return new Promise((function (module, Promise) {
+                var setInterval = exports.apply(require, setTimeout);
 
-                function c(e) {
-                  F(a, t, r, c, i, "next", e)
+                function c(exports) {
+                  formatData(setInterval, module, Promise, c, clearTimeout, "next", exports)
                 }
 
-                function i(e) {
-                  F(a, t, r, c, i, "throw", e)
+                function clearTimeout(exports) {
+                  formatData(setInterval, module, Promise, c, clearTimeout, "throw", exports)
                 }
                 c(void 0)
               }))
             }
-          }(regeneratorRuntime.mark((function e() {
-            var t;
-            return regeneratorRuntime.wrap((function (e) {
-              for (;;) switch (e.prev = e.next) {
+          }(regeneratorRuntime.mark((function exports() {
+            var module;
+            return regeneratorRuntime.wrap((function (exports) {
+              for (;;) switch (exports.prev = exports.next) {
                 case 0:
-                  return e.next = 2, H.api_get_chapter_end_recommend({
-                    book_id: n.bookId
+                  return exports.next = 2, getter.api_get_chapter_end_recommend({
+                    book_id: require.bookId
                   });
                 case 2:
-                  t = e.sent, o.name = t.current_book_name, o.recommendList = t.books || [];
+                  module = exports.sent, setTimeout.name = module.current_book_name, setTimeout.recommendList = module.books || [];
                 case 4:
                 case "end":
-                  return e.stop()
+                  return exports.stop()
               }
-            }), e)
+            }), exports)
           })))(),
-          function (e, n) {
-            return G.e({
-              a: o.recommendList.length > 0
-            }, o.recommendList.length > 0 ? {
-              b: G.t(o.name),
-              c: t.value ? 1 : "",
-              d: G.f(o.recommendList, (function (e, n, o) {
+          function (exports, require) {
+            return getType.exports({
+              setInterval: setTimeout.recommendList.length > 0
+            }, setTimeout.recommendList.length > 0 ? {
+              state: getType.module(setTimeout.name),
+              c: module.value ? 1 : "",
+              navigator: getType.resolve(setTimeout.recommendList, (function (exports, require, setTimeout) {
                 return {
-                  a: "859a884d-0-" + o,
-                  b: G.p({
-                    bookCover: e.book_cover,
-                    bookName: e.book_name,
-                    bookDesc: e.book_desc,
-                    bookBottomText: e.category,
-                    isDark: t.value
+                  setInterval: "859a884d-0-" + setTimeout,
+                  state: getType.document({
+                    bookCover: exports.book_cover,
+                    bookName: exports.book_name,
+                    bookDesc: exports.book_desc,
+                    bookBottomText: exports.category,
+                    isDark: module.value
                   }),
-                  c: n,
-                  d: G.o((function (n) {
-                    return a(e.book_id)
+                  c: require,
+                  navigator: getType.setTimeout((function (require) {
+                    return setInterval(exports.book_id)
                   }))
                 }
               }))
             } : {}, {
-              e: t.value ? 1 : "",
-              f: G.o((function (e) {
-                return a()
+              exports: module.value ? 1 : "",
+              resolve: getType.setTimeout((function (exports) {
+                return setInterval()
               }))
             })
           }
       }
     }),
-    P = G._export_sfc(K, [
-      ["__scopeId", "data-v-859a884d"]
+    error = getType._export_sfc(createStore, [
+      ["__scopeId", "data-history-859a884d"]
     ]);
-  tt.createComponent(P)
+  tt.createComponent(error)
 }));
 //# sourceMappingURL=final-chapter.js.map

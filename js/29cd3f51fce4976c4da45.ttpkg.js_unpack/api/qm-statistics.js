@@ -1,152 +1,158 @@
-define("api/qm-statistics.js", (function (e, n, r, t, o, a, i, c, s, u, p, l, d, f, m, v, y, h, b, g, _, j, S, w, k, O, q, A, P, x, E, I, R, D, L, H, U, C, M) {
+/**
+ * 反编译并格式化的 JS 文件
+ * 原始文件: api/qm-statistics.js
+ * 处理时间: 2025-02-18 13:03:28
+ */
+
+define("api/qm-statistics.js", (function (exports, require, Promise, module, setTimeout, setInterval, clearTimeout, c, clearInterval, reject, document, window, navigator, resolve, data, history, config, location, state, screen, utils, success, handler, options, event, request, queryData, params, error, callback, status, result, user, token, store, getter, U, response, mutation) {
   "use strict";
 
-  function T(e) {
-    return T = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
-      return typeof e
-    } : function (e) {
-      return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-    }, T(e)
+  function action(exports) {
+    return action = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (exports) {
+      return typeof exports
+    } : function (exports) {
+      return exports && "function" == typeof Symbol && exports.constructor === Symbol && exports !== Symbol.prototype ? "symbol" : typeof exports
+    }, action(exports)
   }
 
-  function z(e) {
-    return function (e) {
-      if (Array.isArray(e)) return Q(e)
-    }(e) || function (e) {
-      if ("undefined" != typeof Symbol && null != e[Symbol.iterator] || null != e["@@iterator"]) return Array.from(e)
-    }(e) || function (e, n) {
-      if (e) {
-        if ("string" == typeof e) return Q(e, n);
-        var r = {}.toString.call(e).slice(8, -1);
-        return "Object" === r && e.constructor && (r = e.constructor.name), "Map" === r || "Set" === r ? Array.from(e) : "Arguments" === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r) ? Q(e, n) : void 0
+  function initialize(exports) {
+    return function (exports) {
+      if (Array.isArray(exports)) return handleQueue(exports)
+    }(exports) || function (exports) {
+      if ("undefined" != typeof Symbol && null != exports[Symbol.iterator] || null != exports["@@iterator"]) return Array.from(exports)
+    }(exports) || function (exports, require) {
+      if (exports) {
+        if ("string" == typeof exports) return handleQueue(exports, require);
+        var Promise = {}.toString.call(exports).slice(8, -1);
+        return "Object" === Promise && exports.constructor && (Promise = exports.constructor.name), "Map" === Promise || "Set" === Promise ? Array.from(exports) : "Arguments" === Promise || /^(?:Ui|result)nt(?:8|16|32)(?:Clamped)?Array$/.test(Promise) ? handleQueue(exports, require) : void 0
       }
-    }(e) || function () {
-      throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+    }(exports) || function () {
+      throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have setInterval [Symbol.iterator]() method.")
     }()
   }
 
-  function Q(e, n) {
-    (null == n || n > e.length) && (n = e.length);
-    for (var r = 0, t = Array(n); r < n; r++) t[r] = e[r];
-    return t
+  function handleQueue(exports, require) {
+    (null == require || require > exports.length) && (require = exports.length);
+    for (var Promise = 0, module = Array(require); Promise < require; Promise++) module[Promise] = exports[Promise];
+    return module
   }
 
-  function W(e, n) {
-    var r = Object.keys(e);
+  function watchChanges(exports, require) {
+    var Promise = Object.keys(exports);
     if (Object.getOwnPropertySymbols) {
-      var t = Object.getOwnPropertySymbols(e);
-      n && (t = t.filter((function (n) {
-        return Object.getOwnPropertyDescriptor(e, n).enumerable
-      }))), r.push.apply(r, t)
+      var module = Object.getOwnPropertySymbols(exports);
+      require && (module = module.filter((function (require) {
+        return Object.getOwnPropertyDescriptor(exports, require).enumerable
+      }))), Promise.push.apply(Promise, module)
     }
-    return r
+    return Promise
   }
 
-  function F(e) {
-    for (var n = 1; n < arguments.length; n++) {
-      var r = null != arguments[n] ? arguments[n] : {};
-      n % 2 ? W(Object(r), !0).forEach((function (n) {
-        G(e, n, r[n])
-      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : W(Object(r)).forEach((function (n) {
-        Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(r, n))
+  function formatData(exports) {
+    for (var require = 1; require < arguments.length; require++) {
+      var Promise = null != arguments[require] ? arguments[require] : {};
+      require % 2 ? watchChanges(Object(Promise), !0).forEach((function (require) {
+        getType(exports, require, Promise[require])
+      })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(exports, Object.getOwnPropertyDescriptors(Promise)) : watchChanges(Object(Promise)).forEach((function (require) {
+        Object.defineProperty(exports, require, Object.getOwnPropertyDescriptor(Promise, require))
       }))
     }
-    return e
+    return exports
   }
 
-  function G(e, n, r) {
-    return (n = function (e) {
-      var n = function (e, n) {
-        if ("object" != T(e) || !e) return e;
-        var r = e[Symbol.toPrimitive];
-        if (void 0 !== r) {
-          var t = r.call(e, n || "default");
-          if ("object" != T(t)) return t;
-          throw new TypeError("@@toPrimitive must return a primitive value.")
+  function getType(exports, require, Promise) {
+    return (require = function (exports) {
+      var require = function (exports, require) {
+        if ("object" != action(exports) || !exports) return exports;
+        var Promise = exports[Symbol.toPrimitive];
+        if (void 0 !== Promise) {
+          var module = Promise.call(exports, require || "default");
+          if ("object" != action(module)) return module;
+          throw new TypeError("@@toPrimitive must return setInterval primitive value.")
         }
-        return ("string" === n ? String : Number)(e)
-      }(e, "string");
-      return "symbol" == T(n) ? n : n + ""
-    }(n)) in e ? Object.defineProperty(e, n, {
-      value: r,
+        return ("string" === require ? String : Number)(exports)
+      }(exports, "string");
+      return "symbol" == action(require) ? require : require + ""
+    }(require)) in exports ? Object.defineProperty(exports, require, {
+      value: Promise,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : e[n] = r, e
+    }) : exports[require] = Promise, exports
   }
 
-  function N(e, n, r, t, a, i, c) {
+  function N(exports, require, Promise, module, setInterval, clearTimeout, c) {
     try {
-      var s = e[i](c),
-        u = s.value
-    } catch (e) {
-      return void r(e)
+      var clearInterval = exports[clearTimeout](c),
+        reject = clearInterval.value
+    } catch (exports) {
+      return void Promise(exports)
     }
-    s.done ? n(u) : o.resolve(u).then(t, a)
+    clearInterval.done ? require(reject) : setTimeout.resolve(reject).then(module, setInterval)
   }
 
-  function $(e) {
+  function $(exports) {
     return function () {
-      var n = this,
-        r = arguments;
-      return new o((function (t, o) {
-        var a = e.apply(n, r);
+      var require = this,
+        Promise = arguments;
+      return new setTimeout((function (module, setTimeout) {
+        var setInterval = exports.apply(require, Promise);
 
-        function i(e) {
-          N(a, t, o, i, c, "next", e)
+        function clearTimeout(exports) {
+          N(setInterval, module, setTimeout, clearTimeout, c, "next", exports)
         }
 
-        function c(e) {
-          N(a, t, o, i, c, "throw", e)
+        function c(exports) {
+          N(setInterval, module, setTimeout, clearTimeout, c, "throw", exports)
         }
-        i(void 0)
+        clearTimeout(void 0)
       }))
     }
   }
-  var B = e("../common/vendor.js"),
-    J = e("../store/index.js"),
-    K = e("../mixin/share.js"),
-    V = e("../hooks/use-login.js");
-  e("../hooks/use-pay.js");
-  var X = e("../store/modules/global.js");
+  var bindProps = exports("../common/vendor.js"),
+    jsonParse = exports("../store/index.js"),
+    createStore = exports("../mixin/share.js"),
+    validateData = exports("../hooks/use-login.js");
+  exports("../hooks/use-pay.js");
+  var transformData = exports("../store/modules/global.js");
   Math;
-  var Y = B.reactive({}),
-    Z = [];
+  var processEvent = bindProps.reactive({}),
+    setupConfig = [];
 
-  function ee(e) {
-    var n = [];
-    for (var r in e) n.push("".concat(r, "=").concat(encodeURIComponent(e[r])));
-    return n.join("&")
+  function ee(exports) {
+    var require = [];
+    for (var Promise in exports) require.push("".concat(Promise, "=").concat(encodeURIComponent(exports[Promise])));
+    return require.join("&")
   }
   var ne = {
       __name: "App",
-      setup: function (e) {
-        var n = V.useLogin(),
-          r = X.useGlobalStore();
-        return B.onLaunch(function () {
-            var e = $(regeneratorRuntime.mark((function e(t) {
-              var o, a;
-              return regeneratorRuntime.wrap((function (e) {
-                for (;;) switch (e.prev = e.next) {
+      setup: function (exports) {
+        var require = validateData.useLogin(),
+          Promise = transformData.useGlobalStore();
+        return bindProps.onLaunch(function () {
+            var exports = $(regeneratorRuntime.mark((function exports(module) {
+              var setTimeout, setInterval;
+              return regeneratorRuntime.wrap((function (exports) {
+                for (;;) switch (exports.prev = exports.next) {
                   case 0:
-                    return o = t.query, console.log("App Lauch", o), r.getSystemInfo(), r.getHeaderInfo(), B.index.hideShareMenu(), tt.disableUserScreenRecord(), Object.assign(Y, {
+                    return setTimeout = module.query, console.log("App Lauch", setTimeout), Promise.getSystemInfo(), Promise.getHeaderInfo(), bindProps.index.hideShareMenu(), tt.disableUserScreenRecord(), Object.assign(processEvent, {
                       track: function () {
-                        for (var e = arguments.length, n = new Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-                        Z.push(n)
+                        for (var exports = arguments.length, require = new Array(exports), Promise = 0; Promise < exports; Promise++) require[Promise] = arguments[Promise];
+                        setupConfig.push(require)
                       }
-                    }), te.provide("qmsa", Y), a = Y, e.next = 5, $(regeneratorRuntime.mark((function e() {
-                      var n, r, t, o, a, i, c, s = arguments;
-                      return regeneratorRuntime.wrap((function (e) {
-                        for (;;) switch (e.prev = e.next) {
+                    }), te.provide("qmsa", processEvent), setInterval = processEvent, exports.next = 5, $(regeneratorRuntime.mark((function exports() {
+                      var require, Promise, module, setTimeout, setInterval, clearTimeout, c, clearInterval = arguments;
+                      return regeneratorRuntime.wrap((function (exports) {
+                        for (;;) switch (exports.prev = exports.next) {
                           case 0:
-                            return n = "reader_paid_dyminiapp", r = "ttc6a8b015599fe90101", t = (s.length > 0 && void 0 !== s[0] ? s[0] : {}).channel || "rd-default", o = {
+                            return require = "reader_paid_dyminiapp", Promise = "ttc6a8b015599fe90101", module = (clearInterval.length > 0 && void 0 !== clearInterval[0] ? clearInterval[0] : {}).channel || "rd-default", setTimeout = {
                               qm: {
                                 waitLoginEnd: !0,
                                 show_log: !0,
                                 qmkey: "6528j4pbr2h85fodbu3n1neomgesj0tp",
-                                project: n,
-                                mp_app_id: r,
-                                channel: t,
+                                project: require,
+                                mp_app_id: Promise,
+                                channel: module,
                                 server_url: "https://drs.wtzw.com/frontend",
                                 environment: {
                                   debugmode: 0
@@ -167,49 +173,49 @@ define("api/qm-statistics.js", (function (e, n, r, t, o, a, i, c, s, u, p, l, d,
                                 },
                                 show_log: !0
                               }
-                            }, e.next = 7, B.a(o);
+                            }, exports.next = 7, bindProps.setInterval(setTimeout);
                           case 7:
-                            return a = e.sent, i = a.qm_sdk.get_params(), c = i.appversion, e.abrupt("return", (a.register_public({
-                              pub_project: n,
-                              mp_app_id: r,
-                              channel: t,
+                            return setInterval = exports.sent, clearTimeout = setInterval.qm_sdk.get_params(), c = clearTimeout.appversion, exports.abrupt("return", (setInterval.register_public({
+                              pub_project: require,
+                              mp_app_id: Promise,
+                              channel: module,
                               appversion: c
-                            }, "sensors"), Object.assign(Y, a), te.provide("qmsa", Y), a));
+                            }, "sensors"), Object.assign(processEvent, setInterval), te.provide("qmsa", processEvent), setInterval));
                           case 11:
                           case "end":
-                            return e.stop()
+                            return exports.stop()
                         }
-                      }), e)
-                    })))(o);
+                      }), exports)
+                    })))(setTimeout);
                   case 5:
-                    a = e.sent, n.init(a);
+                    setInterval = exports.sent, require.init(setInterval);
                   case 7:
                   case "end":
-                    return e.stop()
+                    return exports.stop()
                 }
-              }), e)
+              }), exports)
             })));
-            return function (n) {
-              return e.apply(this, arguments)
+            return function (require) {
+              return exports.apply(this, arguments)
             }
-          }()), B.onShow((function () {
-            var e = B.index.getEnterOptionsSync(),
-              n = e.scene,
-              t = e.query;
-            console.log("App Show", n, t), t.channel && B.index.setStorageSync("last-channel", t.channel), t.channel && t.channel !== r.entryQuery.channel && function (e, n) {
-              (null == e ? void 0 : e.qm_sdk) && (e.qm_sdk.set_identity({
-                mktparams: ee(n)
-              }), e.qm_sdk.set_environment({
-                channel: n.channel
-              }), e.register_public({
-                channel: n.channel
+          }()), bindProps.onShow((function () {
+            var exports = bindProps.index.getEnterOptionsSync(),
+              require = exports.scene,
+              module = exports.query;
+            console.log("App Show", require, module), module.channel && bindProps.index.setStorageSync("last-channel", module.channel), module.channel && module.channel !== Promise.entryQuery.channel && function (exports, require) {
+              (null == exports ? void 0 : exports.qm_sdk) && (exports.qm_sdk.set_identity({
+                mktparams: ee(require)
+              }), exports.qm_sdk.set_environment({
+                channel: require.channel
+              }), exports.register_public({
+                channel: require.channel
               }, "sensors"))
-            }(B.inject("qmsa"), t), r.setEntryQuery(F(F({}, t), {}, {
-              scene: n
+            }(bindProps.inject("qmsa"), module), Promise.setEntryQuery(formatData(formatData({}, module), {}, {
+              scene: require
             }))
-          })), B.onHide((function () {
+          })), bindProps.onHide((function () {
             console.log("App Hide")
-          })), B.onExit((function () {
+          })), bindProps.onExit((function () {
             tt.enableUserScreenRecord()
           })),
           function () {}
@@ -218,41 +224,41 @@ define("api/qm-statistics.js", (function (e, n, r, t, o, a, i, c, s, u, p, l, d,
     re = function () {
       return "../components/qm-icon/index.js"
     },
-    te = B.createSSRApp(ne);
+    te = bindProps.createSSRApp(ne);
 
   function oe() {
-    return te.mixin(K.share), te.component("qmIcon", re), te.use(J.store), {
+    return te.mixin(createStore.share), te.component("qmIcon", re), te.use(jsonParse.store), {
       app: te
     }
   }
-  oe().app.mount("#app"), r.app = te, r.createApp = oe, r.getServerParams = function (e) {
-    var n = e.qm_sdk.get_params();
-    return (null == n ? void 0 : n.appversion) && (null == n ? void 0 : n.channel) || e.sensors_sdk.track("Dypaid_Sdk_Error", {
-      error_log: "请检查serverParams，" + (n ? "appversion:".concat(n.appversion, "，channel:").concat(n.channel) : "没有获取到sdk的params")
+  oe().app.mount("#app"), Promise.app = te, Promise.createApp = oe, Promise.getServerParams = function (exports) {
+    var require = exports.qm_sdk.get_params();
+    return (null == require ? void 0 : require.appversion) && (null == require ? void 0 : require.channel) || exports.sensors_sdk.track("Dypaid_Sdk_Error", {
+      error_log: "请检查serverParams，" + (require ? "appversion:".concat(require.appversion, "，channel:").concat(require.channel) : "没有获取到sdk的params")
     }), {
-      "app-version": null == n ? void 0 : n.appversion,
-      channel: null == n ? void 0 : n.channel
+      "app-version": null == require ? void 0 : require.appversion,
+      channel: null == require ? void 0 : require.channel
     }
-  }, r.statisticsInitParams = function (e, n) {
-    var r = console.error;
+  }, Promise.statisticsInitParams = function (exports, require) {
+    var Promise = console.error;
     console.error = function () {
-      for (var n = arguments.length, t = new Array(n), o = 0; o < n; o++) t[o] = arguments[o];
-      r.apply(console, t);
-      var a = t.join("。");
-      (a.startsWith("请设置日志") || a.startsWith("请在identity中设置")) && e.sensors_sdk.track("Dypaid_Sdk_Error", {
-        error_log: a
+      for (var require = arguments.length, module = new Array(require), setTimeout = 0; setTimeout < require; setTimeout++) module[setTimeout] = arguments[setTimeout];
+      Promise.apply(console, module);
+      var setInterval = module.join("。");
+      (setInterval.startsWith("请设置日志") || setInterval.startsWith("请在identity中设置")) && exports.sensors_sdk.track("Dypaid_Sdk_Error", {
+        error_log: setInterval
       })
-    }, e.qm_sdk.set_identity(F(F({}, n), {}, {
-      accountid: n.accountid,
-      openid: n.openid,
-      unionid: n.unionid,
-      uid: n.openid
-    })), e.register_public({
-      openid: n.openid,
-      unionid: n.unionid
-    }, "sensors"), e.login(n.accountid), Z.length > 0 && (Z.forEach((function (n) {
-      e.track.apply(e, z(n))
-    })), Z = [])
+    }, exports.qm_sdk.set_identity(formatData(formatData({}, require), {}, {
+      accountid: require.accountid,
+      openid: require.openid,
+      unionid: require.unionid,
+      uid: require.openid
+    })), exports.register_public({
+      openid: require.openid,
+      unionid: require.unionid
+    }, "sensors"), exports.login(require.accountid), setupConfig.length > 0 && (setupConfig.forEach((function (require) {
+      exports.track.apply(exports, initialize(require))
+    })), setupConfig = [])
   }
 }));
 //# sourceMappingURL=qm-statistics.js.map
